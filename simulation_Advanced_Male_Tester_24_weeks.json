@@ -1,0 +1,194 @@
+{
+  "summary": {
+    "totalDeloads": 5,
+    "experienceEvents": 0,
+    "maxFatiguePerMuscle": {
+      "back_lats": 6,
+      "back_upper": 6,
+      "biceps": 24,
+      "calves": 12,
+      "chest_mid": 10,
+      "glutes": 12,
+      "hamstrings": 6,
+      "quads": 6,
+      "shoulders_front": 8,
+      "shoulders_rear": 6,
+      "shoulders_side": 6,
+      "triceps": 12
+    },
+    "fatigueBaselineHistory": [
+      8.833333333333334,
+      7.416666666666667,
+      4.166666666666667,
+      4.166666666666667,
+      3.75,
+      2.0833333333333335,
+      6.583333333333333,
+      6.583333333333333,
+      6.916666666666667,
+      2.0833333333333335,
+      7,
+      7,
+      7,
+      2.0833333333333335,
+      7.25,
+      7.25,
+      7.25,
+      2.0833333333333335,
+      7.25,
+      7.25,
+      7.25,
+      2.0833333333333335,
+      7.25,
+      7.25
+    ],
+    "volumeHistory": [
+      125,
+      100,
+      50,
+      50,
+      45,
+      25,
+      90,
+      90,
+      90,
+      25,
+      92,
+      92,
+      92,
+      25,
+      95,
+      95,
+      95,
+      25,
+      95,
+      95,
+      95,
+      25,
+      95,
+      95
+    ]
+  },
+  "historyReport": [
+    {
+      "week": 1,
+      "phase": "accumulation",
+      "volume": 125
+    },
+    {
+      "week": 2,
+      "phase": "accumulation",
+      "volume": 100
+    },
+    {
+      "week": 3,
+      "phase": "intensification",
+      "volume": 50
+    },
+    {
+      "week": 4,
+      "phase": "intensification",
+      "volume": 50
+    },
+    {
+      "week": 5,
+      "phase": "intensification",
+      "volume": 45
+    },
+    {
+      "week": 6,
+      "phase": "deload",
+      "volume": 25
+    },
+    {
+      "week": 7,
+      "phase": "accumulation",
+      "volume": 90
+    },
+    {
+      "week": 8,
+      "phase": "accumulation",
+      "volume": 90
+    },
+    {
+      "week": 9,
+      "phase": "accumulation",
+      "volume": 90
+    },
+    {
+      "week": 10,
+      "phase": "deload",
+      "volume": 25
+    },
+    {
+      "week": 11,
+      "phase": "accumulation",
+      "volume": 92
+    },
+    {
+      "week": 12,
+      "phase": "accumulation",
+      "volume": 92
+    },
+    {
+      "week": 13,
+      "phase": "accumulation",
+      "volume": 92
+    },
+    {
+      "week": 14,
+      "phase": "deload",
+      "volume": 25
+    },
+    {
+      "week": 15,
+      "phase": "accumulation",
+      "volume": 95
+    },
+    {
+      "week": 16,
+      "phase": "accumulation",
+      "volume": 95
+    },
+    {
+      "week": 17,
+      "phase": "accumulation",
+      "volume": 95
+    },
+    {
+      "week": 18,
+      "phase": "deload",
+      "volume": 25
+    },
+    {
+      "week": 19,
+      "phase": "accumulation",
+      "volume": 95
+    },
+    {
+      "week": 20,
+      "phase": "accumulation",
+      "volume": 95
+    },
+    {
+      "week": 21,
+      "phase": "accumulation",
+      "volume": 95
+    },
+    {
+      "week": 22,
+      "phase": "deload",
+      "volume": 25
+    },
+    {
+      "week": 23,
+      "phase": "accumulation",
+      "volume": 95
+    },
+    {
+      "week": 24,
+      "phase": "accumulation",
+      "volume": 95
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "message": "records is not iterable",
+  "stack": "TypeError: records is not iterable\n    at computeFatigueState (C:\\Users\\Lenovo\\Desktop\\fitness_ai backend\\state\\stateBuilder.js:26:19)\n    at buildUserState (C:\\Users\\Lenovo\\Desktop\\fitness_ai backend\\state\\stateBuilder.js:103:19)\n    at generateFitnessRoutine (C:\\Users\\Lenovo\\Desktop\\fitness_ai backend\\engine\\fitnessEngine.js:40:23)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async run (C:\\Users\\Lenovo\\Desktop\\fitness_ai backend\\scripts\\debug_blacklist.js:27:20)"
+}

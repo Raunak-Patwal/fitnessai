@@ -1,0 +1,192 @@
+{
+  "summary": {
+    "totalDeloads": 4,
+    "experienceEvents": 0,
+    "maxFatiguePerMuscle": {
+      "back_lats": 12,
+      "back_upper": 12,
+      "biceps": 24,
+      "calves": 16,
+      "chest_mid": 12,
+      "glutes": 16,
+      "hamstrings": 13,
+      "quads": 20,
+      "shoulders_front": 16,
+      "triceps": 16
+    },
+    "fatigueBaselineHistory": [
+      15.7,
+      9,
+      5.6,
+      5.6,
+      5.2,
+      3.4,
+      8.2,
+      8.2,
+      8.6,
+      8.6,
+      3.4,
+      8.6,
+      8.6,
+      8.6,
+      8.6,
+      3.4,
+      8.6,
+      8.6,
+      8.6,
+      8.6,
+      3.4,
+      8.6,
+      8.6,
+      8.6
+    ],
+    "volumeHistory": [
+      88,
+      66,
+      44,
+      44,
+      40,
+      22,
+      58,
+      58,
+      62,
+      62,
+      22,
+      62,
+      62,
+      62,
+      62,
+      22,
+      62,
+      62,
+      62,
+      62,
+      22,
+      62,
+      62,
+      62
+    ]
+  },
+  "historyReport": [
+    {
+      "week": 1,
+      "phase": "accumulation",
+      "volume": 88
+    },
+    {
+      "week": 2,
+      "phase": "accumulation",
+      "volume": 66
+    },
+    {
+      "week": 3,
+      "phase": "intensification",
+      "volume": 44
+    },
+    {
+      "week": 4,
+      "phase": "intensification",
+      "volume": 44
+    },
+    {
+      "week": 5,
+      "phase": "intensification",
+      "volume": 40
+    },
+    {
+      "week": 6,
+      "phase": "deload",
+      "volume": 22
+    },
+    {
+      "week": 7,
+      "phase": "accumulation",
+      "volume": 58
+    },
+    {
+      "week": 8,
+      "phase": "accumulation",
+      "volume": 58
+    },
+    {
+      "week": 9,
+      "phase": "accumulation",
+      "volume": 62
+    },
+    {
+      "week": 10,
+      "phase": "accumulation",
+      "volume": 62
+    },
+    {
+      "week": 11,
+      "phase": "deload",
+      "volume": 22
+    },
+    {
+      "week": 12,
+      "phase": "accumulation",
+      "volume": 62
+    },
+    {
+      "week": 13,
+      "phase": "accumulation",
+      "volume": 62
+    },
+    {
+      "week": 14,
+      "phase": "accumulation",
+      "volume": 62
+    },
+    {
+      "week": 15,
+      "phase": "accumulation",
+      "volume": 62
+    },
+    {
+      "week": 16,
+      "phase": "deload",
+      "volume": 22
+    },
+    {
+      "week": 17,
+      "phase": "accumulation",
+      "volume": 62
+    },
+    {
+      "week": 18,
+      "phase": "accumulation",
+      "volume": 62
+    },
+    {
+      "week": 19,
+      "phase": "accumulation",
+      "volume": 62
+    },
+    {
+      "week": 20,
+      "phase": "accumulation",
+      "volume": 62
+    },
+    {
+      "week": 21,
+      "phase": "deload",
+      "volume": 22
+    },
+    {
+      "week": 22,
+      "phase": "accumulation",
+      "volume": 62
+    },
+    {
+      "week": 23,
+      "phase": "accumulation",
+      "volume": 62
+    },
+    {
+      "week": 24,
+      "phase": "accumulation",
+      "volume": 62
+    }
+  ]
+}

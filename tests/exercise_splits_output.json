@@ -1,0 +1,4514 @@
+[
+  {
+    "days": 3,
+    "goal": "hypertrophy",
+    "experience": "beginner",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "full",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (3x10)",
+          "Machine Chest Press – Selectorized (3x10)",
+          "Lat Pulldown – Close Grip – Tempo Slow (3x10)",
+          "Seated Leg Curl Machine – Paused (3x10)",
+          "Smith Machine Hip Thrust – Low Angle (3x10)",
+          "Lateral Raise – Dumbbell – High Angle (3x10)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Hack Squat Machine (3x10)",
+          "Machine Chest Press – Plate Loaded (3x10)",
+          "Single Arm Lat Pulldown – Low Angle (3x10)",
+          "Seated Leg Curl Machine – Neutral Grip (3x10)",
+          "Smith Machine Hip Thrust – Tempo Slow (3x10)",
+          "Lateral Raise – Cable – Partial ROM (3x10)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Hack Squat Machine – High Angle – Neutral Grip – Tempo Slow (3x10)",
+          "Machine Chest Press – Selectorized – Neutral Grip (3x10)",
+          "Lat Pulldown – Neutral Grip – Low Angle (3x10)",
+          "Lying Leg Curl Machine – Low Angle (3x10)",
+          "Smith Machine Hip Thrust – Low Angle (3x10)",
+          "Lateral Raise – Cable – Tempo Slow (3x10)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 3,
+    "goal": "hypertrophy",
+    "experience": "beginner",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "full",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (3x11)",
+          "Lat Pulldown – Close Grip – Tempo Slow (3x12)",
+          "Machine Chest Press – Selectorized (3x12)",
+          "Seated Leg Curl Machine – Paused (3x12)",
+          "Smith Machine Hip Thrust – Low Angle (3x12)",
+          "Lateral Raise – Dumbbell – High Angle (3x12)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Hack Squat Machine (3x11)",
+          "Single Arm Lat Pulldown – Low Angle (3x12)",
+          "Machine Chest Press – Plate Loaded (3x12)",
+          "Seated Leg Curl Machine – Neutral Grip (3x12)",
+          "Smith Machine Hip Thrust – Tempo Slow (3x12)",
+          "Lateral Raise – Cable – Partial ROM (3x12)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Hack Squat Machine – High Angle – Neutral Grip – Tempo Slow (3x11)",
+          "Lat Pulldown – Neutral Grip – Low Angle (3x12)",
+          "Machine Chest Press – Selectorized – Neutral Grip (3x12)",
+          "Lying Leg Curl Machine – Low Angle (3x12)",
+          "Smith Machine Hip Thrust – Low Angle (3x12)",
+          "Lateral Raise – Cable – Tempo Slow (3x12)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 3,
+    "goal": "hypertrophy",
+    "experience": "intermediate",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "full",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (4x10)",
+          "Cable Fly – High to Low – Neutral Grip (4x10)",
+          "Dual Cable Lat Pulldown (4x10)",
+          "Lateral Raise – Dumbbell – High Angle (4x10)",
+          "Dumbbell Hip Thrust – Partial ROM – Paused (4x10)",
+          "Cable Kickback – Bent Leg – Tempo Slow – High Angle (4x10)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Hack Squat Machine (4x10)",
+          "Cable Fly – High to Low (4x10)",
+          "Dual Cable Lat Pulldown – Paused (4x10)",
+          "Lateral Raise – Cable – Partial ROM (4x10)",
+          "Dumbbell Hip Thrust – Partial ROM – Partial ROM (4x10)",
+          "Cable Kickback – Straight Leg – Paused (4x10)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Hack Squat Machine – High Angle – Neutral Grip – Tempo Slow (4x10)",
+          "Cable Fly – Mid – Paused – Neutral Grip (4x10)",
+          "Dual Cable Lat Pulldown – Low Angle (4x10)",
+          "Lateral Raise – Cable – Tempo Slow (4x10)",
+          "Dumbbell Hip Thrust – Low Angle (4x10)",
+          "Cable Kickback – Bent Leg – Tempo Slow (4x10)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 3,
+    "goal": "hypertrophy",
+    "experience": "intermediate",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "full",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (4x11)",
+          "Dual Cable Lat Pulldown (4x12)",
+          "Cable Fly – High to Low – Neutral Grip (4x12)",
+          "Cable Kickback – Bent Leg – Tempo Slow – High Angle (4x12)",
+          "Dumbbell Hip Thrust – Partial ROM – Paused (4x12)",
+          "Lateral Raise – Dumbbell – High Angle (4x12)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Hack Squat Machine (4x11)",
+          "Dual Cable Lat Pulldown – Paused (4x12)",
+          "Cable Fly – High to Low (4x12)",
+          "Cable Kickback – Straight Leg – Paused (4x12)",
+          "Dumbbell Hip Thrust – Partial ROM – Partial ROM (4x12)",
+          "Lateral Raise – Cable – Partial ROM (4x12)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Hack Squat Machine – High Angle – Neutral Grip – Tempo Slow (4x11)",
+          "Dual Cable Lat Pulldown – Low Angle (4x12)",
+          "Cable Fly – Mid – Paused – Neutral Grip (4x12)",
+          "Cable Kickback – Bent Leg – Tempo Slow (4x12)",
+          "Dumbbell Hip Thrust – Low Angle (4x12)",
+          "Lateral Raise – Cable – Tempo Slow (4x12)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 3,
+    "goal": "hypertrophy",
+    "experience": "advanced",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "full",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Paused (4x8)",
+          "Hack Squat Machine – High Angle – High Angle (4x8)",
+          "Lat Pulldown – Close Grip – Tempo Slow (5x12)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (4x8)",
+          "Lateral Raise – Dumbbell – High Angle (5x12)",
+          "Seated Leg Curl Machine – Paused (5x12)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Tempo Slow (4x8)",
+          "Hack Squat Machine (4x8)",
+          "Single Arm Lat Pulldown – Low Angle (5x12)",
+          "Barbell Hip Thrust – Tempo Slow (4x8)",
+          "Lateral Raise – Cable – Partial ROM (5x12)",
+          "Seated Leg Curl Machine – Neutral Grip (5x12)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Barbell Bench Press – Close Grip – High Angle – Tempo Slow – Low Angle (4x8)",
+          "Hack Squat Machine – High Angle – Neutral Grip – Tempo Slow (4x8)",
+          "Lat Pulldown – Neutral Grip – Low Angle (5x12)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (4x8)",
+          "Lateral Raise – Cable – Tempo Slow (5x12)",
+          "Lying Leg Curl Machine – Low Angle (5x12)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 3,
+    "goal": "hypertrophy",
+    "experience": "advanced",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "full",
+        "list": [
+          "Barbell Back Squat (4x9)",
+          "Barbell Bench Press – Medium Grip – Paused (4x9)",
+          "Lat Pulldown – Close Grip – Tempo Slow (5x14)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (4x9)",
+          "Cable Kickback – Bent Leg – Tempo Slow – High Angle (5x14)",
+          "Lateral Raise – Dumbbell – High Angle (5x14)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (4x9)",
+          "Barbell Bench Press – Medium Grip – Tempo Slow (4x9)",
+          "Single Arm Lat Pulldown – Low Angle (5x14)",
+          "Barbell Hip Thrust – Tempo Slow (4x9)",
+          "Cable Kickback – Straight Leg – Paused (5x14)",
+          "Lateral Raise – Cable – Partial ROM (5x14)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Hack Squat Machine (4x9)",
+          "Barbell Bench Press – Close Grip – High Angle – Tempo Slow – Low Angle (4x9)",
+          "Lat Pulldown – Neutral Grip – Low Angle (5x14)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (4x9)",
+          "Cable Kickback – Bent Leg – Tempo Slow (5x14)",
+          "Lateral Raise – Cable – Tempo Slow (5x14)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 3,
+    "goal": "strength",
+    "experience": "beginner",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "full",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Paused (3x5)",
+          "Barbell Back Squat (3x5)",
+          "Barbell Curl – Straight Bar – Paused (3x5)",
+          "Romanian Deadlift (3x5)",
+          "T-Bar Row – Paused (3x5)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Tempo Slow (3x5)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (3x5)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Neutral Grip (3x5)",
+          "T-Bar Row – Paused – Neutral Grip (3x5)",
+          "Barbell Overhead Press – Paused (3x5)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Barbell Bench Press – Close Grip – High Angle – Tempo Slow – Low Angle (3x5)",
+          "Barbell Hip Thrust – Tempo Slow (3x5)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Partial ROM (3x5)",
+          "Bent Over Barbell Row – Tempo Slow (3x5)",
+          "Barbell Overhead Press – Low Angle (3x5)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 3,
+    "goal": "strength",
+    "experience": "beginner",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "full",
+        "list": [
+          "Barbell Back Squat (3x6)",
+          "Barbell Bench Press – Medium Grip – Paused (3x6)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (3x6)",
+          "Barbell Curl – Straight Bar – Paused (3x6)",
+          "T-Bar Row – Paused (3x6)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Tempo Slow (3x6)",
+          "Barbell Hip Thrust – Tempo Slow (3x6)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Neutral Grip (3x6)",
+          "T-Bar Row – Paused – Neutral Grip (3x6)",
+          "Barbell Overhead Press – Paused (3x6)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Barbell Bench Press – Close Grip – High Angle – Tempo Slow – Low Angle (3x6)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (3x6)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Partial ROM (3x6)",
+          "Bent Over Barbell Row – Tempo Slow (3x6)",
+          "Barbell Overhead Press – Low Angle (3x6)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 3,
+    "goal": "strength",
+    "experience": "intermediate",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "full",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Paused (4x5)",
+          "Barbell Back Squat (4x5)",
+          "Barbell Curl – Straight Bar – Paused (4x5)",
+          "Romanian Deadlift (4x5)",
+          "T-Bar Row – Paused (4x5)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Tempo Slow (4x5)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (4x5)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Neutral Grip (4x5)",
+          "T-Bar Row – Paused – Neutral Grip (4x5)",
+          "Barbell Overhead Press – Paused (4x5)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Barbell Bench Press – Close Grip – High Angle – Tempo Slow – Low Angle (4x5)",
+          "Barbell Hip Thrust – Tempo Slow (4x5)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Partial ROM (4x5)",
+          "Bent Over Barbell Row – Tempo Slow (4x5)",
+          "Barbell Overhead Press – Low Angle (4x5)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 3,
+    "goal": "strength",
+    "experience": "intermediate",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "full",
+        "list": [
+          "Barbell Back Squat (4x6)",
+          "Barbell Bench Press – Medium Grip – Paused (4x6)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (4x6)",
+          "Barbell Curl – Straight Bar – Paused (4x6)",
+          "T-Bar Row – Paused (4x6)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Tempo Slow (4x6)",
+          "Barbell Hip Thrust – Tempo Slow (4x6)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Neutral Grip (4x6)",
+          "T-Bar Row – Paused – Neutral Grip (4x6)",
+          "Barbell Overhead Press – Paused (4x6)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Barbell Bench Press – Close Grip – High Angle – Tempo Slow – Low Angle (4x6)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (4x6)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Partial ROM (4x6)",
+          "Bent Over Barbell Row – Tempo Slow (4x6)",
+          "Barbell Overhead Press – Low Angle (4x6)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 3,
+    "goal": "strength",
+    "experience": "advanced",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "full",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Paused (5x3)",
+          "Barbell Back Squat (5x3)",
+          "Barbell Curl – Straight Bar – Paused (5x3)",
+          "Romanian Deadlift (5x3)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Neutral Grip (5x3)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Tempo Slow (5x3)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (5x3)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Partial ROM (5x3)",
+          "Barbell Curl – Straight Bar – Neutral Grip (5x3)",
+          "T-Bar Row – Paused (5x3)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Barbell Bench Press – Close Grip – High Angle – Tempo Slow – Low Angle (5x3)",
+          "Barbell Hip Thrust – Tempo Slow (5x3)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Low Angle (5x3)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Neutral Grip (5x3)",
+          "T-Bar Row – Paused – Neutral Grip (5x3)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 3,
+    "goal": "strength",
+    "experience": "advanced",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "full",
+        "list": [
+          "Barbell Back Squat (5x4)",
+          "Barbell Bench Press – Medium Grip – Paused (5x4)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (5x4)",
+          "Barbell Curl – Straight Bar – Paused (5x4)",
+          "T-Bar Row – Paused (5x4)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Tempo Slow (5x4)",
+          "Barbell Hip Thrust – Tempo Slow (5x4)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Neutral Grip (5x4)",
+          "T-Bar Row – Paused – Neutral Grip (5x4)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Partial ROM (5x4)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Barbell Bench Press – Close Grip – High Angle – Tempo Slow – Low Angle (5x4)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (5x4)",
+          "Barbell Curl – Straight Bar – Neutral Grip (5x4)",
+          "Bent Over Barbell Row – Tempo Slow (5x4)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Low Angle (5x4)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 3,
+    "goal": "fatloss",
+    "experience": "beginner",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "full",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (3x12)",
+          "Lat Pulldown – Close Grip – Tempo Slow (3x12)",
+          "Smith Machine Incline Bench Press – Partial ROM (3x12)",
+          "Smith Machine Hip Thrust – Low Angle (3x12)",
+          "Crunch Machine – Tempo Slow (3x12)",
+          "Cable Kickback – Bent Leg – Tempo Slow – High Angle (3x12)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Hack Squat Machine (3x12)",
+          "Single Arm Lat Pulldown – Low Angle (3x12)",
+          "Smith Machine Incline Bench Press – High Angle – Neutral Grip (3x12)",
+          "Smith Machine Hip Thrust – Tempo Slow (3x12)",
+          "Crunch Machine – Tempo Slow – Paused – Partial ROM (3x12)",
+          "Cable Kickback – Straight Leg – Paused (3x12)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Hack Squat Machine – High Angle – Neutral Grip – Tempo Slow (3x12)",
+          "Lat Pulldown – Neutral Grip – Low Angle (3x12)",
+          "Smith Machine Incline Bench Press – High Angle – Paused (3x12)",
+          "Smith Machine Hip Thrust – Low Angle (3x12)",
+          "Crunch Machine – Tempo Slow – Paused – Neutral Grip – Partial ROM (3x12)",
+          "Cable Kickback – Bent Leg – Tempo Slow (3x12)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 3,
+    "goal": "fatloss",
+    "experience": "beginner",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "full",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (3x13)",
+          "Lat Pulldown – Close Grip – Tempo Slow (3x14)",
+          "Smith Machine Incline Bench Press – Partial ROM (3x13)",
+          "Smith Machine Hip Thrust – Low Angle (3x14)",
+          "Cable Kickback – Bent Leg – Tempo Slow – High Angle (3x14)",
+          "Crunch Machine – Tempo Slow (3x14)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Hack Squat Machine (3x13)",
+          "Single Arm Lat Pulldown – Low Angle (3x14)",
+          "Smith Machine Incline Bench Press – High Angle – Neutral Grip (3x13)",
+          "Smith Machine Hip Thrust – Tempo Slow (3x14)",
+          "Cable Kickback – Straight Leg – Paused (3x14)",
+          "Crunch Machine – Tempo Slow – Paused – Partial ROM (3x14)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Hack Squat Machine – High Angle – Neutral Grip – Tempo Slow (3x13)",
+          "Lat Pulldown – Neutral Grip – Low Angle (3x14)",
+          "Smith Machine Incline Bench Press – High Angle – Paused (3x13)",
+          "Smith Machine Hip Thrust – Low Angle (3x14)",
+          "Cable Kickback – Bent Leg – Tempo Slow (3x14)",
+          "Crunch Machine – Tempo Slow – Paused – Neutral Grip – Partial ROM (3x14)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 3,
+    "goal": "fatloss",
+    "experience": "intermediate",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "full",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (4x12)",
+          "Dual Cable Lat Pulldown (4x12)",
+          "Cable Fly – High to Low – Neutral Grip (4x12)",
+          "Cable Kickback – Bent Leg – Tempo Slow – High Angle (4x12)",
+          "Dumbbell Hip Thrust – Partial ROM – Paused (4x12)",
+          "Cable Crunch – High Angle (4x12)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Hack Squat Machine (4x12)",
+          "Dual Cable Lat Pulldown – Paused (4x12)",
+          "Cable Fly – High to Low (4x12)",
+          "Cable Kickback – Straight Leg – Paused (4x12)",
+          "Dumbbell Hip Thrust – Partial ROM – Partial ROM (4x12)",
+          "Cable Crunch (4x12)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Hack Squat Machine – High Angle – Neutral Grip – Tempo Slow (4x12)",
+          "Dual Cable Lat Pulldown – Low Angle (4x12)",
+          "Cable Fly – Mid – Paused – Neutral Grip (4x12)",
+          "Cable Kickback – Bent Leg – Tempo Slow (4x12)",
+          "Dumbbell Hip Thrust – Low Angle (4x12)",
+          "Cable Crunch – High Angle – Tempo Slow (4x12)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 3,
+    "goal": "fatloss",
+    "experience": "intermediate",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "full",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (4x13)",
+          "Dual Cable Lat Pulldown (4x14)",
+          "Cable Fly – High to Low – Neutral Grip (4x14)",
+          "Cable Kickback – Bent Leg – Tempo Slow – High Angle (4x14)",
+          "Dumbbell Hip Thrust – Partial ROM – Paused (4x14)",
+          "Crunch Machine – Tempo Slow (4x14)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Hack Squat Machine (4x13)",
+          "Dual Cable Lat Pulldown – Paused (4x14)",
+          "Cable Fly – High to Low (4x14)",
+          "Cable Kickback – Straight Leg – Paused (4x14)",
+          "Dumbbell Hip Thrust – Partial ROM – Partial ROM (4x14)",
+          "Crunch Machine – Tempo Slow – Paused – Partial ROM (4x14)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Hack Squat Machine – High Angle – Neutral Grip – Tempo Slow (4x13)",
+          "Dual Cable Lat Pulldown – Low Angle (4x14)",
+          "Cable Fly – Mid – Paused – Neutral Grip (4x14)",
+          "Cable Kickback – Bent Leg – Tempo Slow (4x14)",
+          "Dumbbell Hip Thrust – Low Angle (4x14)",
+          "Crunch Machine – Tempo Slow – Paused – Neutral Grip – Partial ROM (4x14)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 3,
+    "goal": "fatloss",
+    "experience": "advanced",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "full",
+        "list": [
+          "Barbell Back Squat (4x15)",
+          "Lat Pulldown – Close Grip – Tempo Slow (4x15)",
+          "Barbell Bench Press – Medium Grip – Paused (4x15)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (4x15)",
+          "Cable Kickback – Bent Leg – Tempo Slow – High Angle (4x15)",
+          "Crunch Machine – Tempo Slow (4x15)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (4x15)",
+          "Single Arm Lat Pulldown – Low Angle (4x15)",
+          "Barbell Bench Press – Medium Grip – Tempo Slow (4x15)",
+          "Barbell Hip Thrust – Tempo Slow (4x15)",
+          "Cable Kickback – Straight Leg – Paused (4x15)",
+          "Crunch Machine – Tempo Slow – Paused – Partial ROM (4x15)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Hack Squat Machine (4x15)",
+          "Lat Pulldown – Neutral Grip – Low Angle (4x15)",
+          "Barbell Bench Press – Close Grip – High Angle – Tempo Slow – Low Angle (4x15)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (4x15)",
+          "Cable Kickback – Bent Leg – Tempo Slow (4x15)",
+          "Crunch Machine – Tempo Slow – Paused – Neutral Grip – Partial ROM (4x15)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 3,
+    "goal": "fatloss",
+    "experience": "advanced",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "full",
+        "list": [
+          "Barbell Back Squat (4x16)",
+          "Lat Pulldown – Close Grip – Tempo Slow (4x17)",
+          "Barbell Bench Press – Medium Grip – Paused (4x16)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (4x16)",
+          "Cable Kickback – Bent Leg – Tempo Slow – High Angle (4x17)",
+          "Crunch Machine – Tempo Slow (4x17)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (4x16)",
+          "Single Arm Lat Pulldown – Low Angle (4x17)",
+          "Barbell Bench Press – Medium Grip – Tempo Slow (4x16)",
+          "Barbell Hip Thrust – Tempo Slow (4x16)",
+          "Cable Kickback – Straight Leg – Paused (4x17)",
+          "Crunch Machine – Tempo Slow – Paused – Partial ROM (4x17)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Hack Squat Machine (4x16)",
+          "Lat Pulldown – Neutral Grip – Low Angle (4x17)",
+          "Barbell Bench Press – Close Grip – High Angle – Tempo Slow – Low Angle (4x16)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (4x16)",
+          "Cable Kickback – Bent Leg – Tempo Slow (4x17)",
+          "Crunch Machine – Tempo Slow – Paused – Neutral Grip – Partial ROM (4x17)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 3,
+    "goal": "hybrid",
+    "experience": "beginner",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "full",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (3x6)",
+          "Machine Chest Press – Selectorized (3x10)",
+          "Lat Pulldown – Close Grip – Tempo Slow (3x10)",
+          "Seated Leg Curl Machine – Paused (3x10)",
+          "Smith Machine Hip Thrust – Low Angle (3x10)",
+          "Lateral Raise – Dumbbell – High Angle (3x10)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Hack Squat Machine (3x6)",
+          "Machine Chest Press – Plate Loaded (3x10)",
+          "Single Arm Lat Pulldown – Low Angle (3x10)",
+          "Seated Leg Curl Machine – Neutral Grip (3x10)",
+          "Smith Machine Hip Thrust – Tempo Slow (3x10)",
+          "Lateral Raise – Cable – Partial ROM (3x10)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Hack Squat Machine – High Angle – Neutral Grip – Tempo Slow (3x6)",
+          "Machine Chest Press – Selectorized – Neutral Grip (3x10)",
+          "Lat Pulldown – Neutral Grip – Low Angle (3x10)",
+          "Lying Leg Curl Machine – Low Angle (3x10)",
+          "Smith Machine Hip Thrust – Low Angle (3x10)",
+          "Lateral Raise – Cable – Tempo Slow (3x10)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 3,
+    "goal": "hybrid",
+    "experience": "beginner",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "full",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (3x7)",
+          "Lat Pulldown – Close Grip – Tempo Slow (3x12)",
+          "Machine Chest Press – Selectorized (3x12)",
+          "Seated Leg Curl Machine – Paused (3x12)",
+          "Smith Machine Hip Thrust – Low Angle (3x12)",
+          "Lateral Raise – Dumbbell – High Angle (3x12)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Hack Squat Machine (3x7)",
+          "Single Arm Lat Pulldown – Low Angle (3x12)",
+          "Machine Chest Press – Plate Loaded (3x12)",
+          "Seated Leg Curl Machine – Neutral Grip (3x12)",
+          "Smith Machine Hip Thrust – Tempo Slow (3x12)",
+          "Lateral Raise – Cable – Partial ROM (3x12)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Hack Squat Machine – High Angle – Neutral Grip – Tempo Slow (3x7)",
+          "Lat Pulldown – Neutral Grip – Low Angle (3x12)",
+          "Machine Chest Press – Selectorized – Neutral Grip (3x12)",
+          "Lying Leg Curl Machine – Low Angle (3x12)",
+          "Smith Machine Hip Thrust – Low Angle (3x12)",
+          "Lateral Raise – Cable – Tempo Slow (3x12)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 3,
+    "goal": "hybrid",
+    "experience": "intermediate",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "full",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (4x6)",
+          "Cable Fly – High to Low – Neutral Grip (4x10)",
+          "Dual Cable Lat Pulldown (4x10)",
+          "Lateral Raise – Dumbbell – High Angle (4x10)",
+          "Dumbbell Hip Thrust – Partial ROM – Paused (4x10)",
+          "Cable Kickback – Bent Leg – Tempo Slow – High Angle (4x10)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Hack Squat Machine (4x6)",
+          "Cable Fly – High to Low (4x10)",
+          "Dual Cable Lat Pulldown – Paused (4x10)",
+          "Lateral Raise – Cable – Partial ROM (4x10)",
+          "Dumbbell Hip Thrust – Partial ROM – Partial ROM (4x10)",
+          "Cable Kickback – Straight Leg – Paused (4x10)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Hack Squat Machine – High Angle – Neutral Grip – Tempo Slow (4x6)",
+          "Cable Fly – Mid – Paused – Neutral Grip (4x10)",
+          "Dual Cable Lat Pulldown – Low Angle (4x10)",
+          "Lateral Raise – Cable – Tempo Slow (4x10)",
+          "Dumbbell Hip Thrust – Low Angle (4x10)",
+          "Cable Kickback – Bent Leg – Tempo Slow (4x10)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 3,
+    "goal": "hybrid",
+    "experience": "intermediate",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "full",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (4x7)",
+          "Dual Cable Lat Pulldown (4x12)",
+          "Cable Fly – High to Low – Neutral Grip (4x12)",
+          "Cable Kickback – Bent Leg – Tempo Slow – High Angle (4x12)",
+          "Dumbbell Hip Thrust – Partial ROM – Paused (4x12)",
+          "Lateral Raise – Dumbbell – High Angle (4x12)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Hack Squat Machine (4x7)",
+          "Dual Cable Lat Pulldown – Paused (4x12)",
+          "Cable Fly – High to Low (4x12)",
+          "Cable Kickback – Straight Leg – Paused (4x12)",
+          "Dumbbell Hip Thrust – Partial ROM – Partial ROM (4x12)",
+          "Lateral Raise – Cable – Partial ROM (4x12)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Hack Squat Machine – High Angle – Neutral Grip – Tempo Slow (4x7)",
+          "Dual Cable Lat Pulldown – Low Angle (4x12)",
+          "Cable Fly – Mid – Paused – Neutral Grip (4x12)",
+          "Cable Kickback – Bent Leg – Tempo Slow (4x12)",
+          "Dumbbell Hip Thrust – Low Angle (4x12)",
+          "Lateral Raise – Cable – Tempo Slow (4x12)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 3,
+    "goal": "hybrid",
+    "experience": "advanced",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "full",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Paused (4x6)",
+          "Hack Squat Machine – High Angle – High Angle (4x6)",
+          "Lat Pulldown – Close Grip – Tempo Slow (4x10)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (4x6)",
+          "Lateral Raise – Dumbbell – High Angle (4x10)",
+          "Seated Leg Curl Machine – Paused (4x10)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Tempo Slow (4x6)",
+          "Hack Squat Machine (4x6)",
+          "Single Arm Lat Pulldown – Low Angle (4x10)",
+          "Barbell Hip Thrust – Tempo Slow (4x6)",
+          "Lateral Raise – Cable – Partial ROM (4x10)",
+          "Seated Leg Curl Machine – Neutral Grip (4x10)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Barbell Bench Press – Close Grip – High Angle – Tempo Slow – Low Angle (4x6)",
+          "Hack Squat Machine – High Angle – Neutral Grip – Tempo Slow (4x6)",
+          "Lat Pulldown – Neutral Grip – Low Angle (4x10)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (4x6)",
+          "Lateral Raise – Cable – Tempo Slow (4x10)",
+          "Lying Leg Curl Machine – Low Angle (4x10)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 3,
+    "goal": "hybrid",
+    "experience": "advanced",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "full",
+        "list": [
+          "Barbell Back Squat (4x7)",
+          "Barbell Bench Press – Medium Grip – Paused (4x7)",
+          "Lat Pulldown – Close Grip – Tempo Slow (4x12)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (4x7)",
+          "Cable Kickback – Bent Leg – Tempo Slow – High Angle (4x12)",
+          "Lateral Raise – Dumbbell – High Angle (4x12)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (4x7)",
+          "Barbell Bench Press – Medium Grip – Tempo Slow (4x7)",
+          "Single Arm Lat Pulldown – Low Angle (4x12)",
+          "Barbell Hip Thrust – Tempo Slow (4x7)",
+          "Cable Kickback – Straight Leg – Paused (4x12)",
+          "Lateral Raise – Cable – Partial ROM (4x12)"
+        ]
+      },
+      {
+        "day": "full",
+        "list": [
+          "Hack Squat Machine (4x7)",
+          "Barbell Bench Press – Close Grip – High Angle – Tempo Slow – Low Angle (4x7)",
+          "Lat Pulldown – Neutral Grip – Low Angle (4x12)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (4x7)",
+          "Cable Kickback – Bent Leg – Tempo Slow (4x12)",
+          "Lateral Raise – Cable – Tempo Slow (4x12)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 4,
+    "goal": "hypertrophy",
+    "experience": "beginner",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "upper",
+        "list": [
+          "Machine Chest Press – Selectorized (3x10)",
+          "Lat Pulldown – Close Grip – Tempo Slow (3x10)",
+          "Machine Row – Iso Lateral – Low Angle (3x10)",
+          "Lateral Raise – Dumbbell – High Angle (3x10)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (3x10)",
+          "Smith Machine Hip Thrust – Low Angle (3x10)",
+          "Seated Leg Curl Machine – Paused (3x10)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Machine Chest Press – Plate Loaded (3x10)",
+          "Single Arm Lat Pulldown – Low Angle (3x10)",
+          "Machine Row – Iso Lateral (3x10)",
+          "Lateral Raise – Cable – Partial ROM (3x10)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine (3x10)",
+          "Smith Machine Hip Thrust – Tempo Slow (3x10)",
+          "Seated Leg Curl Machine – Neutral Grip (3x10)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 4,
+    "goal": "hypertrophy",
+    "experience": "beginner",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "upper",
+        "list": [
+          "Lat Pulldown – Close Grip – Tempo Slow (3x12)",
+          "Machine Chest Press – Selectorized (3x12)",
+          "Machine Row – Iso Lateral – Low Angle (3x11)",
+          "Lateral Raise – Dumbbell – High Angle (3x12)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (3x11)",
+          "Smith Machine Hip Thrust – Low Angle (3x12)",
+          "Seated Leg Curl Machine – Paused (3x12)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Single Arm Lat Pulldown – Low Angle (3x12)",
+          "Machine Chest Press – Plate Loaded (3x12)",
+          "Machine Row – Iso Lateral (3x11)",
+          "Lateral Raise – Cable – Partial ROM (3x12)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine (3x11)",
+          "Smith Machine Hip Thrust – Tempo Slow (3x12)",
+          "Seated Leg Curl Machine – Neutral Grip (3x12)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 4,
+    "goal": "hypertrophy",
+    "experience": "intermediate",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "upper",
+        "list": [
+          "Cable Fly – High to Low – Neutral Grip (4x10)",
+          "Dual Cable Lat Pulldown (4x10)",
+          "Seated Cable Row – Close Grip – Partial ROM (4x10)",
+          "Lateral Raise – Dumbbell – High Angle (4x10)",
+          "Cable Curl – Straight Bar – Paused (4x10)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (4x10)",
+          "Dumbbell Hip Thrust – Partial ROM – Paused (4x10)",
+          "Cable Kickback – Bent Leg – Tempo Slow – High Angle (4x10)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Cable Fly – High to Low (4x10)",
+          "Dual Cable Lat Pulldown – Paused (4x10)",
+          "Seated Cable Row – Close Grip – High Angle (4x10)",
+          "Lateral Raise – Cable – Partial ROM (4x10)",
+          "Cable Curl – Rope (4x10)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine (4x10)",
+          "Dumbbell Hip Thrust – Partial ROM – Partial ROM (4x10)",
+          "Cable Kickback – Straight Leg – Paused (4x10)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 4,
+    "goal": "hypertrophy",
+    "experience": "intermediate",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "upper",
+        "list": [
+          "Dual Cable Lat Pulldown (4x12)",
+          "Cable Fly – High to Low – Neutral Grip (4x12)",
+          "Seated Cable Row – Close Grip – Partial ROM (4x11)",
+          "Lateral Raise – Dumbbell – High Angle (4x12)",
+          "Dumbbell Shoulder Press – Neutral Grip – Paused (4x12)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (4x11)",
+          "Dumbbell Hip Thrust – Partial ROM – Paused (4x12)",
+          "Cable Kickback – Bent Leg – Tempo Slow – High Angle (4x12)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Dual Cable Lat Pulldown – Paused (4x12)",
+          "Cable Fly – High to Low (4x12)",
+          "Seated Cable Row – Close Grip – High Angle (4x11)",
+          "Lateral Raise – Cable – Partial ROM (4x12)",
+          "Dumbbell Shoulder Press – Neutral Grip (4x12)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine (4x11)",
+          "Dumbbell Hip Thrust – Partial ROM – Partial ROM (4x12)",
+          "Cable Kickback – Straight Leg – Paused (4x12)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 4,
+    "goal": "hypertrophy",
+    "experience": "advanced",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "upper",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Paused (4x8)",
+          "Lat Pulldown – Close Grip – Tempo Slow (5x12)",
+          "T-Bar Row – Paused (4x8)",
+          "Lateral Raise – Dumbbell – High Angle (5x12)",
+          "Barbell Curl – Straight Bar – Paused (4x8)",
+          "Dumbbell Shoulder Press – Neutral Grip – Paused (5x12)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (4x8)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (4x8)",
+          "Seated Leg Curl Machine – Paused (5x12)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Tempo Slow (4x8)",
+          "Single Arm Lat Pulldown – Low Angle (5x12)",
+          "T-Bar Row – Paused – Neutral Grip (4x8)",
+          "Lateral Raise – Cable – Partial ROM (5x12)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Neutral Grip (4x8)",
+          "Dumbbell Shoulder Press – Neutral Grip (5x12)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine (4x8)",
+          "Barbell Hip Thrust – Tempo Slow (4x8)",
+          "Seated Leg Curl Machine – Neutral Grip (5x12)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 4,
+    "goal": "hypertrophy",
+    "experience": "advanced",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "upper",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Paused (4x9)",
+          "Lat Pulldown – Close Grip – Tempo Slow (5x14)",
+          "T-Bar Row – Paused (4x9)",
+          "Lateral Raise – Dumbbell – High Angle (5x14)",
+          "Barbell Overhead Press – Paused (4x9)",
+          "Rear Delt Fly – Machine – Neutral Grip (5x14)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (4x9)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (4x9)",
+          "Cable Kickback – Bent Leg – Tempo Slow – High Angle (5x14)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Tempo Slow (4x9)",
+          "Single Arm Lat Pulldown – Low Angle (5x14)",
+          "T-Bar Row – Paused – Neutral Grip (4x9)",
+          "Lateral Raise – Cable – Partial ROM (5x14)",
+          "Barbell Overhead Press – Low Angle (4x9)",
+          "Rear Delt Fly – Machine – High Angle (5x14)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine (4x9)",
+          "Barbell Hip Thrust – Tempo Slow (4x9)",
+          "Cable Kickback – Straight Leg – Paused (5x14)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 4,
+    "goal": "strength",
+    "experience": "beginner",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "upper",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Paused (3x5)",
+          "T-Bar Row – Paused (3x5)",
+          "Barbell Curl – Straight Bar – Paused (3x5)",
+          "Barbell Overhead Press – Paused (3x5)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Barbell Back Squat (3x5)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (3x5)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Tempo Slow (3x5)",
+          "T-Bar Row – Paused – Neutral Grip (3x5)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Neutral Grip (3x5)",
+          "Barbell Overhead Press – Low Angle (3x5)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Barbell Hip Thrust – Tempo Slow (3x5)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 4,
+    "goal": "strength",
+    "experience": "beginner",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "upper",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Paused (3x6)",
+          "T-Bar Row – Paused (3x6)",
+          "Barbell Curl – Straight Bar – Paused (3x6)",
+          "Barbell Overhead Press – Paused (3x6)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Barbell Back Squat (3x6)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (3x6)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Tempo Slow (3x6)",
+          "T-Bar Row – Paused – Neutral Grip (3x6)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Neutral Grip (3x6)",
+          "Barbell Overhead Press – Low Angle (3x6)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Barbell Hip Thrust – Tempo Slow (3x6)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 4,
+    "goal": "strength",
+    "experience": "intermediate",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "upper",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Paused (4x5)",
+          "T-Bar Row – Paused (4x5)",
+          "Barbell Curl – Straight Bar – Paused (4x5)",
+          "Barbell Overhead Press – Paused (4x5)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Barbell Back Squat (4x5)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (4x5)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Tempo Slow (4x5)",
+          "T-Bar Row – Paused – Neutral Grip (4x5)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Neutral Grip (4x5)",
+          "Barbell Overhead Press – Low Angle (4x5)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Barbell Hip Thrust – Tempo Slow (4x5)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 4,
+    "goal": "strength",
+    "experience": "intermediate",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "upper",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Paused (4x6)",
+          "T-Bar Row – Paused (4x6)",
+          "Barbell Curl – Straight Bar – Paused (4x6)",
+          "Barbell Overhead Press – Paused (4x6)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Barbell Back Squat (4x6)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (4x6)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Tempo Slow (4x6)",
+          "T-Bar Row – Paused – Neutral Grip (4x6)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Neutral Grip (4x6)",
+          "Barbell Overhead Press – Low Angle (4x6)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Barbell Hip Thrust – Tempo Slow (4x6)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 4,
+    "goal": "strength",
+    "experience": "advanced",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "upper",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Paused (5x3)",
+          "T-Bar Row – Paused (5x3)",
+          "Barbell Curl – Straight Bar – Paused (5x3)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Neutral Grip (5x3)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Partial ROM (5x3)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Barbell Back Squat (5x3)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (5x3)",
+          "Barbell Hip Thrust – Tempo Slow (5x3)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Tempo Slow (5x3)",
+          "T-Bar Row – Paused – Neutral Grip (5x3)",
+          "Barbell Curl – Straight Bar – Neutral Grip (5x3)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Low Angle (5x3)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Neutral Grip (5x3)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (5x3)",
+          "Barbell Hip Thrust (5x3)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 4,
+    "goal": "strength",
+    "experience": "advanced",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "upper",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Paused (5x4)",
+          "T-Bar Row – Paused (5x4)",
+          "Barbell Curl – Straight Bar – Paused (5x4)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Neutral Grip (5x4)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Partial ROM (5x4)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Barbell Back Squat (5x4)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (5x4)",
+          "Barbell Hip Thrust – Tempo Slow (5x4)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Tempo Slow (5x4)",
+          "T-Bar Row – Paused – Neutral Grip (5x4)",
+          "Barbell Curl – Straight Bar – Neutral Grip (5x4)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Low Angle (5x4)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Neutral Grip (5x4)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (5x4)",
+          "Barbell Hip Thrust (5x4)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 4,
+    "goal": "fatloss",
+    "experience": "beginner",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "upper",
+        "list": [
+          "Lat Pulldown – Close Grip – Tempo Slow (3x12)",
+          "Smith Machine Incline Bench Press – Partial ROM (3x12)",
+          "Machine Row – Iso Lateral – Low Angle (3x12)",
+          "Cable Curl – Straight Bar – Paused (3x12)",
+          "Machine Shoulder Press – Tempo Slow (3x12)",
+          "Rear Delt Fly – Machine – Neutral Grip (3x12)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (3x12)",
+          "Smith Machine Hip Thrust – Low Angle (3x12)",
+          "Seated Leg Curl Machine – Paused (3x12)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Single Arm Lat Pulldown – Low Angle (3x12)",
+          "Smith Machine Incline Bench Press – High Angle – Neutral Grip (3x12)",
+          "Machine Row – Iso Lateral (3x12)",
+          "Cable Curl – Rope (3x12)",
+          "Machine Shoulder Press – Tempo Slow – Low Angle – Partial ROM (3x12)",
+          "Rear Delt Fly – Machine – High Angle (3x12)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine (3x12)",
+          "Smith Machine Hip Thrust – Tempo Slow (3x12)",
+          "Seated Leg Curl Machine – Neutral Grip (3x12)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 4,
+    "goal": "fatloss",
+    "experience": "beginner",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "upper",
+        "list": [
+          "Lat Pulldown – Close Grip – Tempo Slow (3x14)",
+          "Smith Machine Incline Bench Press – Partial ROM (3x13)",
+          "Machine Row – Iso Lateral – Low Angle (3x13)",
+          "Rear Delt Fly – Machine – Neutral Grip (3x14)",
+          "Machine Shoulder Press – Tempo Slow (3x14)",
+          "Dumbbell Curl – Supinated – Tempo Slow – Low Angle (3x14)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (3x13)",
+          "Smith Machine Hip Thrust – Low Angle (3x14)",
+          "Cable Kickback – Bent Leg – Tempo Slow – High Angle (3x14)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Single Arm Lat Pulldown – Low Angle (3x14)",
+          "Smith Machine Incline Bench Press – High Angle – Neutral Grip (3x13)",
+          "Machine Row – Iso Lateral (3x13)",
+          "Rear Delt Fly – Machine – High Angle (3x14)",
+          "Machine Shoulder Press – Tempo Slow – Low Angle – Partial ROM (3x14)",
+          "Incline Dumbbell Curl – Neutral Grip – Tempo Slow – Tempo Slow (3x14)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine (3x13)",
+          "Smith Machine Hip Thrust – Tempo Slow (3x14)",
+          "Cable Kickback – Straight Leg – Paused (3x14)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 4,
+    "goal": "fatloss",
+    "experience": "intermediate",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "upper",
+        "list": [
+          "Dual Cable Lat Pulldown (4x12)",
+          "Cable Fly – High to Low – Neutral Grip (4x12)",
+          "Seated Cable Row – Close Grip – Partial ROM (4x12)",
+          "Cable Curl – Straight Bar – Paused (4x12)",
+          "Dumbbell Overhead Extension – Low Angle (4x12)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (4x12)",
+          "Dumbbell Hip Thrust – Partial ROM – Paused (4x12)",
+          "Cable Kickback – Bent Leg – Tempo Slow – High Angle (4x12)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Dual Cable Lat Pulldown – Paused (4x12)",
+          "Cable Fly – High to Low (4x12)",
+          "Seated Cable Row – Close Grip – High Angle (4x12)",
+          "Cable Curl – Rope (4x12)",
+          "Dumbbell Overhead Extension (4x12)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine (4x12)",
+          "Dumbbell Hip Thrust – Partial ROM – Partial ROM (4x12)",
+          "Cable Kickback – Straight Leg – Paused (4x12)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 4,
+    "goal": "fatloss",
+    "experience": "intermediate",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "upper",
+        "list": [
+          "Dual Cable Lat Pulldown (4x14)",
+          "Cable Fly – High to Low – Neutral Grip (4x14)",
+          "Seated Cable Row – Close Grip – Partial ROM (4x13)",
+          "Lateral Raise – Dumbbell – High Angle (4x14)",
+          "Dumbbell Overhead Extension – Low Angle (4x14)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (4x13)",
+          "Dumbbell Hip Thrust – Partial ROM – Paused (4x14)",
+          "Cable Kickback – Bent Leg – Tempo Slow – High Angle (4x14)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Dual Cable Lat Pulldown – Paused (4x14)",
+          "Cable Fly – High to Low (4x14)",
+          "Seated Cable Row – Close Grip – High Angle (4x13)",
+          "Lateral Raise – Cable – Partial ROM (4x14)",
+          "Dumbbell Overhead Extension (4x14)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine (4x13)",
+          "Dumbbell Hip Thrust – Partial ROM – Partial ROM (4x14)",
+          "Cable Kickback – Straight Leg – Paused (4x14)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 4,
+    "goal": "fatloss",
+    "experience": "advanced",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "upper",
+        "list": [
+          "Lat Pulldown – Close Grip – Tempo Slow (4x15)",
+          "Barbell Bench Press – Medium Grip – Paused (4x15)",
+          "T-Bar Row – Paused (4x15)",
+          "Cable Curl – Straight Bar – Paused (4x15)",
+          "Barbell Overhead Press – Paused (4x15)",
+          "Rear Delt Fly – Machine – Neutral Grip (4x15)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (4x15)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (4x15)",
+          "Cable Kickback – Bent Leg – Tempo Slow – High Angle (4x15)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Single Arm Lat Pulldown – Low Angle (4x15)",
+          "Barbell Bench Press – Medium Grip – Tempo Slow (4x15)",
+          "T-Bar Row – Paused – Neutral Grip (4x15)",
+          "Cable Curl – Rope (4x15)",
+          "Barbell Overhead Press – Low Angle (4x15)",
+          "Rear Delt Fly – Machine – High Angle (4x15)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine (4x15)",
+          "Barbell Hip Thrust – Tempo Slow (4x15)",
+          "Cable Kickback – Straight Leg – Paused (4x15)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 4,
+    "goal": "fatloss",
+    "experience": "advanced",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "upper",
+        "list": [
+          "Lat Pulldown – Close Grip – Tempo Slow (4x17)",
+          "Barbell Bench Press – Medium Grip – Paused (4x16)",
+          "T-Bar Row – Paused (4x16)",
+          "Lateral Raise – Dumbbell – High Angle (4x17)",
+          "Barbell Overhead Press – Paused (4x16)",
+          "Rear Delt Fly – Machine – Neutral Grip (4x17)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (4x16)",
+          "Hack Squat Machine – High Angle – High Angle (4x16)",
+          "Cable Kickback – Bent Leg – Tempo Slow – High Angle (4x17)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Single Arm Lat Pulldown – Low Angle (4x17)",
+          "Barbell Bench Press – Medium Grip – Tempo Slow (4x16)",
+          "T-Bar Row – Paused – Neutral Grip (4x16)",
+          "Lateral Raise – Cable – Partial ROM (4x17)",
+          "Barbell Overhead Press – Low Angle (4x16)",
+          "Rear Delt Fly – Machine – High Angle (4x17)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Barbell Hip Thrust – Tempo Slow (4x16)",
+          "Hack Squat Machine (4x16)",
+          "Cable Kickback – Straight Leg – Paused (4x17)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 4,
+    "goal": "hybrid",
+    "experience": "beginner",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "upper",
+        "list": [
+          "Machine Chest Press – Selectorized (3x10)",
+          "Lat Pulldown – Close Grip – Tempo Slow (3x10)",
+          "Machine Row – Iso Lateral – Low Angle (3x6)",
+          "Lateral Raise – Dumbbell – High Angle (3x10)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (3x6)",
+          "Smith Machine Hip Thrust – Low Angle (3x10)",
+          "Seated Leg Curl Machine – Paused (3x10)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Machine Chest Press – Plate Loaded (3x10)",
+          "Single Arm Lat Pulldown – Low Angle (3x10)",
+          "Machine Row – Iso Lateral (3x6)",
+          "Lateral Raise – Cable – Partial ROM (3x10)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine (3x6)",
+          "Smith Machine Hip Thrust – Tempo Slow (3x10)",
+          "Seated Leg Curl Machine – Neutral Grip (3x10)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 4,
+    "goal": "hybrid",
+    "experience": "beginner",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "upper",
+        "list": [
+          "Lat Pulldown – Close Grip – Tempo Slow (3x12)",
+          "Machine Chest Press – Selectorized (3x12)",
+          "Machine Row – Iso Lateral – Low Angle (3x7)",
+          "Lateral Raise – Dumbbell – High Angle (3x12)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (3x7)",
+          "Smith Machine Hip Thrust – Low Angle (3x12)",
+          "Seated Leg Curl Machine – Paused (3x12)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Single Arm Lat Pulldown – Low Angle (3x12)",
+          "Machine Chest Press – Plate Loaded (3x12)",
+          "Machine Row – Iso Lateral (3x7)",
+          "Lateral Raise – Cable – Partial ROM (3x12)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine (3x7)",
+          "Smith Machine Hip Thrust – Tempo Slow (3x12)",
+          "Seated Leg Curl Machine – Neutral Grip (3x12)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 4,
+    "goal": "hybrid",
+    "experience": "intermediate",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "upper",
+        "list": [
+          "Cable Fly – High to Low – Neutral Grip (4x10)",
+          "Dual Cable Lat Pulldown (4x10)",
+          "Seated Cable Row – Close Grip – Partial ROM (4x6)",
+          "Lateral Raise – Dumbbell – High Angle (4x10)",
+          "Cable Curl – Straight Bar – Paused (4x10)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (4x6)",
+          "Dumbbell Hip Thrust – Partial ROM – Paused (4x10)",
+          "Cable Kickback – Bent Leg – Tempo Slow – High Angle (4x10)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Cable Fly – High to Low (4x10)",
+          "Dual Cable Lat Pulldown – Paused (4x10)",
+          "Seated Cable Row – Close Grip – High Angle (4x6)",
+          "Lateral Raise – Cable – Partial ROM (4x10)",
+          "Cable Curl – Rope (4x10)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine (4x6)",
+          "Dumbbell Hip Thrust – Partial ROM – Partial ROM (4x10)",
+          "Cable Kickback – Straight Leg – Paused (4x10)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 4,
+    "goal": "hybrid",
+    "experience": "intermediate",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "upper",
+        "list": [
+          "Dual Cable Lat Pulldown (4x12)",
+          "Cable Fly – High to Low – Neutral Grip (4x12)",
+          "Seated Cable Row – Close Grip – Partial ROM (4x7)",
+          "Lateral Raise – Dumbbell – High Angle (4x12)",
+          "Dumbbell Shoulder Press – Neutral Grip – Paused (4x12)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (4x7)",
+          "Dumbbell Hip Thrust – Partial ROM – Paused (4x12)",
+          "Cable Kickback – Bent Leg – Tempo Slow – High Angle (4x12)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Dual Cable Lat Pulldown – Paused (4x12)",
+          "Cable Fly – High to Low (4x12)",
+          "Seated Cable Row – Close Grip – High Angle (4x7)",
+          "Lateral Raise – Cable – Partial ROM (4x12)",
+          "Dumbbell Shoulder Press – Neutral Grip (4x12)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine (4x7)",
+          "Dumbbell Hip Thrust – Partial ROM – Partial ROM (4x12)",
+          "Cable Kickback – Straight Leg – Paused (4x12)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 4,
+    "goal": "hybrid",
+    "experience": "advanced",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "upper",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Paused (4x6)",
+          "Lat Pulldown – Close Grip – Tempo Slow (4x10)",
+          "T-Bar Row – Paused (4x6)",
+          "Lateral Raise – Dumbbell – High Angle (4x10)",
+          "Barbell Curl – Straight Bar – Paused (4x6)",
+          "Dumbbell Shoulder Press – Neutral Grip – Paused (4x10)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (4x6)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (4x6)",
+          "Seated Leg Curl Machine – Paused (4x10)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Tempo Slow (4x6)",
+          "Single Arm Lat Pulldown – Low Angle (4x10)",
+          "T-Bar Row – Paused – Neutral Grip (4x6)",
+          "Lateral Raise – Cable – Partial ROM (4x10)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Neutral Grip (4x6)",
+          "Dumbbell Shoulder Press – Neutral Grip (4x10)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine (4x6)",
+          "Barbell Hip Thrust – Tempo Slow (4x6)",
+          "Seated Leg Curl Machine – Neutral Grip (4x10)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 4,
+    "goal": "hybrid",
+    "experience": "advanced",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "upper",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Paused (4x7)",
+          "Lat Pulldown – Close Grip – Tempo Slow (4x12)",
+          "T-Bar Row – Paused (4x7)",
+          "Lateral Raise – Dumbbell – High Angle (4x12)",
+          "Barbell Overhead Press – Paused (4x7)",
+          "Rear Delt Fly – Machine – Neutral Grip (4x12)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (4x7)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (4x7)",
+          "Cable Kickback – Bent Leg – Tempo Slow – High Angle (4x12)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Tempo Slow (4x7)",
+          "Single Arm Lat Pulldown – Low Angle (4x12)",
+          "T-Bar Row – Paused – Neutral Grip (4x7)",
+          "Lateral Raise – Cable – Partial ROM (4x12)",
+          "Barbell Overhead Press – Low Angle (4x7)",
+          "Rear Delt Fly – Machine – High Angle (4x12)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine (4x7)",
+          "Barbell Hip Thrust – Tempo Slow (4x7)",
+          "Cable Kickback – Straight Leg – Paused (4x12)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 5,
+    "goal": "hypertrophy",
+    "experience": "beginner",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension – Low Angle (3x10)",
+          "Machine Chest Press – Selectorized (3x10)",
+          "Lateral Raise – Dumbbell – High Angle (3x10)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "Lat Pulldown – Close Grip – Tempo Slow (3x10)",
+          "Machine Row – Iso Lateral – Low Angle (3x10)",
+          "Cable Curl – Straight Bar – Paused (3x10)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Paused – Tempo Slow (3x10)",
+          "Smith Machine Hip Thrust – Low Angle (3x10)",
+          "Seated Leg Curl Machine – Paused (3x10)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Machine Chest Press – Plate Loaded (3x10)",
+          "Single Arm Lat Pulldown – Low Angle (3x10)",
+          "Machine Row – Iso Lateral (3x10)",
+          "Lateral Raise – Cable – Partial ROM (3x10)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (3x10)",
+          "Smith Machine Hip Thrust – Tempo Slow (3x10)",
+          "Seated Leg Curl Machine – Neutral Grip (3x10)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 5,
+    "goal": "hypertrophy",
+    "experience": "beginner",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension – Low Angle (3x12)",
+          "Machine Chest Press – Selectorized (3x12)",
+          "Lateral Raise – Dumbbell – High Angle (3x12)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "Lat Pulldown – Close Grip – Tempo Slow (3x12)",
+          "Machine Row – Iso Lateral – Low Angle (3x11)",
+          "Cable Curl – Straight Bar – Paused (3x12)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Paused – Tempo Slow (3x11)",
+          "Smith Machine Hip Thrust – Low Angle (3x12)",
+          "Seated Leg Curl Machine – Paused (3x12)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Single Arm Lat Pulldown – Low Angle (3x12)",
+          "Machine Chest Press – Plate Loaded (3x12)",
+          "Machine Row – Iso Lateral (3x11)",
+          "Lateral Raise – Cable – Partial ROM (3x12)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (3x11)",
+          "Smith Machine Hip Thrust – Tempo Slow (3x12)",
+          "Seated Leg Curl Machine – Neutral Grip (3x12)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 5,
+    "goal": "hypertrophy",
+    "experience": "intermediate",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension – Low Angle (4x10)",
+          "Decline Dumbbell Bench Press – Low Angle (4x10)",
+          "Lateral Raise – Dumbbell – High Angle (4x10)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "Dual Cable Lat Pulldown (4x10)",
+          "Seated Cable Row – Close Grip – Partial ROM (4x10)",
+          "Cable Curl – Straight Bar – Paused (4x10)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Paused – Tempo Slow (4x10)",
+          "Dumbbell Hip Thrust – Partial ROM – Paused (4x10)",
+          "Cable Kickback – Bent Leg – Tempo Slow – High Angle (4x10)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Cable Fly – High to Low – Neutral Grip (4x10)",
+          "Dual Cable Lat Pulldown – Paused (4x10)",
+          "Seated Cable Row – Close Grip – High Angle (4x10)",
+          "Lateral Raise – Cable – Partial ROM (4x10)",
+          "Cable Curl – Rope (4x10)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (4x10)",
+          "Dumbbell Hip Thrust – Partial ROM – Partial ROM (4x10)",
+          "Cable Kickback – Straight Leg – Paused (4x10)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 5,
+    "goal": "hypertrophy",
+    "experience": "intermediate",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension – Low Angle (4x12)",
+          "Decline Dumbbell Bench Press – Low Angle (4x11)",
+          "Lateral Raise – Dumbbell – High Angle (4x12)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "Dual Cable Lat Pulldown (4x12)",
+          "Seated Cable Row – Close Grip – Partial ROM (4x11)",
+          "Cable Curl – Straight Bar – Paused (4x12)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Paused – Tempo Slow (4x11)",
+          "Dumbbell Hip Thrust – Partial ROM – Paused (4x12)",
+          "Cable Kickback – Bent Leg – Tempo Slow – High Angle (4x12)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Dual Cable Lat Pulldown – Paused (4x12)",
+          "Cable Fly – High to Low – Neutral Grip (4x12)",
+          "Seated Cable Row – Close Grip – High Angle (4x11)",
+          "Lateral Raise – Cable – Partial ROM (4x12)",
+          "Dumbbell Shoulder Press – Neutral Grip – Paused (4x12)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (4x11)",
+          "Dumbbell Hip Thrust – Partial ROM – Partial ROM (4x12)",
+          "Cable Kickback – Straight Leg – Paused (4x12)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 5,
+    "goal": "hypertrophy",
+    "experience": "advanced",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension – Low Angle (5x12)",
+          "Barbell Bench Press – Medium Grip – Paused (4x8)",
+          "Lateral Raise – Dumbbell – High Angle (5x12)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "T-Bar Row – Paused (4x8)",
+          "Lat Pulldown – Close Grip – Tempo Slow (5x12)",
+          "Cable Curl – Straight Bar – Paused (5x12)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Paused – Tempo Slow (4x8)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (4x8)",
+          "Seated Leg Curl Machine – Paused (5x12)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Tempo Slow (4x8)",
+          "Single Arm Lat Pulldown – Low Angle (5x12)",
+          "T-Bar Row – Paused – Neutral Grip (4x8)",
+          "Lateral Raise – Cable – Partial ROM (5x12)",
+          "Barbell Curl – Straight Bar – Paused (4x8)",
+          "Dumbbell Shoulder Press – Neutral Grip – Paused (5x12)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (4x8)",
+          "Barbell Hip Thrust – Tempo Slow (4x8)",
+          "Seated Leg Curl Machine – Neutral Grip (5x12)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 5,
+    "goal": "hypertrophy",
+    "experience": "advanced",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension – Low Angle (5x14)",
+          "Barbell Bench Press – Medium Grip – Paused (4x9)",
+          "Lateral Raise – Dumbbell – High Angle (5x14)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "T-Bar Row – Paused (4x9)",
+          "Lat Pulldown – Close Grip – Tempo Slow (5x14)",
+          "Dumbbell Curl – Supinated – Tempo Slow – Low Angle (5x14)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Paused – Tempo Slow (4x9)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (4x9)",
+          "Cable Kickback – Bent Leg – Tempo Slow – High Angle (5x14)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Tempo Slow (4x9)",
+          "Single Arm Lat Pulldown – Low Angle (5x14)",
+          "T-Bar Row – Paused – Neutral Grip (4x9)",
+          "Lateral Raise – Cable – Partial ROM (5x14)",
+          "Barbell Overhead Press – Paused (4x9)",
+          "Rear Delt Fly – Machine – Neutral Grip (5x14)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (4x9)",
+          "Barbell Hip Thrust – Tempo Slow (4x9)",
+          "Cable Kickback – Straight Leg – Paused (5x14)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 5,
+    "goal": "strength",
+    "experience": "beginner",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Paused (3x5)",
+          "Barbell Overhead Press – Paused (3x5)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "T-Bar Row – Paused (3x5)",
+          "Barbell Curl – Straight Bar – Paused (3x5)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Barbell Back Squat (3x5)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (3x5)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Tempo Slow (3x5)",
+          "T-Bar Row – Paused – Neutral Grip (3x5)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Neutral Grip (3x5)",
+          "Barbell Overhead Press – Low Angle (3x5)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Barbell Hip Thrust – Tempo Slow (3x5)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 5,
+    "goal": "strength",
+    "experience": "beginner",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Paused (3x6)",
+          "Barbell Overhead Press – Paused (3x6)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "T-Bar Row – Paused (3x6)",
+          "Barbell Curl – Straight Bar – Paused (3x6)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Barbell Back Squat (3x6)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (3x6)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Tempo Slow (3x6)",
+          "T-Bar Row – Paused – Neutral Grip (3x6)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Neutral Grip (3x6)",
+          "Barbell Overhead Press – Low Angle (3x6)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Barbell Hip Thrust – Tempo Slow (3x6)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 5,
+    "goal": "strength",
+    "experience": "intermediate",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Paused (4x5)",
+          "Barbell Overhead Press – Paused (4x5)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "T-Bar Row – Paused (4x5)",
+          "Barbell Curl – Straight Bar – Paused (4x5)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Barbell Back Squat (4x5)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (4x5)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Tempo Slow (4x5)",
+          "T-Bar Row – Paused – Neutral Grip (4x5)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Neutral Grip (4x5)",
+          "Barbell Overhead Press – Low Angle (4x5)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Barbell Hip Thrust – Tempo Slow (4x5)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 5,
+    "goal": "strength",
+    "experience": "intermediate",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Paused (4x6)",
+          "Barbell Overhead Press – Paused (4x6)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "T-Bar Row – Paused (4x6)",
+          "Barbell Curl – Straight Bar – Paused (4x6)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Barbell Back Squat (4x6)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (4x6)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Tempo Slow (4x6)",
+          "T-Bar Row – Paused – Neutral Grip (4x6)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Neutral Grip (4x6)",
+          "Barbell Overhead Press – Low Angle (4x6)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Barbell Hip Thrust – Tempo Slow (4x6)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 5,
+    "goal": "strength",
+    "experience": "advanced",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Paused (5x3)",
+          "Barbell Overhead Press – Paused (5x3)",
+          "Barbell Bench Press – Medium Grip – Tempo Slow (5x3)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "T-Bar Row – Paused (5x3)",
+          "Barbell Curl – Straight Bar – Paused (5x3)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Neutral Grip (5x3)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Partial ROM (5x3)",
+          "T-Bar Row – Paused – Neutral Grip (5x3)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Barbell Back Squat (5x3)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (5x3)",
+          "Barbell Hip Thrust – Tempo Slow (5x3)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Barbell Bench Press – Close Grip – High Angle – Tempo Slow – Low Angle (5x3)",
+          "T-Bar Row (5x3)",
+          "Barbell Curl – Straight Bar – Neutral Grip (5x3)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Low Angle (5x3)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Neutral Grip (5x3)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (5x3)",
+          "Barbell Hip Thrust (5x3)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 5,
+    "goal": "strength",
+    "experience": "advanced",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Paused (5x4)",
+          "Barbell Overhead Press – Paused (5x4)",
+          "Barbell Bench Press – Medium Grip – Tempo Slow (5x4)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "T-Bar Row – Paused (5x4)",
+          "Barbell Curl – Straight Bar – Paused (5x4)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Neutral Grip (5x4)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Partial ROM (5x4)",
+          "T-Bar Row – Paused – Neutral Grip (5x4)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Barbell Back Squat (5x4)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (5x4)",
+          "Barbell Hip Thrust – Tempo Slow (5x4)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Barbell Bench Press – Close Grip – High Angle – Tempo Slow – Low Angle (5x4)",
+          "T-Bar Row (5x4)",
+          "Barbell Curl – Straight Bar – Neutral Grip (5x4)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Low Angle (5x4)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Neutral Grip (5x4)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (5x4)",
+          "Barbell Hip Thrust (5x4)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 5,
+    "goal": "fatloss",
+    "experience": "beginner",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension – Low Angle (3x12)",
+          "Machine Chest Press – Selectorized (3x12)",
+          "Lateral Raise – Dumbbell – High Angle (3x12)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "Lat Pulldown – Close Grip – Tempo Slow (3x12)",
+          "Machine Row – Iso Lateral – Low Angle (3x12)",
+          "Cable Curl – Straight Bar – Paused (3x12)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Paused – Tempo Slow (3x12)",
+          "Smith Machine Hip Thrust – Low Angle (3x12)",
+          "Seated Leg Curl Machine – Paused (3x12)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Single Arm Lat Pulldown – Low Angle (3x12)",
+          "Smith Machine Incline Bench Press – Partial ROM (3x12)",
+          "Machine Row – Iso Lateral (3x12)",
+          "Cable Curl – Rope (3x12)",
+          "Machine Shoulder Press – Tempo Slow (3x12)",
+          "Rear Delt Fly – Machine – Neutral Grip (3x12)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (3x12)",
+          "Smith Machine Hip Thrust – Tempo Slow (3x12)",
+          "Seated Leg Curl Machine – Neutral Grip (3x12)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 5,
+    "goal": "fatloss",
+    "experience": "beginner",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension – Low Angle (3x14)",
+          "Machine Chest Press – Selectorized (3x14)",
+          "Lateral Raise – Dumbbell – High Angle (3x14)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "Lat Pulldown – Close Grip – Tempo Slow (3x14)",
+          "Machine Row – Iso Lateral – Low Angle (3x13)",
+          "Dumbbell Curl – Supinated – Tempo Slow – Low Angle (3x14)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Paused – Tempo Slow (3x13)",
+          "Smith Machine Hip Thrust – Low Angle (3x14)",
+          "Cable Kickback – Bent Leg – Tempo Slow – High Angle (3x14)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Single Arm Lat Pulldown – Low Angle (3x14)",
+          "Smith Machine Incline Bench Press – Partial ROM (3x13)",
+          "Machine Row – Iso Lateral (3x13)",
+          "Rear Delt Fly – Machine – Neutral Grip (3x14)",
+          "Machine Shoulder Press – Tempo Slow (3x14)",
+          "Incline Dumbbell Curl – Neutral Grip – Tempo Slow – Tempo Slow (3x14)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (3x13)",
+          "Smith Machine Hip Thrust – Tempo Slow (3x14)",
+          "Cable Kickback – Straight Leg – Paused (3x14)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 5,
+    "goal": "fatloss",
+    "experience": "intermediate",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension – Low Angle (4x12)",
+          "Decline Dumbbell Bench Press – Low Angle (4x12)",
+          "Lateral Raise – Dumbbell – High Angle (4x12)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "Dual Cable Lat Pulldown (4x12)",
+          "Seated Cable Row – Close Grip – Partial ROM (4x12)",
+          "Cable Curl – Straight Bar – Paused (4x12)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Paused – Tempo Slow (4x12)",
+          "Dumbbell Hip Thrust – Partial ROM – Paused (4x12)",
+          "Cable Kickback – Bent Leg – Tempo Slow – High Angle (4x12)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Dual Cable Lat Pulldown – Paused (4x12)",
+          "Cable Fly – High to Low – Neutral Grip (4x12)",
+          "Seated Cable Row – Close Grip – High Angle (4x12)",
+          "Cable Curl – Rope (4x12)",
+          "Dumbbell Overhead Extension (4x12)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (4x12)",
+          "Dumbbell Hip Thrust – Partial ROM – Partial ROM (4x12)",
+          "Cable Kickback – Straight Leg – Paused (4x12)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 5,
+    "goal": "fatloss",
+    "experience": "intermediate",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension – Low Angle (4x14)",
+          "Decline Dumbbell Bench Press – Low Angle (4x13)",
+          "Lateral Raise – Dumbbell – High Angle (4x14)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "Dual Cable Lat Pulldown (4x14)",
+          "Seated Cable Row – Close Grip – Partial ROM (4x13)",
+          "Dumbbell Curl – Supinated – Tempo Slow – Low Angle (4x14)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Paused – Tempo Slow (4x13)",
+          "Dumbbell Hip Thrust – Partial ROM – Paused (4x14)",
+          "Cable Kickback – Bent Leg – Tempo Slow – High Angle (4x14)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Dual Cable Lat Pulldown – Paused (4x14)",
+          "Cable Fly – High to Low – Neutral Grip (4x14)",
+          "Seated Cable Row – Close Grip – High Angle (4x13)",
+          "Lateral Raise – Cable – Partial ROM (4x14)",
+          "Dumbbell Overhead Extension (4x14)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (4x13)",
+          "Dumbbell Hip Thrust – Partial ROM – Partial ROM (4x14)",
+          "Cable Kickback – Straight Leg – Paused (4x14)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 5,
+    "goal": "fatloss",
+    "experience": "advanced",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension – Low Angle (4x15)",
+          "Barbell Bench Press – Medium Grip – Paused (4x15)",
+          "Lateral Raise – Dumbbell – High Angle (4x15)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "T-Bar Row – Paused (4x15)",
+          "Lat Pulldown – Close Grip – Tempo Slow (4x15)",
+          "Cable Curl – Straight Bar – Paused (4x15)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Paused – Tempo Slow (4x15)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (4x15)",
+          "Cable Kickback – Bent Leg – Tempo Slow – High Angle (4x15)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Single Arm Lat Pulldown – Low Angle (4x15)",
+          "Barbell Bench Press – Medium Grip – Tempo Slow (4x15)",
+          "T-Bar Row – Paused – Neutral Grip (4x15)",
+          "Cable Curl – Rope (4x15)",
+          "Barbell Overhead Press – Paused (4x15)",
+          "Rear Delt Fly – Machine – Neutral Grip (4x15)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (4x15)",
+          "Barbell Hip Thrust – Tempo Slow (4x15)",
+          "Cable Kickback – Straight Leg – Paused (4x15)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 5,
+    "goal": "fatloss",
+    "experience": "advanced",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension – Low Angle (4x17)",
+          "Barbell Bench Press – Medium Grip – Paused (4x16)",
+          "Lateral Raise – Dumbbell – High Angle (4x17)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "T-Bar Row – Paused (4x16)",
+          "Lat Pulldown – Close Grip – Tempo Slow (4x17)",
+          "Dumbbell Curl – Supinated – Tempo Slow – Low Angle (4x17)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Paused – Tempo Slow (4x16)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (4x16)",
+          "Cable Kickback – Bent Leg – Tempo Slow – High Angle (4x17)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Single Arm Lat Pulldown – Low Angle (4x17)",
+          "Barbell Bench Press – Medium Grip – Tempo Slow (4x16)",
+          "T-Bar Row – Paused – Neutral Grip (4x16)",
+          "Lateral Raise – Cable – Partial ROM (4x17)",
+          "Barbell Overhead Press – Paused (4x16)",
+          "Rear Delt Fly – Machine – Neutral Grip (4x17)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Barbell Hip Thrust – Tempo Slow (4x16)",
+          "Hack Squat Machine – High Angle – High Angle (4x16)",
+          "Cable Kickback – Straight Leg – Paused (4x17)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 5,
+    "goal": "hybrid",
+    "experience": "beginner",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension – Low Angle (3x10)",
+          "Machine Chest Press – Selectorized (3x10)",
+          "Lateral Raise – Dumbbell – High Angle (3x10)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "Lat Pulldown – Close Grip – Tempo Slow (3x10)",
+          "Machine Row – Iso Lateral – Low Angle (3x6)",
+          "Cable Curl – Straight Bar – Paused (3x10)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Paused – Tempo Slow (3x6)",
+          "Smith Machine Hip Thrust – Low Angle (3x10)",
+          "Seated Leg Curl Machine – Paused (3x10)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Machine Chest Press – Plate Loaded (3x10)",
+          "Single Arm Lat Pulldown – Low Angle (3x10)",
+          "Machine Row – Iso Lateral (3x6)",
+          "Lateral Raise – Cable – Partial ROM (3x10)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (3x6)",
+          "Smith Machine Hip Thrust – Tempo Slow (3x10)",
+          "Seated Leg Curl Machine – Neutral Grip (3x10)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 5,
+    "goal": "hybrid",
+    "experience": "beginner",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension – Low Angle (3x12)",
+          "Machine Chest Press – Selectorized (3x12)",
+          "Lateral Raise – Dumbbell – High Angle (3x12)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "Lat Pulldown – Close Grip – Tempo Slow (3x12)",
+          "Machine Row – Iso Lateral – Low Angle (3x7)",
+          "Cable Curl – Straight Bar – Paused (3x12)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Paused – Tempo Slow (3x7)",
+          "Smith Machine Hip Thrust – Low Angle (3x12)",
+          "Seated Leg Curl Machine – Paused (3x12)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Single Arm Lat Pulldown – Low Angle (3x12)",
+          "Machine Chest Press – Plate Loaded (3x12)",
+          "Machine Row – Iso Lateral (3x7)",
+          "Lateral Raise – Cable – Partial ROM (3x12)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (3x7)",
+          "Smith Machine Hip Thrust – Tempo Slow (3x12)",
+          "Seated Leg Curl Machine – Neutral Grip (3x12)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 5,
+    "goal": "hybrid",
+    "experience": "intermediate",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension – Low Angle (4x10)",
+          "Decline Dumbbell Bench Press – Low Angle (4x6)",
+          "Lateral Raise – Dumbbell – High Angle (4x10)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "Dual Cable Lat Pulldown (4x10)",
+          "Seated Cable Row – Close Grip – Partial ROM (4x6)",
+          "Cable Curl – Straight Bar – Paused (4x10)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Paused – Tempo Slow (4x6)",
+          "Dumbbell Hip Thrust – Partial ROM – Paused (4x10)",
+          "Cable Kickback – Bent Leg – Tempo Slow – High Angle (4x10)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Cable Fly – High to Low – Neutral Grip (4x10)",
+          "Dual Cable Lat Pulldown – Paused (4x10)",
+          "Seated Cable Row – Close Grip – High Angle (4x6)",
+          "Lateral Raise – Cable – Partial ROM (4x10)",
+          "Cable Curl – Rope (4x10)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (4x6)",
+          "Dumbbell Hip Thrust – Partial ROM – Partial ROM (4x10)",
+          "Cable Kickback – Straight Leg – Paused (4x10)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 5,
+    "goal": "hybrid",
+    "experience": "intermediate",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension – Low Angle (4x12)",
+          "Decline Dumbbell Bench Press – Low Angle (4x7)",
+          "Lateral Raise – Dumbbell – High Angle (4x12)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "Dual Cable Lat Pulldown (4x12)",
+          "Seated Cable Row – Close Grip – Partial ROM (4x7)",
+          "Cable Curl – Straight Bar – Paused (4x12)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Paused – Tempo Slow (4x7)",
+          "Dumbbell Hip Thrust – Partial ROM – Paused (4x12)",
+          "Cable Kickback – Bent Leg – Tempo Slow – High Angle (4x12)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Dual Cable Lat Pulldown – Paused (4x12)",
+          "Cable Fly – High to Low – Neutral Grip (4x12)",
+          "Seated Cable Row – Close Grip – High Angle (4x7)",
+          "Lateral Raise – Cable – Partial ROM (4x12)",
+          "Dumbbell Shoulder Press – Neutral Grip – Paused (4x12)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (4x7)",
+          "Dumbbell Hip Thrust – Partial ROM – Partial ROM (4x12)",
+          "Cable Kickback – Straight Leg – Paused (4x12)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 5,
+    "goal": "hybrid",
+    "experience": "advanced",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension – Low Angle (4x10)",
+          "Barbell Bench Press – Medium Grip – Paused (4x6)",
+          "Lateral Raise – Dumbbell – High Angle (4x10)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "T-Bar Row – Paused (4x6)",
+          "Lat Pulldown – Close Grip – Tempo Slow (4x10)",
+          "Cable Curl – Straight Bar – Paused (4x10)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Paused – Tempo Slow (4x6)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (4x6)",
+          "Seated Leg Curl Machine – Paused (4x10)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Tempo Slow (4x6)",
+          "Single Arm Lat Pulldown – Low Angle (4x10)",
+          "T-Bar Row – Paused – Neutral Grip (4x6)",
+          "Lateral Raise – Cable – Partial ROM (4x10)",
+          "Barbell Curl – Straight Bar – Paused (4x6)",
+          "Dumbbell Shoulder Press – Neutral Grip – Paused (4x10)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (4x6)",
+          "Barbell Hip Thrust – Tempo Slow (4x6)",
+          "Seated Leg Curl Machine – Neutral Grip (4x10)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 5,
+    "goal": "hybrid",
+    "experience": "advanced",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension – Low Angle (4x12)",
+          "Barbell Bench Press – Medium Grip – Paused (4x7)",
+          "Lateral Raise – Dumbbell – High Angle (4x12)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "T-Bar Row – Paused (4x7)",
+          "Lat Pulldown – Close Grip – Tempo Slow (4x12)",
+          "Dumbbell Curl – Supinated – Tempo Slow – Low Angle (4x12)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Paused – Tempo Slow (4x7)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (4x7)",
+          "Cable Kickback – Bent Leg – Tempo Slow – High Angle (4x12)"
+        ]
+      },
+      {
+        "day": "upper",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Tempo Slow (4x7)",
+          "Single Arm Lat Pulldown – Low Angle (4x12)",
+          "T-Bar Row – Paused – Neutral Grip (4x7)",
+          "Lateral Raise – Cable – Partial ROM (4x12)",
+          "Barbell Overhead Press – Paused (4x7)",
+          "Rear Delt Fly – Machine – Neutral Grip (4x12)"
+        ]
+      },
+      {
+        "day": "lower",
+        "list": [
+          "Hack Squat Machine – High Angle – High Angle (4x7)",
+          "Barbell Hip Thrust – Tempo Slow (4x7)",
+          "Cable Kickback – Straight Leg – Paused (4x12)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 6,
+    "goal": "hypertrophy",
+    "experience": "beginner",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension – Low Angle (3x10)",
+          "Machine Chest Press – Selectorized (3x10)",
+          "Lateral Raise – Dumbbell – High Angle (3x10)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "Lat Pulldown – Close Grip – Tempo Slow (3x10)",
+          "Machine Row – Iso Lateral – Low Angle (3x10)",
+          "Cable Curl – Straight Bar – Paused (3x10)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Paused – Tempo Slow (3x10)",
+          "Smith Machine Hip Thrust – Low Angle (3x10)",
+          "Seated Leg Curl Machine – Paused (3x10)"
+        ]
+      },
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension (3x10)",
+          "Machine Chest Press – Plate Loaded (3x10)",
+          "Lateral Raise – Cable – Partial ROM (3x10)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "Single Arm Lat Pulldown – Low Angle (3x10)",
+          "Machine Row – Iso Lateral (3x10)",
+          "Cable Curl – Rope (3x10)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Partial ROM (3x10)",
+          "Smith Machine Hip Thrust – Tempo Slow (3x10)",
+          "Seated Leg Curl Machine – Neutral Grip (3x10)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 6,
+    "goal": "hypertrophy",
+    "experience": "beginner",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension – Low Angle (3x12)",
+          "Machine Chest Press – Selectorized (3x12)",
+          "Lateral Raise – Dumbbell – High Angle (3x12)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "Lat Pulldown – Close Grip – Tempo Slow (3x12)",
+          "Machine Row – Iso Lateral – Low Angle (3x11)",
+          "Cable Curl – Straight Bar – Paused (3x12)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Paused – Tempo Slow (3x11)",
+          "Smith Machine Hip Thrust – Low Angle (3x12)",
+          "Seated Leg Curl Machine – Paused (3x12)"
+        ]
+      },
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension (3x12)",
+          "Machine Chest Press – Plate Loaded (3x12)",
+          "Lateral Raise – Cable – Partial ROM (3x12)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "Single Arm Lat Pulldown – Low Angle (3x12)",
+          "Machine Row – Iso Lateral (3x11)",
+          "Cable Curl – Rope (3x12)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Partial ROM (3x11)",
+          "Smith Machine Hip Thrust – Tempo Slow (3x12)",
+          "Seated Leg Curl Machine – Neutral Grip (3x12)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 6,
+    "goal": "hypertrophy",
+    "experience": "intermediate",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension – Low Angle (4x10)",
+          "Decline Dumbbell Bench Press – Low Angle (4x10)",
+          "Lateral Raise – Dumbbell – High Angle (4x10)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "Dual Cable Lat Pulldown (4x10)",
+          "Seated Cable Row – Close Grip – Partial ROM (4x10)",
+          "Cable Curl – Straight Bar – Paused (4x10)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Paused – Tempo Slow (4x10)",
+          "Dumbbell Hip Thrust – Partial ROM – Paused (4x10)",
+          "Cable Kickback – Bent Leg – Tempo Slow – High Angle (4x10)"
+        ]
+      },
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension (4x10)",
+          "Decline Dumbbell Bench Press (4x10)",
+          "Lateral Raise – Cable – Partial ROM (4x10)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "Dual Cable Lat Pulldown – Paused (4x10)",
+          "Seated Cable Row – Close Grip – High Angle (4x10)",
+          "Cable Curl – Rope (4x10)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Partial ROM (4x10)",
+          "Dumbbell Hip Thrust – Partial ROM – Partial ROM (4x10)",
+          "Cable Kickback – Straight Leg – Paused (4x10)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 6,
+    "goal": "hypertrophy",
+    "experience": "intermediate",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension – Low Angle (4x12)",
+          "Decline Dumbbell Bench Press – Low Angle (4x11)",
+          "Lateral Raise – Dumbbell – High Angle (4x12)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "Dual Cable Lat Pulldown (4x12)",
+          "Seated Cable Row – Close Grip – Partial ROM (4x11)",
+          "Cable Curl – Straight Bar – Paused (4x12)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Paused – Tempo Slow (4x11)",
+          "Dumbbell Hip Thrust – Partial ROM – Paused (4x12)",
+          "Cable Kickback – Bent Leg – Tempo Slow – High Angle (4x12)"
+        ]
+      },
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension (4x12)",
+          "Decline Dumbbell Bench Press (4x11)",
+          "Lateral Raise – Cable – Partial ROM (4x12)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "Dual Cable Lat Pulldown – Paused (4x12)",
+          "Seated Cable Row – Close Grip – High Angle (4x11)",
+          "Cable Curl – Rope (4x12)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Partial ROM (4x11)",
+          "Dumbbell Hip Thrust – Partial ROM – Partial ROM (4x12)",
+          "Cable Kickback – Straight Leg – Paused (4x12)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 6,
+    "goal": "hypertrophy",
+    "experience": "advanced",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension – Low Angle (5x12)",
+          "Barbell Bench Press – Medium Grip – Paused (4x8)",
+          "Lateral Raise – Dumbbell – High Angle (5x12)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "T-Bar Row – Paused (4x8)",
+          "Lat Pulldown – Close Grip – Tempo Slow (5x12)",
+          "Cable Curl – Straight Bar – Paused (5x12)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Paused – Tempo Slow (4x8)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (4x8)",
+          "Seated Leg Curl Machine – Paused (5x12)"
+        ]
+      },
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension (5x12)",
+          "Barbell Bench Press – Medium Grip – Tempo Slow (4x8)",
+          "Lateral Raise – Cable – Partial ROM (5x12)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "T-Bar Row – Paused – Neutral Grip (4x8)",
+          "Single Arm Lat Pulldown – Low Angle (5x12)",
+          "Cable Curl – Rope (5x12)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Partial ROM (4x8)",
+          "Barbell Hip Thrust – Tempo Slow (4x8)",
+          "Seated Leg Curl Machine – Neutral Grip (5x12)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 6,
+    "goal": "hypertrophy",
+    "experience": "advanced",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension – Low Angle (5x14)",
+          "Barbell Bench Press – Medium Grip – Paused (4x9)",
+          "Lateral Raise – Dumbbell – High Angle (5x14)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "T-Bar Row – Paused (4x9)",
+          "Lat Pulldown – Close Grip – Tempo Slow (5x14)",
+          "Dumbbell Curl – Supinated – Tempo Slow – Low Angle (5x14)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Paused – Tempo Slow (4x9)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (4x9)",
+          "Cable Kickback – Bent Leg – Tempo Slow – High Angle (5x14)"
+        ]
+      },
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension (5x14)",
+          "Barbell Bench Press – Medium Grip – Tempo Slow (4x9)",
+          "Lateral Raise – Cable – Partial ROM (5x14)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "T-Bar Row – Paused – Neutral Grip (4x9)",
+          "Single Arm Lat Pulldown – Low Angle (5x14)",
+          "Incline Dumbbell Curl – Neutral Grip – Tempo Slow – Tempo Slow (5x14)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Partial ROM (4x9)",
+          "Barbell Hip Thrust – Tempo Slow (4x9)",
+          "Cable Kickback – Straight Leg – Paused (5x14)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 6,
+    "goal": "strength",
+    "experience": "beginner",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Paused (3x5)",
+          "Barbell Overhead Press – Paused (3x5)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "T-Bar Row – Paused (3x5)",
+          "Barbell Curl – Straight Bar – Paused (3x5)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Barbell Back Squat (3x5)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (3x5)"
+        ]
+      },
+      {
+        "day": "push",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Tempo Slow (3x5)",
+          "Barbell Overhead Press – Low Angle (3x5)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "T-Bar Row – Paused – Neutral Grip (3x5)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Neutral Grip (3x5)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Barbell Hip Thrust – Tempo Slow (3x5)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 6,
+    "goal": "strength",
+    "experience": "beginner",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Paused (3x6)",
+          "Barbell Overhead Press – Paused (3x6)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "T-Bar Row – Paused (3x6)",
+          "Barbell Curl – Straight Bar – Paused (3x6)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Barbell Back Squat (3x6)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (3x6)"
+        ]
+      },
+      {
+        "day": "push",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Tempo Slow (3x6)",
+          "Barbell Overhead Press – Low Angle (3x6)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "T-Bar Row – Paused – Neutral Grip (3x6)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Neutral Grip (3x6)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Barbell Hip Thrust – Tempo Slow (3x6)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 6,
+    "goal": "strength",
+    "experience": "intermediate",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Paused (4x5)",
+          "Barbell Overhead Press – Paused (4x5)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "T-Bar Row – Paused (4x5)",
+          "Barbell Curl – Straight Bar – Paused (4x5)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Barbell Back Squat (4x5)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (4x5)"
+        ]
+      },
+      {
+        "day": "push",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Tempo Slow (4x5)",
+          "Barbell Overhead Press – Low Angle (4x5)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "T-Bar Row – Paused – Neutral Grip (4x5)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Neutral Grip (4x5)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Barbell Hip Thrust – Tempo Slow (4x5)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 6,
+    "goal": "strength",
+    "experience": "intermediate",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Paused (4x6)",
+          "Barbell Overhead Press – Paused (4x6)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "T-Bar Row – Paused (4x6)",
+          "Barbell Curl – Straight Bar – Paused (4x6)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Barbell Back Squat (4x6)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (4x6)"
+        ]
+      },
+      {
+        "day": "push",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Tempo Slow (4x6)",
+          "Barbell Overhead Press – Low Angle (4x6)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "T-Bar Row – Paused – Neutral Grip (4x6)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Neutral Grip (4x6)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Barbell Hip Thrust – Tempo Slow (4x6)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 6,
+    "goal": "strength",
+    "experience": "advanced",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Paused (5x3)",
+          "Barbell Overhead Press – Paused (5x3)",
+          "Barbell Bench Press – Medium Grip – Tempo Slow (5x3)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "T-Bar Row – Paused (5x3)",
+          "Barbell Curl – Straight Bar – Paused (5x3)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Neutral Grip (5x3)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Partial ROM (5x3)",
+          "T-Bar Row – Paused – Neutral Grip (5x3)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Barbell Back Squat (5x3)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (5x3)",
+          "Barbell Hip Thrust – Tempo Slow (5x3)"
+        ]
+      },
+      {
+        "day": "push",
+        "list": [
+          "Barbell Bench Press – Close Grip – High Angle – Tempo Slow – Low Angle (5x3)",
+          "Barbell Overhead Press – Low Angle (5x3)",
+          "Barbell Bench Press – Wide Grip – Paused (5x3)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "T-Bar Row (5x3)",
+          "Barbell Curl – Straight Bar – Neutral Grip (5x3)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Low Angle (5x3)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Neutral Grip (5x3)",
+          "Pendlay Row (5x3)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (5x3)",
+          "Barbell Hip Thrust (5x3)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 6,
+    "goal": "strength",
+    "experience": "advanced",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Barbell Bench Press – Medium Grip – Paused (5x4)",
+          "Barbell Overhead Press – Paused (5x4)",
+          "Barbell Bench Press – Medium Grip – Tempo Slow (5x4)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "T-Bar Row – Paused (5x4)",
+          "Barbell Curl – Straight Bar – Paused (5x4)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Neutral Grip (5x4)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Partial ROM (5x4)",
+          "T-Bar Row – Paused – Neutral Grip (5x4)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Barbell Back Squat (5x4)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (5x4)",
+          "Barbell Hip Thrust – Tempo Slow (5x4)"
+        ]
+      },
+      {
+        "day": "push",
+        "list": [
+          "Barbell Bench Press – Close Grip – High Angle – Tempo Slow – Low Angle (5x4)",
+          "Barbell Overhead Press – Low Angle (5x4)",
+          "Barbell Bench Press – Wide Grip – Paused (5x4)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "T-Bar Row (5x4)",
+          "Barbell Curl – Straight Bar – Neutral Grip (5x4)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Low Angle (5x4)",
+          "Barbell Curl – Straight Bar – Neutral Grip – Neutral Grip (5x4)",
+          "Pendlay Row (5x4)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (5x4)",
+          "Barbell Hip Thrust (5x4)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 6,
+    "goal": "fatloss",
+    "experience": "beginner",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension – Low Angle (3x12)",
+          "Machine Chest Press – Selectorized (3x12)",
+          "Lateral Raise – Dumbbell – High Angle (3x12)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "Lat Pulldown – Close Grip – Tempo Slow (3x12)",
+          "Machine Row – Iso Lateral – Low Angle (3x12)",
+          "Cable Curl – Straight Bar – Paused (3x12)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Paused – Tempo Slow (3x12)",
+          "Smith Machine Hip Thrust – Low Angle (3x12)",
+          "Seated Leg Curl Machine – Paused (3x12)"
+        ]
+      },
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension (3x12)",
+          "Machine Chest Press – Plate Loaded (3x12)",
+          "Lateral Raise – Cable – Partial ROM (3x12)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "Single Arm Lat Pulldown – Low Angle (3x12)",
+          "Machine Row – Iso Lateral (3x12)",
+          "Cable Curl – Rope (3x12)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Partial ROM (3x12)",
+          "Smith Machine Hip Thrust – Tempo Slow (3x12)",
+          "Seated Leg Curl Machine – Neutral Grip (3x12)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 6,
+    "goal": "fatloss",
+    "experience": "beginner",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension – Low Angle (3x14)",
+          "Machine Chest Press – Selectorized (3x14)",
+          "Lateral Raise – Dumbbell – High Angle (3x14)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "Lat Pulldown – Close Grip – Tempo Slow (3x14)",
+          "Machine Row – Iso Lateral – Low Angle (3x13)",
+          "Dumbbell Curl – Supinated – Tempo Slow – Low Angle (3x14)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Paused – Tempo Slow (3x13)",
+          "Smith Machine Hip Thrust – Low Angle (3x14)",
+          "Cable Kickback – Bent Leg – Tempo Slow – High Angle (3x14)"
+        ]
+      },
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension (3x14)",
+          "Machine Chest Press – Plate Loaded (3x14)",
+          "Lateral Raise – Cable – Partial ROM (3x14)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "Single Arm Lat Pulldown – Low Angle (3x14)",
+          "Machine Row – Iso Lateral (3x13)",
+          "Incline Dumbbell Curl – Neutral Grip – Tempo Slow – Tempo Slow (3x14)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Partial ROM (3x13)",
+          "Smith Machine Hip Thrust – Tempo Slow (3x14)",
+          "Cable Kickback – Straight Leg – Paused (3x14)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 6,
+    "goal": "fatloss",
+    "experience": "intermediate",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension – Low Angle (4x12)",
+          "Decline Dumbbell Bench Press – Low Angle (4x12)",
+          "Lateral Raise – Dumbbell – High Angle (4x12)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "Dual Cable Lat Pulldown (4x12)",
+          "Seated Cable Row – Close Grip – Partial ROM (4x12)",
+          "Cable Curl – Straight Bar – Paused (4x12)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Paused – Tempo Slow (4x12)",
+          "Dumbbell Hip Thrust – Partial ROM – Paused (4x12)",
+          "Cable Kickback – Bent Leg – Tempo Slow – High Angle (4x12)"
+        ]
+      },
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension (4x12)",
+          "Decline Dumbbell Bench Press (4x12)",
+          "Lateral Raise – Cable – Partial ROM (4x12)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "Dual Cable Lat Pulldown – Paused (4x12)",
+          "Seated Cable Row – Close Grip – High Angle (4x12)",
+          "Cable Curl – Rope (4x12)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Partial ROM (4x12)",
+          "Dumbbell Hip Thrust – Partial ROM – Partial ROM (4x12)",
+          "Cable Kickback – Straight Leg – Paused (4x12)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 6,
+    "goal": "fatloss",
+    "experience": "intermediate",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension – Low Angle (4x14)",
+          "Decline Dumbbell Bench Press – Low Angle (4x13)",
+          "Lateral Raise – Dumbbell – High Angle (4x14)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "Dual Cable Lat Pulldown (4x14)",
+          "Seated Cable Row – Close Grip – Partial ROM (4x13)",
+          "Dumbbell Curl – Supinated – Tempo Slow – Low Angle (4x14)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Paused – Tempo Slow (4x13)",
+          "Dumbbell Hip Thrust – Partial ROM – Paused (4x14)",
+          "Cable Kickback – Bent Leg – Tempo Slow – High Angle (4x14)"
+        ]
+      },
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension (4x14)",
+          "Decline Dumbbell Bench Press (4x13)",
+          "Lateral Raise – Cable – Partial ROM (4x14)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "Dual Cable Lat Pulldown – Paused (4x14)",
+          "Seated Cable Row – Close Grip – High Angle (4x13)",
+          "Incline Dumbbell Curl – Neutral Grip – Tempo Slow – Tempo Slow (4x14)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Partial ROM (4x13)",
+          "Dumbbell Hip Thrust – Partial ROM – Partial ROM (4x14)",
+          "Cable Kickback – Straight Leg – Paused (4x14)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 6,
+    "goal": "fatloss",
+    "experience": "advanced",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension – Low Angle (4x15)",
+          "Barbell Bench Press – Medium Grip – Paused (4x15)",
+          "Lateral Raise – Dumbbell – High Angle (4x15)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "T-Bar Row – Paused (4x15)",
+          "Lat Pulldown – Close Grip – Tempo Slow (4x15)",
+          "Cable Curl – Straight Bar – Paused (4x15)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Paused – Tempo Slow (4x15)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (4x15)",
+          "Cable Kickback – Bent Leg – Tempo Slow – High Angle (4x15)"
+        ]
+      },
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension (4x15)",
+          "Barbell Bench Press – Medium Grip – Tempo Slow (4x15)",
+          "Lateral Raise – Cable – Partial ROM (4x15)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "T-Bar Row – Paused – Neutral Grip (4x15)",
+          "Single Arm Lat Pulldown – Low Angle (4x15)",
+          "Cable Curl – Rope (4x15)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Partial ROM (4x15)",
+          "Barbell Hip Thrust – Tempo Slow (4x15)",
+          "Cable Kickback – Straight Leg – Paused (4x15)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 6,
+    "goal": "fatloss",
+    "experience": "advanced",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension – Low Angle (4x17)",
+          "Barbell Bench Press – Medium Grip – Paused (4x16)",
+          "Lateral Raise – Dumbbell – High Angle (4x17)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "T-Bar Row – Paused (4x16)",
+          "Lat Pulldown – Close Grip – Tempo Slow (4x17)",
+          "Dumbbell Curl – Supinated – Tempo Slow – Low Angle (4x17)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Paused – Tempo Slow (4x16)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (4x16)",
+          "Cable Kickback – Bent Leg – Tempo Slow – High Angle (4x17)"
+        ]
+      },
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension (4x17)",
+          "Barbell Bench Press – Medium Grip – Tempo Slow (4x16)",
+          "Lateral Raise – Cable – Partial ROM (4x17)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "T-Bar Row – Paused – Neutral Grip (4x16)",
+          "Single Arm Lat Pulldown – Low Angle (4x17)",
+          "Incline Dumbbell Curl – Neutral Grip – Tempo Slow – Tempo Slow (4x17)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Partial ROM (4x16)",
+          "Barbell Hip Thrust – Tempo Slow (4x16)",
+          "Cable Kickback – Straight Leg – Paused (4x17)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 6,
+    "goal": "hybrid",
+    "experience": "beginner",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension – Low Angle (3x10)",
+          "Machine Chest Press – Selectorized (3x10)",
+          "Lateral Raise – Dumbbell – High Angle (3x10)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "Lat Pulldown – Close Grip – Tempo Slow (3x10)",
+          "Machine Row – Iso Lateral – Low Angle (3x6)",
+          "Cable Curl – Straight Bar – Paused (3x10)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Paused – Tempo Slow (3x6)",
+          "Smith Machine Hip Thrust – Low Angle (3x10)",
+          "Seated Leg Curl Machine – Paused (3x10)"
+        ]
+      },
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension (3x10)",
+          "Machine Chest Press – Plate Loaded (3x10)",
+          "Lateral Raise – Cable – Partial ROM (3x10)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "Single Arm Lat Pulldown – Low Angle (3x10)",
+          "Machine Row – Iso Lateral (3x6)",
+          "Cable Curl – Rope (3x10)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Partial ROM (3x6)",
+          "Smith Machine Hip Thrust – Tempo Slow (3x10)",
+          "Seated Leg Curl Machine – Neutral Grip (3x10)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 6,
+    "goal": "hybrid",
+    "experience": "beginner",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension – Low Angle (3x12)",
+          "Machine Chest Press – Selectorized (3x12)",
+          "Lateral Raise – Dumbbell – High Angle (3x12)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "Lat Pulldown – Close Grip – Tempo Slow (3x12)",
+          "Machine Row – Iso Lateral – Low Angle (3x7)",
+          "Cable Curl – Straight Bar – Paused (3x12)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Paused – Tempo Slow (3x7)",
+          "Smith Machine Hip Thrust – Low Angle (3x12)",
+          "Seated Leg Curl Machine – Paused (3x12)"
+        ]
+      },
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension (3x12)",
+          "Machine Chest Press – Plate Loaded (3x12)",
+          "Lateral Raise – Cable – Partial ROM (3x12)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "Single Arm Lat Pulldown – Low Angle (3x12)",
+          "Machine Row – Iso Lateral (3x7)",
+          "Cable Curl – Rope (3x12)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Partial ROM (3x7)",
+          "Smith Machine Hip Thrust – Tempo Slow (3x12)",
+          "Seated Leg Curl Machine – Neutral Grip (3x12)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 6,
+    "goal": "hybrid",
+    "experience": "intermediate",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension – Low Angle (4x10)",
+          "Decline Dumbbell Bench Press – Low Angle (4x6)",
+          "Lateral Raise – Dumbbell – High Angle (4x10)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "Dual Cable Lat Pulldown (4x10)",
+          "Seated Cable Row – Close Grip – Partial ROM (4x6)",
+          "Cable Curl – Straight Bar – Paused (4x10)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Paused – Tempo Slow (4x6)",
+          "Dumbbell Hip Thrust – Partial ROM – Paused (4x10)",
+          "Cable Kickback – Bent Leg – Tempo Slow – High Angle (4x10)"
+        ]
+      },
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension (4x10)",
+          "Decline Dumbbell Bench Press (4x6)",
+          "Lateral Raise – Cable – Partial ROM (4x10)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "Dual Cable Lat Pulldown – Paused (4x10)",
+          "Seated Cable Row – Close Grip – High Angle (4x6)",
+          "Cable Curl – Rope (4x10)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Partial ROM (4x6)",
+          "Dumbbell Hip Thrust – Partial ROM – Partial ROM (4x10)",
+          "Cable Kickback – Straight Leg – Paused (4x10)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 6,
+    "goal": "hybrid",
+    "experience": "intermediate",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension – Low Angle (4x12)",
+          "Decline Dumbbell Bench Press – Low Angle (4x7)",
+          "Lateral Raise – Dumbbell – High Angle (4x12)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "Dual Cable Lat Pulldown (4x12)",
+          "Seated Cable Row – Close Grip – Partial ROM (4x7)",
+          "Cable Curl – Straight Bar – Paused (4x12)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Paused – Tempo Slow (4x7)",
+          "Dumbbell Hip Thrust – Partial ROM – Paused (4x12)",
+          "Cable Kickback – Bent Leg – Tempo Slow – High Angle (4x12)"
+        ]
+      },
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension (4x12)",
+          "Decline Dumbbell Bench Press (4x7)",
+          "Lateral Raise – Cable – Partial ROM (4x12)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "Dual Cable Lat Pulldown – Paused (4x12)",
+          "Seated Cable Row – Close Grip – High Angle (4x7)",
+          "Cable Curl – Rope (4x12)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Partial ROM (4x7)",
+          "Dumbbell Hip Thrust – Partial ROM – Partial ROM (4x12)",
+          "Cable Kickback – Straight Leg – Paused (4x12)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 6,
+    "goal": "hybrid",
+    "experience": "advanced",
+    "gender": "male",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension – Low Angle (4x10)",
+          "Barbell Bench Press – Medium Grip – Paused (4x6)",
+          "Lateral Raise – Dumbbell – High Angle (4x10)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "T-Bar Row – Paused (4x6)",
+          "Lat Pulldown – Close Grip – Tempo Slow (4x10)",
+          "Cable Curl – Straight Bar – Paused (4x10)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Paused – Tempo Slow (4x6)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (4x6)",
+          "Seated Leg Curl Machine – Paused (4x10)"
+        ]
+      },
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension (4x10)",
+          "Barbell Bench Press – Medium Grip – Tempo Slow (4x6)",
+          "Lateral Raise – Cable – Partial ROM (4x10)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "T-Bar Row – Paused – Neutral Grip (4x6)",
+          "Single Arm Lat Pulldown – Low Angle (4x10)",
+          "Cable Curl – Rope (4x10)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Partial ROM (4x6)",
+          "Barbell Hip Thrust – Tempo Slow (4x6)",
+          "Seated Leg Curl Machine – Neutral Grip (4x10)"
+        ]
+      }
+    ]
+  },
+  {
+    "days": 6,
+    "goal": "hybrid",
+    "experience": "advanced",
+    "gender": "female",
+    "exercises": [
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension – Low Angle (4x12)",
+          "Barbell Bench Press – Medium Grip – Paused (4x7)",
+          "Lateral Raise – Dumbbell – High Angle (4x12)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "T-Bar Row – Paused (4x7)",
+          "Lat Pulldown – Close Grip – Tempo Slow (4x12)",
+          "Dumbbell Curl – Supinated – Tempo Slow – Low Angle (4x12)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Paused – Tempo Slow (4x7)",
+          "Barbell Hip Thrust – High Angle – Tempo Slow – Low Angle (4x7)",
+          "Cable Kickback – Bent Leg – Tempo Slow – High Angle (4x12)"
+        ]
+      },
+      {
+        "day": "push",
+        "list": [
+          "Dumbbell Overhead Extension (4x12)",
+          "Barbell Bench Press – Medium Grip – Tempo Slow (4x7)",
+          "Lateral Raise – Cable – Partial ROM (4x12)"
+        ]
+      },
+      {
+        "day": "pull",
+        "list": [
+          "T-Bar Row – Paused – Neutral Grip (4x7)",
+          "Single Arm Lat Pulldown – Low Angle (4x12)",
+          "Incline Dumbbell Curl – Neutral Grip – Tempo Slow – Tempo Slow (4x12)"
+        ]
+      },
+      {
+        "day": "legs",
+        "list": [
+          "Leg Press Calf Raise – Partial ROM (4x7)",
+          "Barbell Hip Thrust – Tempo Slow (4x7)",
+          "Cable Kickback – Straight Leg – Paused (4x12)"
+        ]
+      }
+    ]
+  }
+]
