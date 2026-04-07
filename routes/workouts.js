@@ -2,6 +2,19 @@ const express = require("express");
 const router = express.Router();
 const mongoose = require("mongoose");
 
+// Proactively shield against Cast to ObjectId errors
+router.param("workoutId", (req, res, next, id) => {
+  if (!mongoose.Types.ObjectId.isValid(id)) return res.status(400).json({ error: "Invalid workoutId format" });
+  next();
+});
+router.param("userId", (req, res, next, id) => {
+  if (!mongoose.Types.ObjectId.isValid(id)) return res.status(400).json({ error: "Invalid userId format" });
+  next();
+});
+router.param("exerciseId", (req, res, next, id) => {
+  if (!mongoose.Types.ObjectId.isValid(id)) return res.status(400).json({ error: "Invalid exerciseId format" });
+  next();
+});
 const WorkoutLog = require("../models/WorkoutLog");
 const User = require("../models/User");
 const Exercise = require("../models/Exercise");

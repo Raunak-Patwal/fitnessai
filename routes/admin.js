@@ -1,5 +1,7 @@
+
 const express = require("express");
 const router = express.Router();
+const mongoose = require("mongoose");
 
 const User = require("../models/User");
 const WorkoutLog = require("../models/WorkoutLog");
@@ -7,6 +9,11 @@ const Program = require("../models/Program");
 const RLWeight = require("../models/RLWeight");
 const Fatigue = require("../models/Fatigue");
 const MuscleHistory = require("../models/MuscleHistory");
+
+router.param("userId", (req, res, next, id) => {
+  if (!mongoose.Types.ObjectId.isValid(id)) return res.status(400).json({ error: "Invalid userId format" });
+  next();
+});
 
 const { generateFitnessRoutine } = require("../engine/fitnessEngine");
 

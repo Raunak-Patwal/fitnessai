@@ -62,6 +62,31 @@ function toIndianAnalysis({ program, user, fatigueMap, readiness }) {
    Returns the meta-reasoning logic for the user's latest program
 -------------------------------------------------------- */
 
+router.get("/:userId", async (req, res, next) => {
+  try {
+    const { userId } = req.params;
+    
+    // Fall through to /explain/:userId if the param is "explain"
+    if (userId === "explain") {
+      return next();
+    }
+
+    if (!require("mongoose").Types.ObjectId.isValid(userId)) {
+      return res.status(400).json({ error: "Invalid userId format" });
+    }
+
+    const program = await Program.findOne({ userId }).lean();
+    if (!program) {
+      return res.status(404).json({ error: "Program not found" });
+    }
+
+    res.json(program);
+  } catch (err) {
+    console.error("Program fetch error:", err);
+    res.status(500).json({ error: "Internal Error" });
+  }
+});
+
 router.get("/explain/:userId", async (req, res) => {
   try {
     const { userId } = req.params;

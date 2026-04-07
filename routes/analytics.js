@@ -4,6 +4,12 @@
  * 
  * Provides endpoints for frontend charting:
  * - GET /api/analytics/volume/:userId
+// routes/analytics.js
+/**
+ * Analytics API Routes
+ * 
+ * Provides endpoints for frontend charting:
+ * - GET /api/analytics/volume/:userId
  * - GET /api/analytics/strength/:userId/:exerciseId
  * - GET /api/analytics/adherence/:userId
  * - GET /api/analytics/fatigue/:userId
@@ -12,6 +18,14 @@
 
 const express = require("express");
 const router = express.Router();
+const mongoose = require("mongoose");
+
+router.param("userId", (req, res, next, id) => {
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    return res.status(400).json({ error: "Invalid userId format" });
+  }
+  next();
+});
 
 const {
   getVolumeTrend,

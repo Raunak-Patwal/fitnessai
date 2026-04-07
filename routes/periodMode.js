@@ -1,7 +1,13 @@
 const express = require("express");
 const router = express.Router();
+const mongoose = require("mongoose");
 const User = require("../models/User");
 
+// Proactively shield against Cast to ObjectId errors
+router.param("userId", (req, res, next, id) => {
+  if (!mongoose.Types.ObjectId.isValid(id)) return res.status(400).json({ error: "Invalid userId format" });
+  next();
+});
 /* --------------------------------------------------------
    TOGGLE PERIOD MODE
    POST /api/period/toggle
@@ -11,6 +17,8 @@ router.post("/toggle", async (req, res) => {
   try {
     const { userId, active } = req.body;
     if (!userId) return res.status(400).json({ error: "userId is required" });
+    if (!mongoose.Types.ObjectId.isValid(userId)) return res.status(400).json({ error: "Invalid userId format" });
+
 
     const update = {
       period_mode: Boolean(active)

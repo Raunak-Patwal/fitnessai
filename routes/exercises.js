@@ -43,6 +43,8 @@ router.post("/routine/generate", async (req, res) => {
   try {
     const { userId, goal, experience, days } = req.body;
     if (!userId) return res.status(400).json({ error: "userId required" });
+    const mongoose = require("mongoose");
+    if (!mongoose.Types.ObjectId.isValid(userId)) return res.status(400).json({ error: "Invalid userId format" });
 
     const user = await User.findById(userId).lean();
     if (!user) return res.status(404).json({ error: "User not found" });
