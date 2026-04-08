@@ -43,6 +43,11 @@ app.use("/admin", require("./routes/admin"));
 app.use("/users", require("./routes/users"));
 app.use("/period", require("./routes/periodMode"));
 
+// Swagger Docs (FastAPI Style)
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger_output.json');
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
 // Global error handler for JSON parse errors from body-parser
 app.use((err, req, res, next) => {
   // Typical JSON parse error from body-parser is a SyntaxError with status 400

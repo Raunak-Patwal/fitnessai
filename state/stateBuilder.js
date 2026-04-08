@@ -64,13 +64,33 @@ function computeFatigueState(records = [], user = {}) {
 
 /* --------------------------------------------------------
    READINESS (0–1)
+   Weighted approach: accounts for how many muscles are
+   fatigued vs total body. A single low-fatigue muscle
+   shouldn't tank overall readiness.
 -------------------------------------------------------- */
 function computeReadiness(fatigue = {}) {
   const values = Object.values(fatigue);
   if (!values.length) return 1;
 
-  const avg = values.reduce((a, b) => a + b, 0) / values.length;
-  return Math.max(0, Math.min(1, 1 - avg / 100));
+  // Filter out negligible fatigue (< 10) — effectively recovered
+  const meaningful = values.filter(v => v >= 10);
+  if (!meaningful.length) return 1;
+
+  // Average of meaningfully fatigued muscles
+  const avg = meaningful.reduce((a, b) => a + b, 0) / meaningful.length;
+  const rawReadiness = 1 - avg / 100;
+
+  // Body coverage factor: if only 1 of ~14 major muscle groups is
+  // fatigued, overall readiness should still be high.
+  // Blend raw readiness with coverage ratio.
+  const TOTAL_MAJOR_MUSCLES = 14;
+  const coverageRatio = meaningful.length / TOTAL_MAJOR_MUSCLES;
+
+  // Weighted: more fatigued muscles → raw readiness dominates
+  // Fewer fatigued muscles → score pulled towards 1.0
+  const blended = rawReadiness * coverageRatio + 1.0 * (1 - coverageRatio);
+
+  return Math.max(0, Math.min(1, blended));
 }
 
 /* --------------------------------------------------------
