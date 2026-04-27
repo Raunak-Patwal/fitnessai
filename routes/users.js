@@ -70,12 +70,10 @@ router.post('/register', async (req, res) => {
     const existing = await User.findOne({ email: email.toLowerCase().trim() });
     if (existing) return res.status(400).json({ error: 'User already exists' });
 
-    const hash = await bcrypt.hash(password, SALT_ROUNDS);
-
     const user = await User.create({
       name,
       email: email.toLowerCase().trim(),
-      password: hash,
+      password,  // pre-save hook in User model handles hashing
       goal,
       experience,
       equipment
