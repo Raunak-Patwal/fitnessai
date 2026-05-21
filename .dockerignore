@@ -1,0 +1,13 @@
+node_modules
+npm-debug.log
+.git
+.gitignore
+.env
+.mongo-data
+.mongo-log
+*.log
+tests/
+walkthrough.md
+task.md
+implementation_plan.md
+.planning/
