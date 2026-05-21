@@ -2,12 +2,7 @@
 /**
  * Analytics API Routes
  * 
- * Provides endpoints for frontend charting:
- * - GET /api/analytics/volume/:userId?
- * - GET /api/analytics/strength/:userId?/:exerciseId
- * - GET /api/analytics/adherence/:userId?
- * - GET /api/analytics/fatigue/:userId?
- * - GET /api/analytics/progress/:userId?
+ * Provides endpoints for frontend charting using standard Express 5 compatible array paths:
  */
 
 const express = require("express");
@@ -59,7 +54,7 @@ async function handleAnalytics(req, res, analyticsFn) {
  * GET /api/analytics/volume/:userId?
  * Get weekly volume trend for a muscle group
  */
-router.get("/volume/:userId?", authUnified(false), async (req, res) => {
+router.get(["/volume", "/volume/:userId"], authUnified(false), async (req, res) => {
   try {
     const userId = req.params.userId || req.userId;
     const { muscle, weeks } = req.query;
@@ -87,7 +82,7 @@ router.get("/volume/:userId?", authUnified(false), async (req, res) => {
  * GET /api/analytics/strength/:userId?/:exerciseId
  * Get strength curve for an exercise
  */
-router.get("/strength/:userId?/:exerciseId", authUnified(false), async (req, res) => {
+router.get(["/strength/:exerciseId", "/strength/:userId/:exerciseId"], authUnified(false), async (req, res) => {
   try {
     const userId = req.params.userId || req.userId;
     const { exerciseId } = req.params;
@@ -120,7 +115,7 @@ router.get("/strength/:userId?/:exerciseId", authUnified(false), async (req, res
  * GET /api/analytics/adherence/:userId?
  * Get adherence statistics
  */
-router.get("/adherence/:userId?", authUnified(false), async (req, res) => {
+router.get(["/adherence", "/adherence/:userId"], authUnified(false), async (req, res) => {
   try {
     const userId = req.params.userId || req.userId;
     const { weeks } = req.query;
@@ -148,7 +143,7 @@ router.get("/adherence/:userId?", authUnified(false), async (req, res) => {
  * GET /api/analytics/fatigue/:userId?
  * Get fatigue trend over time
  */
-router.get("/fatigue/:userId?", authUnified(false), async (req, res) => {
+router.get(["/fatigue", "/fatigue/:userId"], authUnified(false), async (req, res) => {
   try {
     const userId = req.params.userId || req.userId;
     const { weeks } = req.query;
@@ -176,7 +171,7 @@ router.get("/fatigue/:userId?", authUnified(false), async (req, res) => {
  * GET /api/analytics/progress/:userId?
  * Get progress timeline
  */
-router.get("/progress/:userId?", authUnified(false), async (req, res) => {
+router.get(["/progress", "/progress/:userId"], authUnified(false), async (req, res) => {
   try {
     const userId = req.params.userId || req.userId;
     const { weeks } = req.query;
@@ -204,7 +199,7 @@ router.get("/progress/:userId?", authUnified(false), async (req, res) => {
  * GET /api/analytics/muscles/:userId?
  * Get muscle-wise volume distribution
  */
-router.get("/muscles/:userId?", authUnified(false), async (req, res) => {
+router.get(["/muscles", "/muscles/:userId"], authUnified(false), async (req, res) => {
   try {
     const userId = req.params.userId || req.userId;
     const { weeks } = req.query;
@@ -228,15 +223,15 @@ router.get("/muscles/:userId?", authUnified(false), async (req, res) => {
   }
 });
 
-router.get("/sessions/:userId?", authUnified(false), async (req, res) => {
+router.get(["/sessions", "/sessions/:userId"], authUnified(false), async (req, res) => {
   return handleAnalytics(req, res, getSessionPerformanceTimeline);
 });
 
-router.get("/history/:userId?", authUnified(false), async (req, res) => {
+router.get(["/history", "/history/:userId"], authUnified(false), async (req, res) => {
   return handleAnalytics(req, res, getWorkoutHistory);
 });
 
-router.get("/rl/:userId?", authUnified(false), async (req, res) => {
+router.get(["/rl", "/rl/:userId"], authUnified(false), async (req, res) => {
   try {
     const userId = req.params.userId || req.userId;
     if (!userId) {
@@ -259,7 +254,7 @@ router.get("/rl/:userId?", authUnified(false), async (req, res) => {
  * GET /api/analytics/summary/:userId?
  * Get all analytics summary in one call
  */
-router.get("/summary/:userId?", authUnified(false), async (req, res) => {
+router.get(["/summary", "/summary/:userId"], authUnified(false), async (req, res) => {
   try {
     const userId = req.params.userId || req.userId;
     const { weeks } = req.query;
@@ -318,7 +313,7 @@ router.get("/summary/:userId?", authUnified(false), async (req, res) => {
  * GET /api/analytics/experience/:userId?
  * Get experience level status and progress
  */
-router.get("/experience/:userId?", authUnified(false), async (req, res) => {
+router.get(["/experience", "/experience/:userId"], authUnified(false), async (req, res) => {
   try {
     const userId = req.params.userId || req.userId;
     if (!userId) {
