@@ -6,9 +6,24 @@ const User = require("../models/User");
 const Fatigue = require("../models/Fatigue");
 const { computeFatigueState, computeReadiness } = require("../state/stateBuilder");
 
+/**
+ * Helper: toIndianAnalysis
+ * Formulates a rich, explainable report of the user's fitness state.
+ * Translates dry mathematical metrics (slopes, triggers, readiness scores) into 
+ * friendly, actionable insights in Hinglish for a premium mobile/web UX.
+ * 
+ * @param {Object} params
+ * @param {Object} params.program - The active training program document
+ * @param {Object} params.user - The user profile document
+ * @param {Object} params.fatigueMap - Computed fatigue values per muscle group
+ * @param {Number} params.readiness - Overall daily physical readiness percentage
+ * @returns {Object} Clean localized user-centric report
+ */
 function toIndianAnalysis({ program, user, fatigueMap, readiness }) {
   const latestMeta = program.latest_meta || {};
   const fatigueEntries = Object.entries(fatigueMap || {}).sort((a, b) => (Number(b[1]) || 0) - (Number(a[1]) || 0));
+  
+  // Calculate the average physical fatigue score
   const averageFatigue = fatigueEntries.length > 0
     ? fatigueEntries.reduce((sum, [, level]) => sum + (Number(level) || 0), 0) / fatigueEntries.length
     : 0;
@@ -38,7 +53,7 @@ function toIndianAnalysis({ program, user, fatigueMap, readiness }) {
         : "Abhi plateau predictor sirf tracking mode me hai. Performance aur fatigue data aur jama hoga to automatic deload trigger ho sakta hai."
     },
     mesocycle: {
-      phase: mesocycle.phase || program.mesocycle_phase || "accumulation",
+      focus: mesocycle.phase || program.mesocycle_phase || "accumulation",
       week: mesocycle.week || 1,
       totalWeeks: mesocycle.totalWeeks || 4,
       triggers: mesocycle.triggers || [],
@@ -57,17 +72,23 @@ function toIndianAnalysis({ program, user, fatigueMap, readiness }) {
   };
 }
 
-/* --------------------------------------------------------
-   EXPLAINABILITY REPORT API
-   GET /program/explain/:userId
-   Returns the meta-reasoning logic for the user's latest program
--------------------------------------------------------- */
-
+/**
+ * Route: GET /api/program/ OR GET /api/program/:userId
+ * Description: Fetches the simplified active program details for a user.
+ * 
+ * Performance & Design:
+ * 1. Resolves the latest week of the generated routine.
+ * 2. Queries completed workout logs to calculate the current sequence index.
+ * 3. Extracts and serves exactly ONE 'activeWorkout' object to prevent client-side calendar math.
+ * 4. Omits the heavy 'weeks' array (historical data) to shrink payload size by >95%.
+ * 
+ * Authentication: authUnified middleware parses Bearer token.
+ */
 router.get(["/", "/:userId"], authUnified(false), async (req, res, next) => {
   try {
     const userId = req.params.userId || req.userId;
     
-    // Fall through to /explain/:userId? if the param is "explain"
+    // Express 5 routing safety: forward parameters to next matching controller if the param is "explain"
     if (userId === "explain") {
       return next();
     }
@@ -80,12 +101,13 @@ router.get(["/", "/:userId"], authUnified(false), async (req, res, next) => {
       return res.status(400).json({ error: "Invalid userId format" });
     }
 
+    // Retrieve active program
     const program = await Program.findOne({ userId }).lean();
     if (!program) {
       return res.status(404).json({ error: "Program not found" });
     }
 
-    // Resolve the active week and current single day's workout sequentially
+    // Resolve the active week
     const latestWeek = program.weeks && program.weeks.length > 0
       ? program.weeks[program.weeks.length - 1]
       : null;
@@ -94,13 +116,17 @@ router.get(["/", "/:userId"], authUnified(false), async (req, res, next) => {
     const WorkoutLog = require("../models/WorkoutLog");
     const programStart = latestWeek?.createdAt || program.startDate || new Date();
 
+    // Query all completed logs for the current mesocycle/week to determine sequence progression
     const completedLogs = await WorkoutLog.find({
       userId,
       date: { $gte: programStart },
       status: "completed"
     }).lean();
 
-    // Helper to resolve the active workout day sequentially
+    /**
+     * Helper: getActiveTrainingDay
+     * Locates the active split day using modulo arithmetic while bypassing empty routine days.
+     */
     function getActiveTrainingDay(splitRoutine = [], startIndex = 0) {
       if (!Array.isArray(splitRoutine) || splitRoutine.length === 0) {
         return { dayIndex: 0, todayRoutine: null };
@@ -118,6 +144,7 @@ router.get(["/", "/:userId"], authUnified(false), async (req, res, next) => {
       };
     }
 
+    // Calculate current sequence day
     const { dayIndex, todayRoutine } = getActiveTrainingDay(routine, completedLogs.length);
 
     let activeWorkout = null;
@@ -130,10 +157,10 @@ router.get(["/", "/:userId"], authUnified(false), async (req, res, next) => {
         status: "planned"
       };
 
-      // Check if there is an in-progress log for this workout today
+      // Check if there is an in-progress log started within the last 24 hours
       const now = new Date();
       const todayBoundary = new Date(now);
-      todayBoundary.setHours(2, 0, 0, 0);
+      todayBoundary.setHours(2, 0, 0, 0); // 2:00 AM local timezone boundary
       if (now < todayBoundary) {
         todayBoundary.setDate(todayBoundary.getDate() - 1);
       }
@@ -145,6 +172,7 @@ router.get(["/", "/:userId"], authUnified(false), async (req, res, next) => {
         date: { $gte: todayBoundary, $lt: tomorrowBoundary }
       }).sort({ date: -1 }).lean();
 
+      // If an active session exists, hook the status and custom sets tracking values
       if (todayLog) {
         activeWorkout.workoutId = todayLog._id;
         activeWorkout.status = todayLog.status;
@@ -154,6 +182,7 @@ router.get(["/", "/:userId"], authUnified(false), async (req, res, next) => {
       }
     }
 
+    // Strip historical week arrays to minimize mobile parsing overhead and keep payload lightweight
     const { weeks, ...programMetadata } = program;
     res.json({
       ...programMetadata,
@@ -166,6 +195,11 @@ router.get(["/", "/:userId"], authUnified(false), async (req, res, next) => {
   }
 });
 
+/**
+ * Route: GET /api/program/explain OR GET /api/program/explain/:userId
+ * Description: Generates real-time AI explainability reports detailing how the system is 
+ *              predicting and avoiding fatigue plateaus and protecting active injuries.
+ */
 router.get(["/explain", "/explain/:userId"], authUnified(false), async (req, res) => {
   try {
     const userId = req.params.userId || req.userId;
@@ -184,14 +218,15 @@ router.get(["/explain", "/explain/:userId"], authUnified(false), async (req, res
       return res.status(404).json({ error: "No active generated program found." });
     }
 
+    // Calculate real-time fatigue values
     const fatigueMap = computeFatigueState(fatigueRecords, user || {});
     const readiness = computeReadiness(fatigueMap);
 
-    // ── Live Injury Risk Evaluation ──
+    // ── Live Injury Risk Evaluation (Injury Prevention Engine) ──
     const { evaluateInjuryRisk } = require("../engine/injuryPrevention");
     const liveInjuryResult = await evaluateInjuryRisk(userId);
 
-    // ── Live Plateau Evaluation ──
+    // ── Live Plateau Evaluation (Predictive AI Plateau Engine) ──
     const MuscleHistory = require("../models/MuscleHistory");
     const { evaluatePlateauTriggers } = require("../engine/predictivePlateau");
     const muscleHistoryDocs = await MuscleHistory.find({ userId }).lean();
@@ -212,10 +247,10 @@ router.get(["/explain", "/explain/:userId"], authUnified(false), async (req, res
     };
     const livePlateauResult = evaluatePlateauTriggers(muscleHistory, userState, adherenceScore);
 
-    // Override analysis with live-computed values
+    // Formulate basic structure
     const analysis = toIndianAnalysis({ program, user, fatigueMap, readiness });
     
-    // Patch injury with live data
+    // Inject Live Injury risk variables
     const injuryFlags = Array.isArray(user?.injury_flags) ? user.injury_flags : [];
     analysis.injury = {
       modeActive: liveInjuryResult.triggerInjuryMode || injuryFlags.length > 0,
@@ -228,7 +263,7 @@ router.get(["/explain", "/explain/:userId"], authUnified(false), async (req, res
           : "Abhi koi active injury flag nahi hai. System normal training mode me kaam kar raha hai."
     };
 
-    // Patch plateau with live data
+    // Inject Live Plateau prediction values
     const topTrigger = livePlateauResult.triggers[0] || null;
     analysis.plateau = {
       active: livePlateauResult.applyDeload,
