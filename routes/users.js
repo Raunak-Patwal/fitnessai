@@ -9,6 +9,7 @@ const WorkoutLog = require("../models/WorkoutLog");
 const MuscleHistory = require("../models/MuscleHistory");
 
 const { generateFitnessRoutine } = require("../engine/fitnessEngine");
+const authUnified = require("../middleware/authUnified");
 
 const DEFAULT_EQUIPMENT = ["bodyweight"];
 const DEFAULT_MUSCLES = [
@@ -54,92 +55,24 @@ function sanitizeUser(user) {
   };
 }
 
-const jwt = require('jsonwebtoken');
-const bcrypt = require('bcryptjs');
-const JWT_SECRET = process.env.JWT_SECRET || 'your_super_secret_jwt_key_here';
-const SALT_ROUNDS = 10;
+const authController = require('../controllers/authController');
 
-router.post('/register', async (req, res) => {
-  try {
-    const { name, email, password, goal, experience, equipment } = req.body;
-
-    if (!name || !email || !password) {
-      return res.status(400).json({ error: 'name, email and password are required' });
-    }
-
-    const existing = await User.findOne({ email: email.toLowerCase().trim() });
-    if (existing) return res.status(400).json({ error: 'User already exists' });
-
-    const user = await User.create({
-      name,
-      email: email.toLowerCase().trim(),
-      password,  // pre-save hook in User model handles hashing
-      goal,
-      experience,
-      equipment
-    });
-
-    const token = jwt.sign({ id: user._id, email: user.email }, JWT_SECRET, { expiresIn: '30d' });
-
-    res.json({
-      user: {
-        id: user._id,
-        name: user.name,
-        email: user.email,
-        goal: user.goal,
-        experience: user.experience,
-        equipment: user.equipment
-      },
-      token
-    });
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: 'Internal Error' });
-  }
-});
-
-router.post('/login', async (req, res) => {
-  try {
-    const { email, password } = req.body;
-    if (!email || !password) return res.status(400).json({ error: 'email and password required' });
-
-    const user = await User.findOne({ email: email.toLowerCase().trim() });
-    if (!user) return res.status(400).json({ error: 'Invalid credentials' });
-
-    const match = await bcrypt.compare(password, user.password);
-    if (!match) return res.status(400).json({ error: 'Invalid credentials' });
-
-    const token = jwt.sign({ id: user._id, email: user.email }, JWT_SECRET, { expiresIn: '30d' });
-
-    res.json({
-      user: {
-        id: user._id,
-        name: user.name,
-        email: user.email,
-        goal: user.goal,
-        experience: user.experience,
-        equipment: user.equipment
-      },
-      token
-    });
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: 'Internal Error' });
-  }
-});
+router.post('/register', authController.register);
+router.post('/login', authController.login);
 
 /* --------------------------------------------------------
    USER ONBOARDING API
    POST /api/users/onboarding
 -------------------------------------------------------- */
 
-router.post("/onboarding", async (req, res) => {
+router.post("/onboarding", authUnified(false), async (req, res) => {
   try {
     const { 
-      userId,
       name, email, gender, age, weight, height, goal, 
       experience, training_days_per_week, equipment, injury_flags 
     } = req.body;
+
+    const userId = req.userId || req.body.userId;
 
     if (!name || !String(name).trim()) {
       return res.status(400).json({ error: "name is required" });
@@ -258,13 +191,17 @@ router.post("/onboarding", async (req, res) => {
 });
 
 // Getter for the dashboard
-router.get("/:userId", async (req, res) => {
+router.get(["/", "/:userId"], authUnified(false), async (req, res) => {
     try {
+        const userId = req.params.userId || req.userId;
+        if (!userId) {
+            return res.status(400).json({ error: "userId is required (via Bearer token or path parameter)" });
+        }
         const mongoose = require("mongoose");
-        if (!mongoose.Types.ObjectId.isValid(req.params.userId)) {
+        if (!mongoose.Types.ObjectId.isValid(userId)) {
             return res.status(400).json({error: "Invalid userId format"});
         }
-        const user = await User.findById(req.params.userId).lean();
+        const user = await User.findById(userId).lean();
         if(!user) return res.status(404).json({error: "User not found"});
         return res.json({success: true, user});
     } catch(err) {

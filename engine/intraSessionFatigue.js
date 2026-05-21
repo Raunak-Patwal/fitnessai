@@ -5,6 +5,7 @@
    ====================================================== */
 
 const { isCardioExercise } = require("./planner/utils");
+const { fatigueMatrix } = require("./utils/loadScienceDB");
 
 // Inline compound check to avoid circular dependency with coverageEngine
 function isCompound(exercise) {
@@ -63,7 +64,15 @@ function calculateSessionFatigue(exercises, goal = "hypertrophy") {
   for (const ex of exercises) {
     const type = getExerciseType(ex);
     const sets = ex.sets || 3;
-    const cnsCost = (CNS_COST[type] || 0.5) * sets;
+    
+    // Look up in Science DB first, fallback to generic types if missing
+    let cnsCost = 0;
+    const dbEntry = fatigueMatrix[ex.name] || fatigueMatrix[ex.normalized_name];
+    if (dbEntry) {
+      cnsCost = (dbEntry.systemic / 10.0) * sets; // Normalize 1-10 to 0-1 scale per set
+    } else {
+      cnsCost = (CNS_COST[type] || 0.5) * sets;
+    }
 
     cumulativeCNS += cnsCost;
 
@@ -110,7 +119,13 @@ function getDayCNSCost(exercises) {
   for (const ex of exercises) {
     const type = getExerciseType(ex);
     const sets = ex.sets || 3;
-    total += (CNS_COST[type] || 0.5) * sets;
+    
+    const dbEntry = fatigueMatrix[ex.name] || fatigueMatrix[ex.normalized_name];
+    if (dbEntry) {
+      total += (dbEntry.systemic / 10.0) * sets;
+    } else {
+      total += (CNS_COST[type] || 0.5) * sets;
+    }
   }
   return total;
 }

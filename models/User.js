@@ -1,6 +1,7 @@
 // models/User.js
 const mongoose = require("mongoose");
-const bcrypt = require("bcryptjs");
+const bcryptRaw = require("bcryptjs");
+const bcrypt = bcryptRaw.default || bcryptRaw;
 
 const userSchema = new mongoose.Schema({
   name: { type: String, required: true, trim: true },
@@ -30,12 +31,21 @@ const userSchema = new mongoose.Schema({
   progressScore: { type: Number, default: 0 }
 }, { timestamps: true, strict: false });
 
-// 🔒 Hash password if modified (FIXED)
+// 🔒 Hash password if modified (STABILIZED)
 userSchema.pre("save", async function () {
   if (!this.isModified("password")) return;
 
-  const salt = await bcrypt.genSalt(10);
-  this.password = await bcrypt.hash(this.password, salt);
+  try {
+    // Only hash if it doesn't look like a bcrypt hash already (prevents double-hashing)
+    if (this.password && this.password.startsWith('$2')) {
+      return;
+    }
+
+    const salt = await bcrypt.genSalt(10);
+    this.password = await bcrypt.hash(this.password, salt);
+  } catch (err) {
+    throw err;
+  }
 });
 
 // Instance method to compare password

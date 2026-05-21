@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Program = require("../models/Program");
+const authUnified = require("../middleware/authUnified");
 const User = require("../models/User");
 const Fatigue = require("../models/Fatigue");
 const { computeFatigueState, computeReadiness } = require("../state/stateBuilder");
@@ -62,13 +63,17 @@ function toIndianAnalysis({ program, user, fatigueMap, readiness }) {
    Returns the meta-reasoning logic for the user's latest program
 -------------------------------------------------------- */
 
-router.get("/:userId", async (req, res, next) => {
+router.get(["/", "/:userId"], authUnified(false), async (req, res, next) => {
   try {
-    const { userId } = req.params;
+    const userId = req.params.userId || req.userId;
     
-    // Fall through to /explain/:userId if the param is "explain"
+    // Fall through to /explain/:userId? if the param is "explain"
     if (userId === "explain") {
       return next();
+    }
+
+    if (!userId) {
+      return res.status(400).json({ error: "userId is required (via Bearer token or path parameter)" });
     }
 
     if (!require("mongoose").Types.ObjectId.isValid(userId)) {
@@ -87,12 +92,12 @@ router.get("/:userId", async (req, res, next) => {
   }
 });
 
-router.get("/explain/:userId", async (req, res) => {
+router.get(["/explain", "/explain/:userId"], authUnified(false), async (req, res) => {
   try {
-    const { userId } = req.params;
+    const userId = req.params.userId || req.userId;
 
     if (!userId) {
-      return res.status(400).json({ error: "userId is required" });
+      return res.status(400).json({ error: "userId is required (via Bearer token or path parameter)" });
     }
 
     const [program, user, fatigueRecords] = await Promise.all([

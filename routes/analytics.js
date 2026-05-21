@@ -3,29 +3,17 @@
  * Analytics API Routes
  * 
  * Provides endpoints for frontend charting:
- * - GET /api/analytics/volume/:userId
-// routes/analytics.js
-/**
- * Analytics API Routes
- * 
- * Provides endpoints for frontend charting:
- * - GET /api/analytics/volume/:userId
- * - GET /api/analytics/strength/:userId/:exerciseId
- * - GET /api/analytics/adherence/:userId
- * - GET /api/analytics/fatigue/:userId
- * - GET /api/analytics/progress/:userId
+ * - GET /api/analytics/volume/:userId?
+ * - GET /api/analytics/strength/:userId?/:exerciseId
+ * - GET /api/analytics/adherence/:userId?
+ * - GET /api/analytics/fatigue/:userId?
+ * - GET /api/analytics/progress/:userId?
  */
 
 const express = require("express");
 const router = express.Router();
 const mongoose = require("mongoose");
-
-router.param("userId", (req, res, next, id) => {
-  if (!mongoose.Types.ObjectId.isValid(id)) {
-    return res.status(400).json({ error: "Invalid userId format" });
-  }
-  next();
-});
+const authUnified = require("../middleware/authUnified");
 
 const {
   getVolumeTrend,
@@ -45,11 +33,11 @@ const {
  */
 async function handleAnalytics(req, res, analyticsFn) {
   try {
-    const { userId } = req.params;
+    const userId = req.params.userId || req.userId;
     const { weeks } = req.query;
     
     if (!userId) {
-      return res.status(400).json({ error: "userId is required" });
+      return res.status(400).json({ error: "userId is required (via Bearer token or parameter)" });
     }
     
     const weeksAgo = Math.min(parseInt(weeks) || DEFAULT_WEEKS, 52); // Max 52 weeks
@@ -68,16 +56,17 @@ async function handleAnalytics(req, res, analyticsFn) {
 }
 
 /**
- * GET /api/analytics/volume/:userId
+ * GET /api/analytics/volume/:userId?
  * Get weekly volume trend for a muscle group
- * Query params:
- *   - muscle: Muscle group (optional)
- *   - weeks: Number of weeks to analyze (default: 12)
  */
-router.get("/volume/:userId", async (req, res) => {
+router.get("/volume/:userId?", authUnified(false), async (req, res) => {
   try {
-    const { userId } = req.params;
+    const userId = req.params.userId || req.userId;
     const { muscle, weeks } = req.query;
+    
+    if (!userId) {
+      return res.status(400).json({ error: "userId is required (via Bearer token or parameter)" });
+    }
     
     const weeksAgo = Math.min(parseInt(weeks) || DEFAULT_WEEKS, 52);
     
@@ -95,15 +84,18 @@ router.get("/volume/:userId", async (req, res) => {
 });
 
 /**
- * GET /api/analytics/strength/:userId/:exerciseId
+ * GET /api/analytics/strength/:userId?/:exerciseId
  * Get strength curve for an exercise
- * Query params:
- *   - weeks: Number of weeks to analyze (default: 12)
  */
-router.get("/strength/:userId/:exerciseId", async (req, res) => {
+router.get("/strength/:userId?/:exerciseId", authUnified(false), async (req, res) => {
   try {
-    const { userId, exerciseId } = req.params;
+    const userId = req.params.userId || req.userId;
+    const { exerciseId } = req.params;
     const { weeks } = req.query;
+    
+    if (!userId) {
+      return res.status(400).json({ error: "userId is required (via Bearer token or parameter)" });
+    }
     
     if (!exerciseId) {
       return res.status(400).json({ error: "exerciseId is required" });
@@ -125,15 +117,17 @@ router.get("/strength/:userId/:exerciseId", async (req, res) => {
 });
 
 /**
- * GET /api/analytics/adherence/:userId
- * Get adherence statistics (planned vs completed sets)
- * Query params:
- *   - weeks: Number of weeks to analyze (default: 12)
+ * GET /api/analytics/adherence/:userId?
+ * Get adherence statistics
  */
-router.get("/adherence/:userId", async (req, res) => {
+router.get("/adherence/:userId?", authUnified(false), async (req, res) => {
   try {
-    const { userId } = req.params;
+    const userId = req.params.userId || req.userId;
     const { weeks } = req.query;
+    
+    if (!userId) {
+      return res.status(400).json({ error: "userId is required (via Bearer token or parameter)" });
+    }
     
     const weeksAgo = Math.min(parseInt(weeks) || DEFAULT_WEEKS, 52);
     
@@ -151,15 +145,17 @@ router.get("/adherence/:userId", async (req, res) => {
 });
 
 /**
- * GET /api/analytics/fatigue/:userId
+ * GET /api/analytics/fatigue/:userId?
  * Get fatigue trend over time
- * Query params:
- *   - weeks: Number of weeks to analyze (default: 12)
  */
-router.get("/fatigue/:userId", async (req, res) => {
+router.get("/fatigue/:userId?", authUnified(false), async (req, res) => {
   try {
-    const { userId } = req.params;
+    const userId = req.params.userId || req.userId;
     const { weeks } = req.query;
+    
+    if (!userId) {
+      return res.status(400).json({ error: "userId is required (via Bearer token or parameter)" });
+    }
     
     const weeksAgo = Math.min(parseInt(weeks) || DEFAULT_WEEKS, 52);
     
@@ -177,15 +173,17 @@ router.get("/fatigue/:userId", async (req, res) => {
 });
 
 /**
- * GET /api/analytics/progress/:userId
- * Get progress timeline (experience & score over time)
- * Query params:
- *   - weeks: Number of weeks to analyze (default: 12)
+ * GET /api/analytics/progress/:userId?
+ * Get progress timeline
  */
-router.get("/progress/:userId", async (req, res) => {
+router.get("/progress/:userId?", authUnified(false), async (req, res) => {
   try {
-    const { userId } = req.params;
+    const userId = req.params.userId || req.userId;
     const { weeks } = req.query;
+    
+    if (!userId) {
+      return res.status(400).json({ error: "userId is required (via Bearer token or parameter)" });
+    }
     
     const weeksAgo = Math.min(parseInt(weeks) || DEFAULT_WEEKS, 52);
     
@@ -203,15 +201,17 @@ router.get("/progress/:userId", async (req, res) => {
 });
 
 /**
- * GET /api/analytics/muscles/:userId
+ * GET /api/analytics/muscles/:userId?
  * Get muscle-wise volume distribution
- * Query params:
- *   - weeks: Number of weeks to analyze (default: 12)
  */
-router.get("/muscles/:userId", async (req, res) => {
+router.get("/muscles/:userId?", authUnified(false), async (req, res) => {
   try {
-    const { userId } = req.params;
+    const userId = req.params.userId || req.userId;
     const { weeks } = req.query;
+    
+    if (!userId) {
+      return res.status(400).json({ error: "userId is required (via Bearer token or parameter)" });
+    }
     
     const weeksAgo = Math.min(parseInt(weeks) || DEFAULT_WEEKS, 52);
     
@@ -228,19 +228,19 @@ router.get("/muscles/:userId", async (req, res) => {
   }
 });
 
-router.get("/sessions/:userId", async (req, res) => {
+router.get("/sessions/:userId?", authUnified(false), async (req, res) => {
   return handleAnalytics(req, res, getSessionPerformanceTimeline);
 });
 
-router.get("/history/:userId", async (req, res) => {
+router.get("/history/:userId?", authUnified(false), async (req, res) => {
   return handleAnalytics(req, res, getWorkoutHistory);
 });
 
-router.get("/rl/:userId", async (req, res) => {
+router.get("/rl/:userId?", authUnified(false), async (req, res) => {
   try {
-    const { userId } = req.params;
+    const userId = req.params.userId || req.userId;
     if (!userId) {
-      return res.status(400).json({ error: "userId is required" });
+      return res.status(400).json({ error: "userId is required (via Bearer token or parameter)" });
     }
 
     const result = await getRLInsights(userId);
@@ -256,13 +256,17 @@ router.get("/rl/:userId", async (req, res) => {
 });
 
 /**
- * GET /api/analytics/summary/:userId
+ * GET /api/analytics/summary/:userId?
  * Get all analytics summary in one call
  */
-router.get("/summary/:userId", async (req, res) => {
+router.get("/summary/:userId?", authUnified(false), async (req, res) => {
   try {
-    const { userId } = req.params;
+    const userId = req.params.userId || req.userId;
     const { weeks } = req.query;
+    
+    if (!userId) {
+      return res.status(400).json({ error: "userId is required (via Bearer token or parameter)" });
+    }
     
     const weeksAgo = Math.min(parseInt(weeks) || DEFAULT_WEEKS, 52);
     
@@ -311,14 +315,14 @@ router.get("/summary/:userId", async (req, res) => {
 });
 
 /**
- * GET /api/analytics/experience/:userId
+ * GET /api/analytics/experience/:userId?
  * Get experience level status and progress
  */
-router.get("/experience/:userId", async (req, res) => {
+router.get("/experience/:userId?", authUnified(false), async (req, res) => {
   try {
-    const { userId } = req.params;
+    const userId = req.params.userId || req.userId;
     if (!userId) {
-      return res.status(400).json({ error: "userId is required" });
+      return res.status(400).json({ error: "userId is required (via Bearer token or parameter)" });
     }
 
     const { getExperienceStatus } = require("../engine/experienceEngine");

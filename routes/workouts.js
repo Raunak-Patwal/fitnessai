@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const mongoose = require("mongoose");
+const authUnified = require("../middleware/authUnified");
 
 // Proactively shield against Cast to ObjectId errors
 router.param("workoutId", (req, res, next, id) => {
@@ -110,9 +111,10 @@ async function buildWorkoutExercises(exercises = []) {
    Enhanced with per-exercise tracking and adherence scoring
   -------------------------------------------------------- */
 
-router.post("/complete", async (req, res) => {
+router.post("/complete", authUnified(false), async (req, res) => {
   try {
-    const { userId, workoutId, exercises, mode = "full" } = req.body;
+    const { workoutId, exercises, mode = "full" } = req.body;
+    const userId = req.userId || req.body.userId;
 
     if (!userId || !workoutId) {
       return res.status(400).json({ error: "userId and workoutId are required" });
@@ -458,16 +460,172 @@ router.post("/:workoutId/adjust", async (req, res) => {
 });
 
 /* --------------------------------------------------------
+   GET CURRENT WEEK'S WORKOUT DAYS (LAZY LOADING SPLIT INFO)
+   GET /api/workouts/days/:userId?
+   Returns the training days of the current week's split (metadata only, extremely fast)
+  -------------------------------------------------------- */
+
+router.get(["/days", "/days/:userId"], authUnified(false), async (req, res) => {
+  try {
+    const userId = req.userId || req.params.userId || req.query.userId;
+    if (!userId) {
+      return res.status(400).json({ error: "userId is required (via Bearer token or parameter)" });
+    }
+
+    const program = await require("../models/Program").findOne({ userId }).lean();
+    if (!program || !program.weeks || program.weeks.length === 0) {
+      return res.json({
+        success: false,
+        error: "No routine generated yet. Generate a routine first.",
+        needsGeneration: true
+      });
+    }
+
+    const latestWeek = program.weeks[program.weeks.length - 1];
+    const routine = latestWeek.routine || [];
+    
+    const days = routine.map((day, index) => {
+      const musclesSet = new Set();
+      if (Array.isArray(day.exercises)) {
+        day.exercises.forEach(ex => {
+          if (ex.primary_muscle) musclesSet.add(ex.primary_muscle.toLowerCase());
+        });
+      }
+      return {
+        dayIndex: index,
+        dayName: day.day,
+        label: `Day ${index + 1}: ${day.day ? day.day.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase()) : 'Training'}`,
+        muscles: Array.from(musclesSet),
+        exerciseCount: Array.isArray(day.exercises) ? day.exercises.length : 0
+      };
+    });
+
+    res.json({
+      success: true,
+      userId,
+      currentWeek: latestWeek.week,
+      mesocyclePhase: program.mesocycle_phase,
+      totalDays: days.length,
+      days
+    });
+  } catch (err) {
+    console.error("Fetch workout days error:", err);
+    res.status(500).json({ error: "Internal Error" });
+  }
+});
+
+/* --------------------------------------------------------
+   GET SPECIFIC DAY'S WORKOUT (SINGLE DAY DETAIL LAZY LOADING)
+   GET /api/workouts/day/:userId?
+   Returns the exercises and log status for a specific training day by index or name
+  -------------------------------------------------------- */
+
+router.get(["/day", "/day/:userId"], authUnified(false), async (req, res) => {
+  try {
+    const userId = req.userId || req.params.userId || req.query.userId;
+    if (!userId) {
+      return res.status(400).json({ error: "userId is required (via Bearer token or parameter)" });
+    }
+
+    const { dayIndex, dayName, start } = req.query;
+
+    const program = await require("../models/Program").findOne({ userId }).lean();
+    if (!program || !program.weeks || program.weeks.length === 0) {
+      return res.json({
+        success: false,
+        error: "No routine generated yet. Generate a routine first.",
+        needsGeneration: true
+      });
+    }
+
+    const latestWeek = program.weeks[program.weeks.length - 1];
+    const routine = latestWeek.routine || [];
+    if (routine.length === 0) {
+      return res.json({
+        success: false,
+        error: "Routine is empty",
+        needsGeneration: true
+      });
+    }
+
+    let selectedDayIndex = 0;
+    if (dayIndex !== undefined) {
+      selectedDayIndex = parseInt(dayIndex);
+    } else if (dayName) {
+      selectedDayIndex = routine.findIndex(d => d.day.toLowerCase() === dayName.toLowerCase());
+      if (selectedDayIndex === -1) selectedDayIndex = 0;
+    }
+
+    if (selectedDayIndex < 0 || selectedDayIndex >= routine.length) {
+      return res.status(400).json({ error: `Invalid dayIndex. Must be between 0 and ${routine.length - 1}` });
+    }
+
+    const targetRoutineDay = routine[selectedDayIndex];
+
+    const now = new Date();
+    const todayBoundary = new Date(now);
+    todayBoundary.setHours(2, 0, 0, 0);
+    if (now < todayBoundary) {
+      todayBoundary.setDate(todayBoundary.getDate() - 1);
+    }
+    const tomorrowBoundary = new Date(todayBoundary);
+    tomorrowBoundary.setDate(tomorrowBoundary.getDate() + 1);
+
+    let activeLog = await WorkoutLog.findOne({
+      userId,
+      day: targetRoutineDay.day,
+      date: { $gte: todayBoundary, $lt: tomorrowBoundary }
+    }).sort({ date: -1 }).lean();
+
+    if (!activeLog && (start === 'true' || start === true)) {
+      const newLog = new WorkoutLog({
+        userId,
+        day: targetRoutineDay.day,
+        date: new Date(),
+        exercises: await buildWorkoutExercises(targetRoutineDay.exercises),
+        status: "in_progress"
+      });
+      await newLog.save();
+      activeLog = newLog.toObject();
+    }
+
+    const RLWeight = require("../models/RLWeight");
+    const rlDocs = await RLWeight.find({ userId }).lean();
+    const rlScores = {};
+    rlDocs.forEach(r => {
+      rlScores[String(r.exerciseId)] = r.preferenceScore ?? r.score ?? 0;
+    });
+
+    res.json({
+      success: true,
+      data: {
+        workoutId: activeLog ? activeLog._id : null,
+        day: targetRoutineDay.day,
+        dayIndex: selectedDayIndex,
+        totalDays: routine.length,
+        status: activeLog ? activeLog.status : "planned",
+        exercises: activeLog ? activeLog.exercises : await buildWorkoutExercises(targetRoutineDay.exercises),
+        plannedExercises: targetRoutineDay.exercises,
+        rlScores
+      }
+    });
+  } catch (err) {
+    console.error("Fetch single day workout error:", err);
+    res.status(500).json({ error: "Internal Error" });
+  }
+});
+
+/* --------------------------------------------------------
    GET TODAY'S WORKOUT
-   GET /api/workouts/today/:userId
+   GET /api/workouts/today/:userId?
    Returns today's exercises from the current program
   -------------------------------------------------------- */
 
-router.get("/today/:userId", async (req, res) => {
+router.get(["/today", "/today/:userId"], authUnified(false), async (req, res) => {
   try {
-    const { userId } = req.params;
+    const userId = req.userId || req.params.userId || req.query.userId;
     if (!userId) {
-      return res.status(400).json({ error: "userId is required" });
+      return res.status(400).json({ error: "userId is required (via Bearer token or parameter)" });
     }
 
     const user = await User.findById(userId).lean();

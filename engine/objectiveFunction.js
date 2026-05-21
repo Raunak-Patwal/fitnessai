@@ -23,6 +23,8 @@ const {
 } = require("./movementVectors");
 
 const { isCardioExercise, SPLIT_TEMPLATES, getCanonicalMuscles } = require("./planner/utils");
+const { fatigueMatrix } = require("./utils/loadScienceDB");
+const { getTargetVolume } = require("./planner/targetVolume");
 
 // ── Goal-dependent weight vectors ──
 const OBJECTIVE_WEIGHTS = {
@@ -67,15 +69,16 @@ const JOINT_MAX = 12.0;
    COMPONENT 1: Goal-Stimulus Alignment (GSA)
    GSA = Σ_m [min(S_m / T_m, 1.0) × P_m] / Σ_m P_m
   -------------------------------------------------------- */
-function computeGSA(stimulus, goal) {
+function computeGSA(stimulus, goal, experience = "intermediate") {
   const priorities = GOAL_PRIORITY_MUSCLES[goal] || GOAL_PRIORITY_MUSCLES.hypertrophy;
   let weightedHit = 0;
   let totalPriority = 0;
 
   for (const [muscle, priority] of Object.entries(priorities)) {
     const actual = stimulus[muscle] || 0;
-    // Target: at least 6 effective sets per priority muscle per week
-    const target = priority * 8;
+    // Replace arbitrary bounds with empirical target volume from science db
+    const target = getTargetVolume(muscle, goal, experience);
+    
     weightedHit += Math.min(actual / Math.max(target, 0.01), 1.0) * priority;
     totalPriority += priority;
   }
@@ -116,6 +119,11 @@ function computeDE(routine) {
    FS = 1 − max_d(CNS_d / CNS_max)
   -------------------------------------------------------- */
 function getCNSCost(exercise) {
+  const dbEntry = fatigueMatrix[exercise.name] || fatigueMatrix[exercise.normalized_name];
+  if (dbEntry) {
+    return dbEntry.systemic / 10.0 * 2.0; // Scaled to relative engine value
+  }
+
   const pattern = (exercise.movement_pattern || "").toLowerCase();
   if (isCardioExercise(exercise)) return CNS_COST.cardio;
   const isHeavy = exercise.is_compound && (exercise.difficulty_score || 5) >= 7;
