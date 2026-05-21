@@ -621,7 +621,7 @@ router.get(["/day", "/day/:userId"], authUnified(false), async (req, res) => {
    Returns today's exercises from the current program
   -------------------------------------------------------- */
 
-router.get(["/today", "/today/:userId"], authUnified(false), async (req, res) => {
+router.get(["/today", "/today/:userId", "/active", "/active/:userId"], authUnified(false), async (req, res) => {
   try {
     const userId = req.userId || req.params.userId || req.query.userId;
     if (!userId) {

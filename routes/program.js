@@ -85,7 +85,81 @@ router.get(["/", "/:userId"], authUnified(false), async (req, res, next) => {
       return res.status(404).json({ error: "Program not found" });
     }
 
-    res.json(program);
+    // Resolve the active week and current single day's workout sequentially
+    const latestWeek = program.weeks && program.weeks.length > 0
+      ? program.weeks[program.weeks.length - 1]
+      : null;
+    const routine = latestWeek?.routine || [];
+
+    const WorkoutLog = require("../models/WorkoutLog");
+    const programStart = latestWeek?.createdAt || program.startDate || new Date();
+
+    const completedLogs = await WorkoutLog.find({
+      userId,
+      date: { $gte: programStart },
+      status: "completed"
+    }).lean();
+
+    // Helper to resolve the active workout day sequentially
+    function getActiveTrainingDay(splitRoutine = [], startIndex = 0) {
+      if (!Array.isArray(splitRoutine) || splitRoutine.length === 0) {
+        return { dayIndex: 0, todayRoutine: null };
+      }
+      for (let offset = 0; offset < splitRoutine.length; offset++) {
+        const index = (startIndex + offset) % splitRoutine.length;
+        const todayRoutine = splitRoutine[index];
+        if (Array.isArray(todayRoutine?.exercises) && todayRoutine.exercises.length > 0) {
+          return { dayIndex: index, todayRoutine };
+        }
+      }
+      return {
+        dayIndex: startIndex % splitRoutine.length,
+        todayRoutine: splitRoutine[startIndex % splitRoutine.length] || null
+      };
+    }
+
+    const { dayIndex, todayRoutine } = getActiveTrainingDay(routine, completedLogs.length);
+
+    let activeWorkout = null;
+    if (todayRoutine) {
+      activeWorkout = {
+        day: todayRoutine.day,
+        dayIndex,
+        totalDays: routine.length,
+        exercises: todayRoutine.exercises,
+        status: "planned"
+      };
+
+      // Check if there is an in-progress log for this workout today
+      const now = new Date();
+      const todayBoundary = new Date(now);
+      todayBoundary.setHours(2, 0, 0, 0);
+      if (now < todayBoundary) {
+        todayBoundary.setDate(todayBoundary.getDate() - 1);
+      }
+      const tomorrowBoundary = new Date(todayBoundary);
+      tomorrowBoundary.setDate(tomorrowBoundary.getDate() + 1);
+
+      const todayLog = await WorkoutLog.findOne({
+        userId,
+        date: { $gte: todayBoundary, $lt: tomorrowBoundary }
+      }).sort({ date: -1 }).lean();
+
+      if (todayLog) {
+        activeWorkout.workoutId = todayLog._id;
+        activeWorkout.status = todayLog.status;
+        if (Array.isArray(todayLog.exercises) && todayLog.exercises.length > 0) {
+          activeWorkout.exercises = todayLog.exercises;
+        }
+      }
+    }
+
+    const { weeks, ...programMetadata } = program;
+    res.json({
+      ...programMetadata,
+      currentWeekNumber: latestWeek?.week || 1,
+      activeWorkout
+    });
   } catch (err) {
     console.error("Program fetch error:", err);
     res.status(500).json({ error: "Internal Error" });

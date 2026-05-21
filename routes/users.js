@@ -176,12 +176,20 @@ router.post("/onboarding", authUnified(false), async (req, res) => {
     }
 
     const program = await Program.findOne({ userId: activeUserId }).lean();
+    const activeRoutine = program?.weeks?.[program.weeks.length - 1]?.routine || programResult.routine || [];
+    const activeWorkout = activeRoutine[0] ? {
+      day: activeRoutine[0].day,
+      dayIndex: 0,
+      totalDays: activeRoutine.length,
+      exercises: activeRoutine[0].exercises,
+      status: "planned"
+    } : null;
 
     res.json({
       success: true,
       message: "Onboarding complete. AI Engine initialized.",
       user: sanitizeUser(user),
-      program: program?.weeks?.[program.weeks.length - 1]?.routine || programResult.routine
+      activeWorkout
     });
 
   } catch (err) {
