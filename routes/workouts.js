@@ -20,6 +20,7 @@ const WorkoutLog = require("../models/WorkoutLog");
 const User = require("../models/User");
 const Exercise = require("../models/Exercise");
 const { rankExercisePool } = require("../ranker");
+const { generateWorkoutPlan, getGeneratedPlan } = require("../engine/workoutGenerationEngine");
 
 const { evaluateExperienceUpgrade } = require("../engine/experienceEngine");
 const {
@@ -1011,4 +1012,148 @@ router.post("/:workoutId/add", async (req, res) => {
   }
 });
 
+/* ------------------------------------------------------------------ *
+ *  RULE-BASED WORKOUT PLAN GENERATION                                  *
+ *  POST /api/v1/workouts/generate                                       *
+ *                                                                       *
+ *  Generates a fresh workout plan on-demand using a constraint-driven  *
+ *  rule-based algorithm (no LLMs). Decouples the blueprint (Day 1…N)  *
+ *  from calendar days so users get a rolling schedule.                 *
+ * ------------------------------------------------------------------ */
+
+/**
+ * POST /workouts/generate
+ *
+ * Body:
+ *   {
+ *     "user_id": "...",
+ *     "goal": "hypertrophy" | "strength" | "fatloss" | "hybrid",
+ *     "experience_level": "beginner" | "intermediate" | "advanced",
+ *     "selected_days": ["monday", "wednesday", "friday"],
+ *     "equipment": ["full_gym"] | ["dumbbell", "barbell"] | ["bodyweight"],
+ *     "duration_minutes": 60,
+ *     "injury_flags": []         // optional
+ *   }
+ */
+router.post("/generate", authUnified(false), async (req, res) => {
+  try {
+    const {
+      user_id,
+      goal,
+      experience_level,
+      selected_days,
+      equipment       = [],
+      duration_minutes= 60,
+      injury_flags    = [],
+    } = req.body;
+
+    // ── Resolve user_id: prefer JWT token, then body ──
+    const resolvedUserId = req.userId || user_id;
+
+    if (!resolvedUserId) {
+      return res.status(400).json({ error: "user_id is required" });
+    }
+
+    // ── Validate required fields ──
+    const VALID_GOALS = new Set(["hypertrophy", "strength", "fatloss", "hybrid"]);
+    const VALID_EXP   = new Set(["beginner", "intermediate", "advanced"]);
+
+    if (goal && !VALID_GOALS.has(goal)) {
+      return res.status(400).json({
+        error: `Invalid goal '${goal}'. Must be one of: hypertrophy, strength, fatloss, hybrid`
+      });
+    }
+
+    if (experience_level && !VALID_EXP.has(experience_level)) {
+      return res.status(400).json({
+        error: `Invalid experience_level '${experience_level}'. Must be one of: beginner, intermediate, advanced`
+      });
+    }
+
+    if (!Array.isArray(selected_days) || selected_days.length === 0) {
+      return res.status(400).json({ error: "selected_days must be a non-empty array of day names" });
+    }
+
+    if (selected_days.length > 7) {
+      return res.status(400).json({ error: "selected_days cannot exceed 7 days" });
+    }
+
+    // ── If user exists in DB, merge profile defaults ──
+    let resolvedGoal       = goal;
+    let resolvedExperience = experience_level;
+    let resolvedEquipment  = equipment;
+    let resolvedInjuries   = injury_flags;
+
+    try {
+      const userDoc = await User.findById(resolvedUserId).lean();
+      if (userDoc) {
+        resolvedGoal       = goal            || userDoc.goal       || "hypertrophy";
+        resolvedExperience = experience_level|| userDoc.experience || "beginner";
+        resolvedEquipment  = equipment.length > 0 ? equipment : (userDoc.equipment || []);
+        resolvedInjuries   = injury_flags.length > 0 ? injury_flags : (userDoc.injury_flags || []);
+      }
+    } catch (_) {
+      // User lookup failed — proceed with explicit body values
+    }
+
+    // ── Generate the plan ──
+    const plan = await generateWorkoutPlan({
+      user_id:         resolvedUserId,
+      goal:            resolvedGoal,
+      experience_level:resolvedExperience,
+      selected_days,
+      equipment:       resolvedEquipment,
+      duration_minutes,
+      injury_flags:    resolvedInjuries,
+    });
+
+    return res.status(201).json({
+      success: true,
+      plan_id:       plan.plan_id,
+      split:         plan.split,
+      total_days:    plan.workouts.length,
+      goal:          plan.goal,
+      experience:    plan.experience_level,
+      workouts:      plan.workouts,
+      rolling_schedule_note:
+        "If you miss a session, your next workout continues from the next blueprint day. You never fall behind.",
+    });
+  } catch (err) {
+    console.error("[POST /workouts/generate] Error:", err);
+    const status = err.message?.includes("valid day") ? 400 : 500;
+    return res.status(status).json({ error: err.message || "Internal Error" });
+  }
+});
+
+/* ------------------------------------------------------------------ *
+ *  RETRIEVE A PREVIOUSLY GENERATED PLAN                               *
+ *  GET /api/v1/workouts/generate/:planId                              *
+ * ------------------------------------------------------------------ */
+router.get("/generate/:planId", async (req, res) => {
+  try {
+    const { planId } = req.params;
+    if (!planId) return res.status(400).json({ error: "planId is required" });
+
+    const plan = await getGeneratedPlan(planId);
+    if (!plan) return res.status(404).json({ error: "Plan not found" });
+
+    return res.json({
+      success: true,
+      plan_id:    plan.plan_id,
+      split:      plan.split,
+      total_days: plan.workouts.length,
+      goal:       plan.goal,
+      experience: plan.experience_level,
+      workouts:   plan.workouts,
+      created_at: plan.createdAt,
+      rolling_schedule_note:
+        "If you miss a session, your next workout continues from the next blueprint day. You never fall behind.",
+    });
+  } catch (err) {
+    console.error("[GET /workouts/generate/:planId] Error:", err);
+    return res.status(500).json({ error: "Internal Error" });
+  }
+});
+
 module.exports = router;
+
