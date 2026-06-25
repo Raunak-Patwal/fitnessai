@@ -16,7 +16,7 @@
 // ──────────────────────────────────────────────────────────────────────────────
 
 const { v4: uuidv4 } = require("uuid");
-const Exercise      = require("../models/Exercise");
+const Exercise = require("../models/Exercise");
 const GeneratedPlan = require("../models/GeneratedPlan");
 
 const {
@@ -36,47 +36,47 @@ const {
 // ──────────────────────────────────────────────────────────────────────────────
 const SLOT_BLUEPRINTS = {
   push: [
-    { pattern: "horizontal_push", label: "Chest Compound",       required: true  },
-    { pattern: "vertical_push",   label: "Shoulder Press",       required: true  },
-    { pattern: "chest_fly",       label: "Chest Isolation",      required: false },
-    { pattern: "triceps_isolation",label: "Triceps Isolation",   required: false },
-    { pattern: "lateral_raise",   label: "Lateral Raise",        required: false },
+    { pattern: "horizontal_push", label: "Chest Compound", required: true },
+    { pattern: "vertical_push", label: "Shoulder Press", required: true },
+    { pattern: "chest_fly", label: "Chest Isolation", required: false },
+    { pattern: "triceps_isolation", label: "Triceps Isolation", required: false },
+    { pattern: "lateral_raise", label: "Lateral Raise", required: false },
   ],
   pull: [
-    { pattern: "vertical_pull",   label: "Vertical Pull",        required: true  },
-    { pattern: "horizontal_pull", label: "Row",                  required: true  },
-    { pattern: "biceps_isolation",label: "Biceps Curl",          required: false },
-    { pattern: "rear_delt",       label: "Rear Delt",            required: false },
-    { pattern: "heavy_hinge",     label: "Back Hinge",           required: false },
+    { pattern: "vertical_pull", label: "Vertical Pull", required: true },
+    { pattern: "horizontal_pull", label: "Row", required: true },
+    { pattern: "biceps_isolation", label: "Biceps Curl", required: false },
+    { pattern: "rear_delt", label: "Rear Delt", required: false },
+    { pattern: "heavy_hinge", label: "Back Hinge", required: false },
   ],
   legs: [
-    { pattern: "squat",           label: "Squat",                required: true  },
-    { pattern: "heavy_hinge",     label: "Hip Hinge",            required: true  },
-    { pattern: "knee_flexion",    label: "Leg Curl",             required: false },
-    { pattern: "calf_raise",      label: "Calf",                 required: false },
-    { pattern: "leg_press",       label: "Leg Press / Accessory",required: false },
+    { pattern: "squat", label: "Squat", required: true },
+    { pattern: "heavy_hinge", label: "Hip Hinge", required: true },
+    { pattern: "knee_flexion", label: "Leg Curl", required: false },
+    { pattern: "calf_raise", label: "Calf", required: false },
+    { pattern: "leg_press", label: "Leg Press / Accessory", required: false },
   ],
   upper: [
-    { pattern: "horizontal_push", label: "Chest Press",          required: true  },
-    { pattern: "vertical_pull",   label: "Lat Pull",             required: true  },
-    { pattern: "horizontal_pull", label: "Row",                  required: true  },
-    { pattern: "vertical_push",   label: "Shoulder Press",       required: false },
-    { pattern: "biceps_isolation",label: "Biceps",               required: false },
-    { pattern: "triceps_isolation",label: "Triceps",             required: false },
+    { pattern: "horizontal_push", label: "Chest Press", required: true },
+    { pattern: "vertical_pull", label: "Lat Pull", required: true },
+    { pattern: "horizontal_pull", label: "Row", required: true },
+    { pattern: "vertical_push", label: "Shoulder Press", required: false },
+    { pattern: "biceps_isolation", label: "Biceps", required: false },
+    { pattern: "triceps_isolation", label: "Triceps", required: false },
   ],
   lower: [
-    { pattern: "squat",           label: "Squat",                required: true  },
-    { pattern: "heavy_hinge",     label: "Hip Hinge",            required: true  },
-    { pattern: "knee_flexion",    label: "Leg Curl",             required: false },
-    { pattern: "calf_raise",      label: "Calf",                 required: false },
+    { pattern: "squat", label: "Squat", required: true },
+    { pattern: "heavy_hinge", label: "Hip Hinge", required: true },
+    { pattern: "knee_flexion", label: "Leg Curl", required: false },
+    { pattern: "calf_raise", label: "Calf", required: false },
   ],
   full: [
-    { pattern: "squat",           label: "Squat",                required: true  },
-    { pattern: "horizontal_push", label: "Chest Press",          required: true  },
-    { pattern: "vertical_pull",   label: "Lat Pull",             required: true  },
-    { pattern: "heavy_hinge",     label: "Hip Hinge",            required: false },
-    { pattern: "vertical_push",   label: "Shoulder Press",       required: false },
-    { pattern: "horizontal_pull", label: "Row",                  required: false },
+    { pattern: "squat", label: "Squat", required: true },
+    { pattern: "horizontal_push", label: "Chest Press", required: true },
+    { pattern: "vertical_pull", label: "Lat Pull", required: true },
+    { pattern: "heavy_hinge", label: "Hip Hinge", required: false },
+    { pattern: "vertical_push", label: "Shoulder Press", required: false },
+    { pattern: "horizontal_pull", label: "Row", required: false },
   ],
 };
 
@@ -141,11 +141,11 @@ function determineSplit(dayCount, experience) {
 // ──────────────────────────────────────────────────────────────────────────────
 function normalizeEquipment(equipment = []) {
   const aliases = {
-    full_gym:       "gym",
+    full_gym: "gym",
     commercial_gym: "gym",
-    home_gym:       "dumbbell",
-    bodyweight_only:"bodyweight",
-    no_equipment:   "bodyweight",
+    home_gym: "dumbbell",
+    bodyweight_only: "bodyweight",
+    no_equipment: "bodyweight",
   };
   return equipment.map((e) => aliases[e.toLowerCase()] ?? e.toLowerCase());
 }
@@ -227,17 +227,17 @@ function populateDay({
     const { sets, repsLabel, restSeconds, rpe } = prescribeVolume(goal, experience, isCompound);
 
     exercises.push({
-      name:               picked.name,
-      exercise_id:        picked._id,
-      primary_muscle:     picked.primary_muscle || "",
-      movement_pattern:   picked.movement_pattern || "",
-      equipment:          picked.equipment || "",
+      name: picked.name,
+      exercise_id: picked._id,
+      primary_muscle: picked.primary_muscle || "",
+      movement_pattern: picked.movement_pattern || "",
+      equipment: picked.equipment || "",
       intensity_category: picked.intensity_category || "accessory",
       sets,
-      reps:               repsLabel,
-      rest_seconds:       restSeconds,
+      reps: repsLabel,
+      rest_seconds: restSeconds,
       rpe,
-      prescription:       `${sets}x${repsLabel} @RPE ${rpe}`,
+      prescription: `${sets}x${repsLabel} @RPE ${rpe}`,
     });
 
     usedIds.add(String(picked._id));
@@ -247,14 +247,45 @@ function populateDay({
 }
 
 // ──────────────────────────────────────────────────────────────────────────────
-// MAP BLUEPRINT → CALENDAR DAYS
-// Returns [{ calendarDay, splitType, blueprintDay }]
+// WEEK SCHEDULE BUILDER
+// Returns a map { "sunday": "YYYY-MM-DD", "monday": "YYYY-MM-DD", … "saturday": "YYYY-MM-DD" }
+// Always covers the CURRENT calendar week: Sunday → Saturday (fixed, not rolling).
 // ──────────────────────────────────────────────────────────────────────────────
-function mapBlueprintToDays(blueprint, selectedDays) {
+function getWeekSchedule() {
+  const DAY_NAMES = ["sunday","monday","tuesday","wednesday","thursday","friday","saturday"];
+  const schedule  = {};
+
+  // Find this week's Sunday (roll back from today)
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  const sunday = new Date(today);
+  sunday.setDate(today.getDate() - today.getDay()); // getDay() = 0 on Sunday
+
+  // Fill Sunday → Saturday (i = 0..6)
+  for (let i = 0; i < 7; i++) {
+    const d = new Date(sunday);
+    d.setDate(sunday.getDate() + i);
+    const dayName = DAY_NAMES[d.getDay()];            // "sunday" … "saturday"
+    const iso     = d.toISOString().split("T")[0];    // "YYYY-MM-DD"
+    schedule[dayName] = iso;
+  }
+
+  // e.g. today = Thu 2026-06-25 → { sunday:"2026-06-22", monday:"2026-06-23", … saturday:"2026-06-28" }
+  return schedule;
+}
+
+// ──────────────────────────────────────────────────────────────────────────────
+// MAP BLUEPRINT → CALENDAR DAYS
+// Returns [{ calendar_day, scheduled_date, split_type, blueprint_day }]
+// scheduled_date = the actual ISO date for that day in the current Sun–Sat week.
+// ──────────────────────────────────────────────────────────────────────────────
+function mapBlueprintToDays(blueprint, selectedDays, weekSchedule) {
   return blueprint.map((splitType, idx) => ({
-    calendar_day:  selectedDays[idx],
-    split_type:    splitType,
-    blueprint_day: idx + 1,        // 1-indexed for client-side display
+    calendar_day:   selectedDays[idx],
+    scheduled_date: weekSchedule[selectedDays[idx]] || null,  // e.g. "2026-06-23"
+    split_type:     splitType,
+    blueprint_day:  idx + 1,        // 1-indexed for client-side display
   }));
 }
 
@@ -289,8 +320,12 @@ async function generateWorkoutPlan({
   // ── Step 1: Determine split ──
   const { blueprint, splitLabel } = determineSplit(cleanDays.length, experience_level);
 
-  // ── Step 2: Map blueprint → calendar days ──
-  const dayMappings = mapBlueprintToDays(blueprint, cleanDays);
+  // ── Step 2: Get current Sun–Sat week and map blueprint → calendar days ──
+  const weekSchedule = getWeekSchedule();
+  const week_start   = weekSchedule["sunday"];    // e.g. "2026-06-22"
+  const week_end     = weekSchedule["saturday"];  // e.g. "2026-06-28"
+
+  const dayMappings  = mapBlueprintToDays(blueprint, cleanDays, weekSchedule);
 
   // ── Step 3: Load exercise DB once ──
   const allExercises = await Exercise.find({}).lean();
@@ -298,7 +333,7 @@ async function generateWorkoutPlan({
   // ── Step 4: Populate each day ──
   const usedIds = new Set(); // tracks exercises used across all days to reduce repeats
 
-  const workouts = dayMappings.map(({ calendar_day, split_type, blueprint_day }) => {
+  const workouts = dayMappings.map(({ calendar_day, scheduled_date, split_type, blueprint_day }) => {
     const exercises = populateDay({
       splitType:   split_type,
       goal,
@@ -309,7 +344,7 @@ async function generateWorkoutPlan({
       usedIds,
     });
 
-    return { calendar_day, blueprint_day, split_type, exercises };
+    return { calendar_day, scheduled_date, blueprint_day, split_type, exercises };
   });
 
   // ── Step 5: Build plan document ──
@@ -322,7 +357,9 @@ async function generateWorkoutPlan({
     selected_days:   cleanDays,
     equipment:       normalizedEquipment,
     duration_minutes,
-    workouts,
+    week_start,      // "YYYY-MM-DD" — this week's Sunday
+    week_end,        // "YYYY-MM-DD" — this week's Saturday
+    workouts,        // each workout has scheduled_date for its exact day this week
   };
 
   // ── Persist to DB (non-blocking on failure — preview plans are best-effort) ──

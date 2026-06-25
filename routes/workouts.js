@@ -1114,9 +1114,11 @@ router.post("/generate", authUnified(false), async (req, res) => {
       total_days:    plan.workouts.length,
       goal:          plan.goal,
       experience:    plan.experience_level,
+      week_start:    plan.week_start,   // "YYYY-MM-DD" — this week's Sunday
+      week_end:      plan.week_end,     // "YYYY-MM-DD" — this week's Saturday
       workouts:      plan.workouts,
       rolling_schedule_note:
-        "If you miss a session, your next workout continues from the next blueprint day. You never fall behind.",
+        "This plan covers the current calendar week (Sunday–Saturday). Each workout includes a scheduled_date for its exact day this week.",
     });
   } catch (err) {
     console.error("[POST /workouts/generate] Error:", err);
