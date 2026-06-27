@@ -76,8 +76,10 @@ async function applyInjuryAdjustments(user, injuryResult) {
 
       if (!recentPainLogs) {
         // Clear flags explicitly
-        await User.updateOne({ _id: user._id }, { $set: { injury_flags: [] } });
-        user.injury_flags = [];
+        // Only remove system-generated flags (objects), keep user-defined chronic flags (strings)
+        const keptFlags = user.injury_flags.filter(f => typeof f === 'string');
+        await User.updateOne({ _id: user._id }, { $set: { injury_flags: keptFlags } });
+        user.injury_flags = keptFlags;
       }
     }
     return;
