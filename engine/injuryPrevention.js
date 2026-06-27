@@ -56,64 +56,6 @@ async function evaluateInjuryRisk(userId) {
   // Global overload check
   if (result.triggers.length >= 3) {
     result.globalDeload = true;
-/**
- * engine/injuryPrevention.js
- * 
- * Monitors pain levels in WorkoutLogs.
- * Triggers Injury Mode if same muscle pain >= 7 occurs 2+ times within 14 days.
- */
-
-const WorkoutLog = require("../models/WorkoutLog");
-const User = require("../models/User");
-
-async function evaluateInjuryRisk(userId) {
-  const result = {
-    triggerInjuryMode: false,
-    triggers: [],
-    reasons: []
-  };
-
-  const fourteenDaysAgo = new Date(Date.now() - 14 * 24 * 60 * 60 * 1000);
-  
-  // Fetch logs from last 14 days with high pain
-  const logs = await WorkoutLog.find({
-    userId,
-    date: { $gte: fourteenDaysAgo },
-    "exercises.pain_level": { $gte: 7 }
-  }).lean();
-
-  if (!logs || logs.length === 0) return result;
-
-  const painCountByMuscle = {};
-
-  for (const log of logs) {
-    if (!log.exercises) continue;
-    
-    // Deduplicate per workout (don't count a 5-set bench press as 5 separate incidents if logged together, though exercises here are movements)
-    const musclesInLog = new Set();
-    for (const ex of log.exercises) {
-      if (ex.pain_level >= 7) {
-        musclesInLog.add(ex.primary_muscle);
-      }
-    }
-    
-    for (const muscle of musclesInLog) {
-      painCountByMuscle[muscle] = (painCountByMuscle[muscle] || 0) + 1;
-    }
-  }
-
-  for (const [muscle, count] of Object.entries(painCountByMuscle)) {
-    if (count >= 2) {
-      result.triggerInjuryMode = true;
-      const reason = `Injury risk detected: ${muscle} experienced pain >= 7 in ${count} separate workouts over last 14 days.`;
-      result.triggers.push({ muscle, count });
-      result.reasons.push(reason);
-    }
-  }
-  
-  // Global overload check
-  if (result.triggers.length >= 3) {
-    result.globalDeload = true;
     result.reasons.push(`Global deload activated due to pain across 3+ muscles.`);
   }
 
