@@ -686,15 +686,23 @@ router.get(["/today", "/today/:userId", "/active", "/active/:userId"], authUnifi
       todayLog = null;
     }
 
-    // If today's workout is already completed, advance to the next day
-    // This handles the case where user finishes a workout and reloads
-    if (todayLog && todayLog.status === "completed") {
-      // The dayIndex should be based on ALL completed workouts (including today's)
+    let dayIndex, todayRoutine;
+
+    if (todayLog) {
+      // If we already have a log for today (whether in_progress or completed),
+      // we just return it so the frontend knows the actual state for today.
+      dayIndex = routine.findIndex(r => r.day === todayLog.day);
+      if (dayIndex === -1) {
+        dayIndex = Math.max(0, completedLogs.length - (todayLog.status === "completed" ? 1 : 0)) % routine.length;
+      }
+      todayRoutine = routine[dayIndex] || { day: todayLog.day, exercises: [] };
+    } else {
       const nextTrainingDay = resolveNextTrainingDay(
         routine,
         completedLogs.length % routine.length
       );
-      const { dayIndex, todayRoutine } = nextTrainingDay;
+      dayIndex = nextTrainingDay.dayIndex;
+      todayRoutine = nextTrainingDay.todayRoutine;
 
       if (!todayRoutine || !Array.isArray(todayRoutine.exercises) || todayRoutine.exercises.length === 0) {
         return res.json({
@@ -704,56 +712,7 @@ router.get(["/today", "/today/:userId", "/active", "/active/:userId"], authUnifi
         });
       }
 
-      // Create a new workout log for the next training day
-      const newLog = new WorkoutLog({
-        userId,
-        day: todayRoutine.day,
-        date: new Date(),
-        exercises: await buildWorkoutExercises(todayRoutine.exercises),
-        status: "in_progress"
-      });
-      await newLog.save();
-      todayLog = newLog.toObject();
-
-      // Get RL scores for display
-      const RLWeight = require("../models/RLWeight");
-      const rlDocs = await RLWeight.find({ userId }).lean();
-      const rlScores = {};
-      rlDocs.forEach(r => {
-        rlScores[String(r.exerciseId)] = r.preferenceScore ?? r.score ?? 0;
-      });
-
-      return res.json({
-        success: true,
-        data: {
-          workoutId: todayLog._id,
-          day: todayRoutine.day,
-          dayIndex,
-          totalDays: routine.length,
-          exercises: todayLog.exercises,
-          plannedExercises: todayRoutine.exercises,
-          status: todayLog.status,
-          rlScores
-        }
-      });
-    }
-
-    const nextTrainingDay = resolveNextTrainingDay(
-      routine,
-      completedLogs.length % routine.length
-    );
-    const { dayIndex, todayRoutine } = nextTrainingDay;
-
-    if (!todayRoutine || !Array.isArray(todayRoutine.exercises) || todayRoutine.exercises.length === 0) {
-      return res.json({
-        success: false,
-        error: "No training day with exercises is available in the current routine.",
-        needsGeneration: true
-      });
-    }
-
-    // If no log for today, create one
-    if (!todayLog) {
+      // Create a new workout log for today
       const newLog = new WorkoutLog({
         userId,
         day: todayRoutine.day,
