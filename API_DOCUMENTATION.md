@@ -1,218 +1,378 @@
-# Fitness AI Platform â€” Unified Developer API Handbook
+# Fitness AI Platform — Complete Developer Integration Guide
 
-Welcome to the official developer documentation for the **Fitness AI Platform Backend**. This guide serves as an authoritative integration manual for frontend engineering teams to easily authenticate, track performance, and retrieve workout programs.
-
-## Key Upgrades in Version 1.1.0:
-1. **Unified Authentication**: Login and registration logic under `/api/auth` and `/api/users` are 100% synchronized, using a single authoritative controller.
-2. **Bearer JWT Authorization**: Secure routes accept the standard header `Authorization: Bearer <token>`, resolving user IDs dynamically and securely without requiring hardcoded path parameters.
-3. **High-Performance Daily Lazy Loading**: Eradicate API lag completely! Instead of querying the massive, multi-week historical program array, the frontend can query lightweight week splits and fetch exercise details for just the active/planned day.
+> **Base URL (Production):** `https://fitnessai-5rja.onrender.com`
+> **Base URL (Local):** `http://localhost:5000`
+> **Swagger UI:** `http://localhost:5000/docs`
 
 ---
 
-## 1. Core Architecture & Auth
+## ?? Rules for Integration
 
-### Base URL
+### Header (Sabse important)
+Saare protected routes (??) mein ye header **MUST** bhejo:
 ```
-http://localhost:5000/api
+Content-Type: application/json
+Authorization: Bearer <token>
 ```
-
-### Interactive Sandbox (Swagger UI)
-An interactive OpenAPI documentation sandbox is served directly from the server for easy payload testing and live route execution:
-- **URL**: `http://localhost:5000/docs`
-- **Testing Authorized Endpoints**: Log in or register, copy the `token` string, click **Authorize** at the top right of the Swagger page, and input: `Bearer YOUR_TOKEN_STRING`.
+Token register ya login se milta hai. Ise secure storage mein save karo.
 
 ---
 
-## 2. Authentication & User APIs
+## 1. REGISTER — `POST /auth/register`
 
-### [POST] User Registration
-Unified endpoint to sign up a new user. The system automatically initializes their recovery profile, experience scores, and injury safeguards.
-- **Route**: `POST /auth/register` or `POST /users/register`
-- **Body Request**:
-  ```json
-  {
-    "name": "Alex Carter",
-    "email": "alex@fitai.com",
-    "password": "securepassword123",
-    "goal": "hypertrophy",
+**Header:**
+```
+Content-Type: application/json
+```
+*(No token needed)*
+
+**Body:**
+```json
+{
+  "name": "Raunak",
+  "email": "raunak@gmail.com",
+  "password": "Test@1234",
+  "goal": "strength",
+  "experience": "intermediate",
+  "gender": "male",
+  "training_days_per_week": 5,
+  "age": 25,
+  "weight": 75,
+  "height": 175,
+  "recovery_profile": "fast",
+  "equipment": ["barbell", "dumbbell"],
+  "injury_flags": []
+}
+```
+
+**Allowed Values:**
+
+| Field | Options |
+|---|---|
+| `goal` | `hypertrophy` `strength` `fatloss` `hybrid` |
+| `experience` | `beginner` `intermediate` `advanced` |
+| `gender` | `male` `female` `other` |
+| `recovery_profile` | `fast` `moderate` `slow` |
+| `training_days_per_week` | 1 to 7 |
+
+**Response:**
+```json
+{
+  "user": {
+    "id": "6a52a477f716f80464d7cf25",
+    "name": "Raunak",
+    "email": "raunak@gmail.com",
+    "goal": "strength",
     "experience": "intermediate",
-    "equipment": ["bodyweight", "barbell", "dumbbells"]
-  }
-  ```
-- **Response (200 OK)**:
-  ```json
-  {
-    "user": {
-      "id": "603f7e1b5b4e7230fc6e7a2d",
-      "name": "Alex Carter",
-      "email": "alex@fitai.com",
-      "goal": "hypertrophy",
-      "experience": "intermediate",
-      "equipment": ["bodyweight", "barbell", "dumbbells"]
-    },
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
-  }
-  ```
-
-### [POST] User Login
-Retrieve a secure token. Password comparisons are securely compiled and evaluated.
-- **Route**: `POST /auth/login` or `POST /users/login`
-- **Body Request**:
-  ```json
-  {
-    "email": "alex@fitai.com",
-    "password": "securepassword123"
-  }
-  ```
-- **Response (200 OK)**:
-  ```json
-  {
-    "user": {
-      "id": "603f7e1b5b4e7230fc6e7a2d",
-      "name": "Alex Carter",
-      "email": "alex@fitai.com",
-      "goal": "hypertrophy",
-      "experience": "intermediate",
-      "equipment": ["bodyweight", "barbell", "dumbbells"]
-    },
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
-  }
-  ```
-
-### [GET] User Profile
-Fetch details for a logged-in user. Automatically maps from token if path variable is omitted.
-- **Route**: `GET /users/:userId?`
-- **Headers**: `Authorization: Bearer <token>`
-- **Response (200 OK)**:
-  ```json
-  {
-    "success": true,
-    "user": {
-      "_id": "603f7e1b5b4e7230fc6e7a2d",
-      "name": "Alex Carter",
-      "email": "alex@fitai.com",
-      "goal": "hypertrophy",
-      "experience": "intermediate",
-      "equipment": ["bodyweight", "barbell", "dumbbells"],
-      "createdAt": "2026-05-21T12:00:00.000Z"
-    }
-  }
-  ```
+    "gender": "male",
+    "training_days_per_week": 5,
+    "age": 25,
+    "weight": 75,
+    "height": 175,
+    "recovery_profile": "fast",
+    "equipment": ["barbell", "dumbbell"],
+    "injury_flags": [],
+    "role": "user"
+  },
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+}
+```
 
 ---
 
-## 3. High-Performance Daily Workout APIs (Lazy Loaded)
+## 2. LOGIN — `POST /auth/login`
 
-To guarantee a lag-free experience on mobile apps and websites, **do not fetch the entire multi-week program**. Instead, use these two lightweight routes to get split structures and single-day details:
+**Header:**
+```
+Content-Type: application/json
+```
 
-### [GET] Fetch Week Split Metadata (Payload < 1 KB)
-Returns the training days of the current week's split (metadata only). This allows the frontend to quickly render tab layouts or a list of training days for the week without loading heavy exercise lists.
-- **Route**: `GET /workouts/days/:userId?`
-- **Headers**: `Authorization: Bearer <token>`
-- **Response (200 OK)**:
-  ```json
-  {
-    "success": true,
-    "userId": "603f7e1b5b4e7230fc6e7a2d",
-    "currentWeek": 1,
-    "mesocyclePhase": "accumulation",
-    "totalDays": 3,
-    "days": [
+**Body:**
+```json
+{
+  "email": "raunak@gmail.com",
+  "password": "Test@1234"
+}
+```
+
+**Response:**
+```json
+{
+  "user": { "id": "...", "name": "Raunak", ... },
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+}
+```
+
+---
+
+## 3. ONBOARDING — `POST /users/onboarding` ??
+
+Register ke baad AI engine initialize karne ke liye **ek baar** call karo.
+
+**Header:**
+```
+Content-Type: application/json
+Authorization: Bearer <token>
+```
+
+**Body (minimum required):**
+```json
+{
+  "name": "Raunak",
+  "training_days_per_week": 5
+}
+```
+
+**Response:**
+```json
+{
+  "success": true,
+  "message": "Onboarding complete. AI Engine initialized.",
+  "user": { ... },
+  "activeWorkout": {
+    "day": "push",
+    "dayIndex": 0,
+    "totalDays": 5,
+    "exercises": [ ... ],
+    "status": "planned"
+  }
+}
+```
+
+---
+
+## 4. GET USER PROFILE — `GET /users/:userId` ??
+
+**Header:**
+```
+Authorization: Bearer <token>
+```
+
+**URL:**
+```
+GET /users/6a52a477f716f80464d7cf25
+```
+
+**Response:**
+```json
+{
+  "success": true,
+  "user": {
+    "id": "6a52a477f716f80464d7cf25",
+    "name": "Raunak",
+    "email": "raunak@gmail.com",
+    "goal": "strength",
+    "experience": "intermediate",
+    "gender": "male",
+    "age": 25,
+    "weight": 75,
+    "height": 175,
+    "training_days_per_week": 5,
+    "recovery_profile": "fast",
+    "equipment": ["barbell", "dumbbell"],
+    "injury_flags": []
+  }
+}
+```
+
+---
+
+## 5. TODAY'S WORKOUT — `GET /workouts/today/:userId` ??
+
+**Header:**
+```
+Authorization: Bearer <token>
+```
+
+**URL:**
+```
+GET /workouts/today/6a52a477f716f80464d7cf25
+```
+
+**Response:**
+```json
+{
+  "success": true,
+  "data": {
+    "workoutId": "6a53...",
+    "day": "push",
+    "dayIndex": 0,
+    "totalDays": 5,
+    "exercises": [
       {
-        "dayIndex": 0,
-        "dayName": "push_a",
-        "label": "Day 1: Push A",
-        "muscles": ["chest", "shoulders", "triceps"],
-        "exerciseCount": 5
-      },
-      {
-        "dayIndex": 1,
-        "dayName": "pull_a",
-        "label": "Day 2: Pull A",
-        "muscles": ["back", "biceps"],
-        "exerciseCount": 5
-      },
-      {
-        "dayIndex": 2,
-        "dayName": "legs_a",
-        "label": "Day 3: Legs A",
-        "muscles": ["quads", "hamstrings", "glutes", "calves"],
-        "exerciseCount": 4
+        "exerciseId": "...",
+        "name": "Barbell Bench Press",
+        "primary_muscle": "chest_mid",
+        "equipment": "barbell",
+        "target_sets": 3,
+        "target_reps": 8,
+        "target_rpe": 8,
+        "status": "pending"
       }
     ]
   }
-  ```
+}
+```
 
-### [GET] Fetch Single Day Workout Details
-Returns the complete planned or logged exercises for a specific day. Highly performance-optimized.
-- **Route**: `GET /workouts/day/:userId?`
-- **Headers**: `Authorization: Bearer <token>`
-- **Query Parameters**:
-  - `dayIndex` (integer, 0-indexed): Index of the day (e.g. `0`, `1`, `2`)
-  - `dayName` (string): Alternately, name of the day (e.g. `push_a`)
-  - `start` (boolean, optional): If `true`, starts the workout and registers a `WorkoutLog` in-progress.
-- **Response (200 OK)**:
-  ```json
-  {
-    "success": true,
-    "data": {
-      "workoutId": "603f7f455b4e7230fc6e7a3f",
-      "day": "push_a",
-      "dayIndex": 0,
-      "totalDays": 3,
-      "status": "in_progress",
-      "exercises": [
-        {
-          "name": "Barbell Bench Press",
-          "sets": 4,
-          "reps": 8,
-          "rpe_target": 8,
-          "weight_suggestion": 60,
-          "primary_muscle": "chest"
-        }
-      ],
-      "rlScores": {
-        "603f7e3c5b4e7230fc6e7a30": 0.85
-      }
+---
+
+## 6. WEEK SPLIT — `GET /workouts/days/:userId` ??
+
+Sirf day names fetch karo (lightweight — dashboard ke liye).
+
+**Header:**
+```
+Authorization: Bearer <token>
+```
+
+**Response:**
+```json
+{
+  "success": true,
+  "totalDays": 5,
+  "days": [
+    { "dayIndex": 0, "dayName": "push", "muscles": ["chest", "shoulders", "triceps"], "exerciseCount": 5 },
+    { "dayIndex": 1, "dayName": "pull", "muscles": ["back", "biceps"], "exerciseCount": 5 }
+  ]
+}
+```
+
+---
+
+## 7. COMPLETE WORKOUT — `POST /workouts/complete` ??
+
+**Header:**
+```
+Content-Type: application/json
+Authorization: Bearer <token>
+```
+
+**Body:**
+```json
+{
+  "workoutId": "6a53...",
+  "mode": "bulk",
+  "exercises": [
+    {
+      "exerciseIndex": 0,
+      "actual_sets": 3,
+      "actual_reps": 8,
+      "weight": 80,
+      "rpe": 7,
+      "status": "completed"
+    },
+    {
+      "exerciseIndex": 1,
+      "status": "skipped",
+      "reason": "too tired"
     }
-  }
-  ```
-
-### [GET] Today's Workout Status
-Retrieves today's active workout. Resolves which day the user is on based oncompleted days.
-- **Route**: `GET /workouts/today/:userId?`
-- **Headers**: `Authorization: Bearer <token>`
+  ]
+}
+```
 
 ---
 
-## 4. Program & Analytics APIs
+## 8. TRACK SET — `POST /workouts/track-set` ??
 
-### [GET] Complete Program Object
-- **Route**: `GET /program/:userId?`
-- **Headers**: `Authorization: Bearer <token>`
+Har set ke baad call karo (live tracking).
 
-### [GET] Explainability Logic Report
-Provides a complete analysis of the algorithmic decisions, explaining progression multipliers, plateau detection, and volume thresholds tailored for the user.
-- **Route**: `GET /program/explain/:userId?`
-- **Headers**: `Authorization: Bearer <token>`
+**Header:**
+```
+Content-Type: application/json
+Authorization: Bearer <token>
+```
 
-### [GET] Analytics Summary
-Fetches volume trends, weekly adherence metrics, fatigue levels, progressive overload graphs, and RL preferences in a single call.
-- **Route**: `GET /analytics/summary/:userId?`
-- **Headers**: `Authorization: Bearer <token>`
+**Body:**
+```json
+{
+  "workoutId": "6a53...",
+  "exerciseIndex": 0,
+  "setsCompleted": 2,
+  "weight": 80,
+  "rpe": 7
+}
+```
 
 ---
 
-## 5. Frontend Integration Guide (No-Lag Best Practice)
+## 9. SKIP EXERCISE — `POST /workouts/skip` ??
 
-To build a flawless, ultra-responsive client experience:
+**Header:**
+```
+Content-Type: application/json
+Authorization: Bearer <token>
+```
 
-1. **Dashboard Loading**:
-   - On app launch, query `GET /workouts/days`.
-   - Render the days (e.g. "Day 1: Push A", "Day 2: Pull A", "Day 3: Legs A") in a beautiful slider.
-2. **Workout Details Preview**:
-   - When a user taps on any day in the list, call `GET /workouts/day?dayIndex=X` (replace `X` with the day's index).
-   - Display the exercises and reps immediately. No lag!
-3. **Beginning a Session**:
-   - When the user clicks "Start Workout", call `GET /workouts/day?dayIndex=X&start=true`.
-   - Capture the returned `workoutId` to post set completions via `POST /api/workouts/track-set` and completion via `POST /api/workouts/complete`.
+**Body:**
+```json
+{
+  "workoutId": "6a53...",
+  "exerciseIndex": 1,
+  "reason": "knee pain"
+}
+```
+
+---
+
+## 10. GENERATE WORKOUT (AI) — `POST /workouts/generate` ??
+
+**Header:**
+```
+Content-Type: application/json
+Authorization: Bearer <token>
+```
+
+**Body:**
+```json
+{
+  "goal": "strength",
+  "experience_level": "intermediate",
+  "selected_days": ["Monday", "Wednesday", "Friday", "Saturday"],
+  "equipment": ["barbell", "dumbbell"],
+  "duration_minutes": 60,
+  "injury_flags": []
+}
+```
+
+---
+
+## 11. ANALYTICS — `GET /analytics/summary/:userId` ??
+
+**Header:**
+```
+Authorization: Bearer <token>
+```
+
+---
+
+## 12. PROGRAM — `GET /program/:userId` ??
+
+**Header:**
+```
+Authorization: Bearer <token>
+```
+
+---
+
+## ?? Typical Integration Flow
+
+```
+Step 1: POST /auth/register  ? Token lo + user profile save karo
+Step 2: POST /users/onboarding ? AI engine initialize karo (ek baar)
+Step 3: GET /workouts/today/:userId ? Aaj ka workout dikhao
+Step 4: POST /workouts/track-set ? Har set ke baad (live)
+Step 5: POST /workouts/complete ? Workout khatam par
+Step 6: GET /analytics/summary ? Progress dikhao
+```
+
+---
+
+## ? Common Mistakes
+
+| Galti | Fix |
+|---|---|
+| `Authorization` header missing | Sab ?? routes pe `Bearer <token>` bhejo |
+| `Content-Type` missing | POST/PUT mein `application/json` set karo |
+| `gender`/`training_days_per_week` missing | Register mein saare fields bhejo |
+| Workout complete bina `workoutId` | Pehle `/workouts/today` se `workoutId` lo |
+| Token expire hone ke baad 401 | `POST /auth/login` se naya token lo |

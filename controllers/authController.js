@@ -4,7 +4,7 @@ const JWT_SECRET = process.env.JWT_SECRET || 'your_super_secret_jwt_key_here';
 
 const register = async (req, res) => {
   try {
-    const { name, email, password, goal, experience, equipment } = req.body;
+    const { name, email, password, goal, experience, equipment, gender, training_days_per_week, age, weight, height, injury_flags, recovery_profile } = req.body;
 
     if (!name || !email || !password) {
       return res.status(400).json({ error: 'name, email and password are required' });
@@ -19,7 +19,14 @@ const register = async (req, res) => {
       password,  // pre-save hook in User model handles hashing
       goal,
       experience,
-      equipment
+      equipment,
+      gender,
+      training_days_per_week,
+      age,
+      weight,
+      height,
+      injury_flags,
+      recovery_profile
     });
 
     const token = jwt.sign({ id: user._id, email: user.email }, JWT_SECRET, { expiresIn: '30d' });
@@ -31,7 +38,15 @@ const register = async (req, res) => {
         email: user.email,
         goal: user.goal,
         experience: user.experience,
-        equipment: user.equipment
+        equipment: user.equipment,
+        gender: user.gender,
+        training_days_per_week: user.training_days_per_week,
+        age: user.age,
+        weight: user.weight,
+        height: user.height,
+        injury_flags: user.injury_flags,
+        recovery_profile: user.recovery_profile,
+        role: user.role
       },
       token
     });

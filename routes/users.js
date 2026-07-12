@@ -211,7 +211,7 @@ router.get(["/", "/:userId"], authUnified(false), async (req, res) => {
         }
         const user = await User.findById(userId).lean();
         if(!user) return res.status(404).json({error: "User not found"});
-        return res.json({success: true, user});
+        return res.json({success: true, user: sanitizeUser(user)});
     } catch(err) {
         res.status(500).json({error: err.message});
     }
